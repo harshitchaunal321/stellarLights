@@ -80,14 +80,14 @@ function updateDropdownPositions() {
     ">
         Photo Credit Line Here
     </div>
-    <div class="horizontal-line" style="
+    <!-- <div class="horizontal-line" style="
         position: absolute;
         bottom: 10px;
         left: 0;
         top: 1079px;
         width: 100%;
         border-bottom: 1px solid grey;
-    "></div>
+    "></div> -->
 </div>
 
 <div id="faq-dropdown-1" class="faq-dropdown" style="
