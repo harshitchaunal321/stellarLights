@@ -1,0 +1,525 @@
+/*
+ * Home Page Styles
+ * Theme: Stellar Light
+ */
+
+/* Hero Section */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: -20px;
+    padding-top: 100px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 90%;
+}
+
+.hero-content h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 38px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    max-width: 600px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto 30px;
+}
+
+.enquire-button {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.enquire-button:hover {
+    background-color: white;
+    border: 2px solid white;
+    color: black;
+}
+
+/* Carousel Section */
+.carousel-section {
+    background-color: black;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.carousel-intro {
+    max-width: 60rem;
+    margin: 0 auto 3rem;
+}
+
+.carousel-intro p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.carousel-wrapper {
+    position: relative;
+    max-width: 60rem;
+    margin: 0 auto;
+    min-height: 15rem;
+}
+
+.carousel-content {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.carousel-item {
+    display: none;
+    text-align: center;
+}
+
+.carousel-item.active {
+    display: block;
+}
+
+.carousel-item h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.carousel-item p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    max-width: 40rem;
+    margin: 0 auto 2rem;
+}
+
+.carousel-button {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 2rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.carousel-button:hover {
+    background-color: white;
+    border: 2px solid white;
+    color: black;
+}
+
+.carousel-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: 2px solid white;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.carousel-arrow:hover {
+    background-color: white;
+    color: black;
+}
+
+.carousel-arrow-left {
+    left: -4rem;
+}
+
+.carousel-arrow-right {
+    right: -4rem;
+}
+
+/* Image Wrapper for Overlay */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 0.5rem 1rem;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+/* Gallery Section */
+.gallery-section {
+    background-color: black;
+    padding: 4rem 0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.gallery-grid .image-wrapper {
+    height: 300px;
+}
+
+/* Call to Action Section */
+.cta-section {
+    background-color: black;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 60rem;
+    margin: 0 auto 2rem;
+}
+
+.cta-content h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.cta-content .enquire-button {
+    font-size: 1rem;
+}
+
+.additional-images {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.additional-images .image-wrapper {
+    width: 23%;
+    height: 250px;
+}
+
+/* Responsive Adjustments */
+
+/* Small screens (up to 576px) */
+@media (max-width: 576px) {
+    .hero-section {
+        margin-top: -5rem;
+        padding-top: 5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 8vw;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+        max-width: 100%;
+    }
+
+    .enquire-button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .carousel-section {
+        padding: 2rem 0;
+    }
+
+    .carousel-intro p {
+        font-size: 0.9rem;
+        max-width: 90%;
+    }
+
+    .carousel-wrapper {
+        min-height: 12rem;
+    }
+
+    .carousel-item h2 {
+        font-size: 1.5rem;
+    }
+
+    .carousel-item p {
+        font-size: 0.9rem;
+        max-width: 90%;
+    }
+
+    .carousel-button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .carousel-arrow {
+        font-size: 1rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .carousel-arrow-left {
+        left: 0.5rem;
+    }
+
+    .carousel-arrow-right {
+        right: 0.5rem;
+    }
+
+    .gallery-section {
+        padding: 2rem 0;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-grid .image-wrapper {
+        height: 220px;
+    }
+
+    .image-overlay {
+        font-size: 1rem;
+        padding: 0.3rem 0.8rem;
+    }
+
+    .cta-section {
+        padding: 2rem 0;
+    }
+
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .additional-images {
+        flex-direction: column;
+    }
+
+    .additional-images .image-wrapper {
+        width: 100%;
+        height: 150px;
+    }
+}
+
+/* Medium screens (576px to 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .hero-section {
+        margin-top: -6rem;
+        padding-top: 6rem;
+    }
+
+    .hero-content h1 {
+        font-size: 6vw;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        max-width: 90%;
+    }
+
+    .enquire-button {
+        font-size: 0.9rem;
+    }
+
+    .carousel-section {
+        padding: 3rem 0;
+    }
+
+    .carousel-intro p {
+        font-size: 1rem;
+    }
+
+    .carousel-wrapper {
+        min-height: 13rem;
+    }
+
+    .carousel-item h2 {
+        font-size: 1.8rem;
+    }
+
+    .carousel-item p {
+        font-size: 1rem;
+    }
+
+    .carousel-button {
+        font-size: 0.9rem;
+    }
+
+    .carousel-arrow {
+        font-size: 1.2rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .carousel-arrow-left {
+        left: 1rem;
+    }
+
+    .carousel-arrow-right {
+        right: 1rem;
+    }
+
+    .gallery-section {
+        padding: 3rem 0;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid .image-wrapper {
+        height: 220px;
+    }
+
+    .image-overlay {
+        font-size: 1.1rem;
+        padding: 0.4rem 0.9rem;
+    }
+
+    .cta-section {
+        padding: 3rem 0;
+    }
+
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .additional-images {
+        flex-wrap: wrap;
+    }
+
+    .additional-images .image-wrapper {
+        width: 48%;
+        height: 180px;
+    }
+}
+
+/* Large screens (768px to 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 5vw;
+    }
+
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+
+    .carousel-intro p {
+        font-size: 1.1rem;
+    }
+
+    .carousel-wrapper {
+        min-height: 14rem;
+    }
+
+    .carousel-item h2 {
+        font-size: 1.8rem;
+    }
+
+    .carousel-item p {
+        font-size: 1.1rem;
+    }
+
+    .gallery-grid .image-wrapper {
+        height: 220px;
+    }
+
+    .image-overlay {
+        font-size: 1.1rem;
+    }
+
+    .additional-images .image-wrapper {
+        width: 24%;
+        height: 200px;
+    }
+}
+
+/* Extra large screens (992px and above) */
+@media (min-width: 993px) {
+    .hero-content h1 {
+        font-size: 4vw;
+        max-font-size: 60px;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+
+    .carousel-item h2 {
+        font-size: 2rem;
+    }
+
+    .carousel-item p {
+        font-size: 1.2rem;
+    }
+
+    .gallery-grid .image-wrapper {
+        height: 300px;
+    }
+
+    .image-overlay {
+        font-size: 1.2rem;
+    }
+
+    .additional-images .image-wrapper {
+        width: 23%;
+        height: 250px;
+    }
+}
