@@ -1,0 +1,387 @@
+/*
+ * FAQ Page Styles
+ * Theme: Stellar Lights
+ */
+
+/* Hero Section */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: -20px;
+    padding-top: 100px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 90%;
+}
+
+.hero-content h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    max-width: 600px;
+    text-transform: uppercase;
+}
+
+.hero-content p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 25px;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.photo-credit {
+    position: absolute;
+    bottom: 20px;
+    right: 140px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 14px;
+    color: white;
+    opacity: 0.8;
+}
+
+/* FAQ Dropdowns */
+.faq-dropdown {
+    position: relative;
+    width: 80%;
+    max-width: 1264px;
+    margin: 0 auto;
+    opacity: 1;
+    margin-bottom: 30px;
+}
+
+.dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+}
+
+.dropdown-header h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 35px;
+    line-height: 27px;
+    letter-spacing: 3.5px;
+    color: #FFFFFF;
+    text-align: left;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.dropdown-icon {
+    font-size: 24px;
+    color: #FFFFFF;
+    transition: transform 0.3s ease;
+}
+
+.dropdown-content {
+    display: none;
+    padding-top: 20px;
+}
+
+.dropdown-content p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Call to Action Section (shared with home.css) */
+.cta-section {
+    background-color: black;
+    padding: 4rem 0;
+    text-align: center;
+    margin-top: 0;
+}
+
+.cta-content {
+    max-width: 60rem;
+    margin: 0 auto 2rem;
+}
+
+.cta-content h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.cta-content .enquire-button {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-content .enquire-button:hover {
+    background-color: white;
+    border: 2px solid white;
+    color: black;
+}
+
+.additional-images {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.additional-images .image-wrapper {
+    width: 23%;
+    height: 250px;
+    position: relative;
+}
+
+.additional-images .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+.additional-images .image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 0.5rem 1rem;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+/* Responsive Adjustments */
+
+/* Small screens (up to 576px) */
+@media (max-width: 576px) {
+    .hero-section {
+        margin-top: -5rem;
+        padding-top: 5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 8vw;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .photo-credit {
+        right: 20px;
+        font-size: 12px;
+        bottom: 10px;
+    }
+
+    .faq-dropdown {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .dropdown-header h2 {
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 2px;
+    }
+
+    .dropdown-icon {
+        font-size: 18px;
+    }
+
+    .dropdown-content p {
+        font-size: 14px;
+    }
+
+    .cta-section {
+        padding: 2rem 0;
+    }
+
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .additional-images {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .additional-images .image-wrapper {
+        width: 100%;
+        height: 150px;
+    }
+
+    .additional-images .image-overlay {
+        font-size: 1rem;
+        padding: 0.3rem 0.8rem;
+    }
+}
+
+/* Medium screens (576px to 768px) */
+@media (min-width: 577px) and (max-width: 768px) {
+    .hero-section {
+        margin-top: -6rem;
+        padding-top: 6rem;
+    }
+
+    .hero-content h1 {
+        font-size: 6vw;
+    }
+
+    .hero-content p {
+        font-size: 1.2rem;
+        max-width: 90%;
+    }
+
+    .photo-credit {
+        right: 30px;
+        font-size: 13px;
+    }
+
+    .faq-dropdown {
+        width: 90%;
+        margin-bottom: 25px;
+    }
+
+    .dropdown-header h2 {
+        font-size: 25px;
+        line-height: 1.2;
+        letter-spacing: 2.5px;
+    }
+
+    .dropdown-icon {
+        font-size: 20px;
+    }
+
+    .dropdown-content p {
+        font-size: 15px;
+    }
+
+    .cta-section {
+        padding: 3rem 0;
+    }
+
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .additional-images {
+        flex-wrap: wrap;
+        margin-top: 70px;
+    }
+
+    .additional-images .image-wrapper {
+        width: 48%;
+        height: 180px;
+    }
+
+    .additional-images .image-overlay {
+        font-size: 1.1rem;
+    }
+}
+
+/* Large screens (768px to 992px) */
+@media (min-width: 769px) and (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 5vw;
+    }
+
+    .hero-content p {
+        font-size: 1.5rem;
+    }
+
+    .photo-credit {
+        right: 50px;
+    }
+
+    .faq-dropdown {
+        width: 85%;
+    }
+
+    .dropdown-header h2 {
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+
+    .additional-images .image-wrapper {
+        width: 24%;
+        height: 200px;
+    }
+
+    .additional-images .image-overlay {
+        font-size: 1.1rem;
+    }
+}
+
+/* Extra large screens (992px and above) */
+@media (min-width: 993px) {
+    .hero-content h1 {
+        font-size: 70px;
+    }
+
+    .hero-content p {
+        font-size: 25px;
+    }
+
+    .photo-credit {
+        right: 140px;
+    }
+
+    .faq-dropdown {
+        width: 80%;
+        max-width: 1264px;
+    }
+
+    .additional-images .image-wrapper {
+        width: 23%;
+        height: 250px;
+    }
+}
