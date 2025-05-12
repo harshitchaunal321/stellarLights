@@ -4,43 +4,11 @@ Template Name: Home Page
 */
 get_header(); ?>
 
-<div class="hero-section" style="
-    background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/homePageBGImage.png');
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-    position: relative;
-    margin-top: -20px;
-    padding-top: 100px;
-">
+<div class="hero-section" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/homePageBGImage.png');">
     <div class="hero-content">
-        <h1 style="
-            font-family: 'Titillium Web', sans-serif;
-            font-size: 38px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            max-width: 600px;
-            text-transform: uppercase;
-        ">
-            We are Australia’s Premier Drone Show Storytellers
-        </h1>
-        <p style="
-            font-family: 'Titillium Web', sans-serif;
-            font-size: 18px;
-            line-height: 1.6;
-            max-width: 650px;
-            margin: 0 auto 30px;
-        ">
-            Stellar Lights crafts exceptional drone light shows across Australia, blending captivating creative storytelling with advanced drone technology. From large-scale public celebrations to corporate events, our bespoke drone shows offer unique, immersive experiences designed to captivate and inspire.
-        </p>
-        <a href="/contact" class="enquire-button">
-            Enquire Now
-        </a>
+        <h1>We are Australia’s Premier Drone Show Storytellers</h1>
+        <p>Stellar Lights crafts exceptional drone light shows across Australia, blending captivating creative storytelling with advanced drone technology. From large-scale public celebrations to corporate events, our bespoke drone shows offer unique, immersive experiences designed to captivate and inspire.</p>
+        <a href="/contact" class="enquire-button">Enquire Now</a>
     </div>
 </div>
 
@@ -81,39 +49,39 @@ get_header(); ?>
         <div class="image-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-1.png" alt="Public Events">
             <span class="image-overlay">
-             Australian Education Union<br>For Every Child Campaign
+                Australian Education Union<br>For Every Child Campaign
             </span>
         </div>
         <div class="image-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-2.png" alt="Corporate Shows">
             <span class="image-overlay">
-            Rotorua, New Zealand<br> Aronui Arts Festival
-            </span> 
-               </div>
+                Rotorua, New Zealand<br>Aronui Arts Festival
+            </span>
+        </div>
         <div class="image-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-3.png" alt="Festivals">
             <span class="image-overlay">
-            Sealife Melbourne<br> Exhibit Opening Night
-            </span>  
-              </div>
+                Sealife Melbourne<br>Exhibit Opening Night
+            </span>
+        </div>
         <div class="image-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-4.png" alt="Cultural Celebrations">
             <span class="image-overlay">
-            Ningaloo, Exmouth<br> Solar Eclipse/Dark Sky Festival
-            </span>  
-              </div>
+                Ningaloo, Exmouth<br>Solar Eclipse/Dark Sky Festival
+            </span>
+        </div>
         <div class="image-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-5.png" alt="Private Events">
             <span class="image-overlay">
-            Location<br> Darwin Festival
-            </span>    
-            </div>
+                Location<br>Darwin Festival
+            </span>
+        </div>
         <div class="image-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-6.png" alt="Special Occasions">
             <span class="image-overlay">
-            Viti Levu, Fiji<br> Private Celebration
-            </span>   
-             </div>
+                Viti Levu, Fiji<br>Private Celebration
+            </span>
+        </div>
     </div>
 </section>
 
@@ -123,7 +91,6 @@ get_header(); ?>
         <a href="/contact" class="enquire-button">Enquire Now</a>
     </div>
     <div class="additional-images">
-        
         <div class="image-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/corporateEvent.png" alt="Corporate Shows">
             <span class="image-overlay">Corporate Events</span>
