@@ -141,10 +141,9 @@ body {
 
 .footer-collaborators h3 {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 1.5rem;
+    font-size: 35px;
     font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
 }
 
 .collaborator-icons {
@@ -152,17 +151,22 @@ body {
     justify-content: center;
     flex-wrap: wrap;
     gap: 1.5rem;
+    padding: 0 190px;
 }
 
 .collaborator-icons a {
     display: block;
+    width: 100px;
+    height: 80px;
 }
 
 .collaborator-icons img {
-    height: 40px;
-    width: auto;
+    height: 80px;
+    width: 100px;
     filter: grayscale(100%);
     transition: filter 0.3s ease;
+    opacity: 1px;
+    object-fit: contain;
 }
 
 .collaborator-icons img:hover {
@@ -175,7 +179,7 @@ body {
 }
 
 .footer-logo img {
-    height: 60px;
+    height: 90px;
     width: auto;
 }
 
@@ -187,6 +191,7 @@ body {
 .footer-address p {
     margin: 0.5rem 0;
     font-size: 0.9rem;
+    letter-spacing: 1.8px;
 }
 
 .footer-address a {
@@ -243,6 +248,7 @@ body {
     font-size: 1rem;
     text-transform: uppercase;
     transition: color 0.3s ease;
+    letter-spacing: 3.75px
 }
 
 .footer-menu a:hover {
@@ -258,6 +264,7 @@ body {
     font-family: 'Titillium Web', sans-serif;
     font-size: 1.2rem;
     margin-bottom: 1.5rem;
+    letter-spacing: 2.2px;
 }
 
 .subscribe-form {
@@ -274,7 +281,10 @@ body {
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: white;
-    width: 200px;
+    width: 356px;
+    border-radius: 9px;
+    font-style: italic;
+
 }
 
 .subscribe-input::placeholder {
@@ -285,6 +295,9 @@ body {
     font-size: 0.8rem;
     color: rgba(255, 255, 255, 0.7);
     margin-bottom: 1rem;
+    letter-spacing: 1.8px;
+    text-align: center;
+    font-style: italic;
 }
 
 .signup-button {
@@ -297,6 +310,7 @@ body {
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    border-radius: 9px;
 }
 
 .signup-button:hover {
@@ -306,7 +320,7 @@ body {
 .footer-divider {
     width: 80%;
     height: 1px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: #707070;
     margin: 2rem auto;
 }
 
@@ -317,6 +331,9 @@ body {
 .footer-copyright p {
     margin: 0;
     font-size: 0.9rem;
+    font-style: italic;
+    color: grey;
+    letter-spacing: 2.2px;
 }
 
 /* Responsive adjustments */
