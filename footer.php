@@ -46,7 +46,6 @@
             <li><a href="<?php echo home_url('/process'); ?>">PROCESS</a></li>
             <li><a href="<?php echo home_url('/journal'); ?>">JOURNAL</a></li>
             <li><a href="<?php echo home_url('/faq'); ?>">FAQ</a></li>
-            настаживание: 1
             <li><a href="<?php echo home_url('/contact'); ?>">CONTACT</a></li>
         </ul>
     </div>

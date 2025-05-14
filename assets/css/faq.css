@@ -41,7 +41,7 @@
     margin-bottom: 20px;
     max-width: 1364px;
     text-transform: uppercase;
-    margin-top: -100px;
+    margin-top: -155px;
 }
 
 .hero-content p {
@@ -102,19 +102,20 @@
     font-family: 'Titillium Web', sans-serif;
     font-style: normal;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 30px;
     line-height: 40px;
     letter-spacing: 3.5px;
     color: #FFFFFF;
     text-align: left;
-    text-transform: capitalize;
     margin: 0;
 }
 
 .dropdown-icon {
-    font-size: 24px;
+    font-size: 34px;
     color: #FFFFFF;
     transition: transform 0.3s ease;
+    margin-left: 15px;
+    transform-origin: center;
 }
 
 .dropdown-content {
@@ -152,22 +153,24 @@
 
 .cta-content h2 {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 2rem;
+    font-size: 35px;
     font-weight: 700;
-    text-transform: uppercase;
+    letter-spacing: 3.5px;
+    /* text-transform: uppercase; */
     margin-bottom: 1.5rem;
 }
 
 .cta-content .enquire-button {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 1rem;
-    text-transform: uppercase;
+    font-size: 29px;
     color: white;
     background-color: transparent;
     border: 2px solid white;
-    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+    padding: 10px 27px;
     text-decoration: none;
     border-radius: 20px;
+    letter-spacing: 2.9px;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -208,11 +211,10 @@
     color: white;
     padding: 0.5rem 1rem;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 700;
-    text-transform: uppercase;
+    letter-spacing: 3.5px;
     text-align: center;
-    border-radius: 5px;
     white-space: nowrap;
 }
 
@@ -273,7 +275,7 @@
 
     .additional-images {
         flex-direction: column;
-        margin-top: 50px;
+        /* margin-top: 50px; */
     }
 
     .additional-images .image-wrapper {
@@ -337,7 +339,7 @@
 
     .additional-images {
         flex-wrap: wrap;
-        margin-top: 70px;
+        /* margin-top: 70px; */
     }
 
     .additional-images .image-wrapper {
@@ -347,6 +349,7 @@
 
     .additional-images .image-overlay {
         font-size: 1.1rem;
+        padding: 0.4rem 0.9rem;
     }
 }
 
@@ -404,6 +407,10 @@
 
     .additional-images .image-wrapper {
         width: 23%;
-        height: 250px;
+        height: 350px;
+    }
+
+    .additional-images .image-overlay {
+        font-size: 1.2rem;
     }
 }
