@@ -8,7 +8,7 @@
 
 <footer class="site-footer">
     <div class="footer-collaborators">
-        <h3>Our Collaborators</h3>
+        <h3>Our Collaborations</h3>
         <div class="collaborator-icons">
             <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-1.png" alt="Collaborator 1"></a>
             <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-2.png" alt="Collaborator 2"></a>
