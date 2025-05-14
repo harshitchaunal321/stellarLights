@@ -790,17 +790,17 @@ input[type="button"] {
     .menu-toggle {
         display: block;
         order: 2;
-        margin-top: 60px;
+        margin-top: 40px;
     }
 
     .main-nav {
         position: fixed;
-        top: 0;
+        top: -40px;
         right: -100%;
         width: 80%;
         max-width: 300px;
         height: 100vh;
-        background-color: rgba(0, 0, 0, 0.95);
+        /* background-color: rgba(0, 0, 0, 0.95); */
         transition: right 0.3s ease;
         z-index: 1000;
         padding-top: 100px;
@@ -824,11 +824,6 @@ input[type="button"] {
         font-size: 18px;
         padding: 10px 0;
         display: block;
-    }
-
-    /* Logo adjustment for mobile */
-    .logo img {
-        height: 150px !important;
     }
 
     /* Hamburger animation when menu is open */
@@ -856,5 +851,77 @@ input[type="button"] {
 
     .header-right {
         position: static;
+    }
+}
+
+/* Medium screens (768px to 992px) - iPad portrait/landscape */
+@media (min-width: 768px) and (max-width: 992px) {
+    .header-container {
+        padding: 20px 5%;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .logo img {
+        height: 120px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-top: 0;
+        margin-left: 20px;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 60%;
+        max-width: 400px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.98);
+        padding-top: 140px;
+    }
+
+    .nav-menu li {
+        margin: 20px 0;
+    }
+
+    .nav-menu a {
+        font-size: 22px;
+        padding: 12px 0;
+    }
+}
+
+/* Large tablets (992px to 1024px) */
+@media (min-width: 993px) and (max-width: 1024px) {
+    .header-container {
+        max-width: 95%;
+    }
+
+    .nav-menu a {
+        font-size: 18px;
+        padding: 0.5rem 0.8rem;
+        margin-left: 8px;
+        letter-spacing: 2.75px;
+    }
+
+    .logo img {
+        height: 140px;
+    }
+}
+
+/* Adjustments for landscape mobile devices */
+@media (max-width: 992px) and (orientation: landscape) {
+    .main-nav {
+        padding-top: 80px;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .logo img {
+        height: 100px;
     }
 }

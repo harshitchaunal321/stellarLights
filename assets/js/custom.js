@@ -55,21 +55,11 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+// Update your custom.js with this responsive handling
 jQuery(document).ready(function ($) {
-    // Fixed header on scroll
-    const header = $('.fixed-header');
-    const headerHeight = header.outerHeight();
-
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > headerHeight) {
-            header.addClass('scrolled');
-        } else {
-            header.removeClass('scrolled');
-        }
-    });
-
-    // Mobile menu toggle
-    $('.menu-toggle').click(function () {
+    // Handle menu toggle for all mobile/tablet sizes
+    $('.menu-toggle').click(function (e) {
+        e.stopPropagation();
         $(this).toggleClass('active');
         $('.main-nav').toggleClass('active');
         $('body').toggleClass('menu-open');
@@ -77,19 +67,36 @@ jQuery(document).ready(function ($) {
 
     // Close menu when clicking on a link
     $('.nav-menu a').click(function () {
-        if ($(window).width() <= 992) {
+        if ($(window).width() <= 1024) {
             $('.menu-toggle').removeClass('active');
             $('.main-nav').removeClass('active');
             $('body').removeClass('menu-open');
         }
     });
 
-    // Close menu when clicking outside
-    $(document).click(function (e) {
-        if (!$(e.target).closest('.main-nav, .menu-toggle').length) {
-            $('.menu-toggle').removeClass('active');
-            $('.main-nav').removeClass('active');
-            $('body').removeClass('menu-open');
+    // Responsive logo sizing
+    function adjustHeader() {
+        const width = $(window).width();
+
+        if (width <= 480) {
+            // Small mobile
+            $('.logo img').css('height', '80px');
+        } else if (width <= 768) {
+            // Larger mobile
+            $('.logo img').css('height', '100px');
+        } else if (width <= 992) {
+            // iPad portrait
+            $('.logo img').css('height', '120px');
+        } else if (width <= 1024) {
+            // iPad landscape
+            $('.logo img').css('height', '140px');
+        } else {
+            // Desktop
+            $('.logo img').css('height', '158px');
         }
-    });
+    }
+
+    // Run on load and resize
+    adjustHeader();
+    $(window).resize(adjustHeader);
 });
