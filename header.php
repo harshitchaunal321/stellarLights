@@ -7,24 +7,37 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> style="background-color: black;">
-    <header class="stellar-header">
+    <header class="stellar-header fixed-header">
         <div class="header-container">
-            <!-- Logo -->
-            <div class="logo">
-                <a href="<?php echo esc_url(home_url('/')); ?>">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Stellar Lights Logo" style="height: 200px;">
-                </a>
+            <div class="header-left">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="<?php echo esc_url(home_url('/')); ?>">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Stellar Lights Logo" style="height: 158px;">
+                    </a>
+                </div>
             </div>
-            <!-- Navigation Menu -->
-            <nav class="main-nav">
-                <?php
-                wp_nav_menu(array(
-                    'theme_location' => 'primary',
-                    'menu_class' => 'nav-menu',
-                    'container' => false,
-                    'fallback_cb' => false,
-                ));
-                ?>
-            </nav>
+            
+            <div class="header-right">
+                <!-- Mobile Menu Toggle -->
+                <button class="menu-toggle" aria-label="Mobile Menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                
+                <!-- Navigation Menu -->
+                <nav class="main-nav">
+                    <?php
+                    wp_nav_menu(array(
+                        'theme_location' => 'primary',
+                        'menu_class' => 'nav-menu',
+                        'container' => false,
+                        'fallback_cb' => false,
+                        'walker' => new Stellar_Lights_Menu_Walker()
+                    ));
+                    ?>
+                </nav>
+            </div>
         </div>
     </header>

@@ -60,6 +60,7 @@ body {
 
 .nav-menu li {
     position: relative;
+    margin-top: -30px;
 }
 
 .nav-menu a {
@@ -675,5 +676,185 @@ body {
 
     .footer-menu a {
         font-size: 1rem;
+    }
+}
+
+/* Fixed Header Styles */
+.fixed-header {
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+/* Scrolled Header Styles */
+.fixed-header.scrolled {
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Active Menu Item */
+.nav-menu li.active a {
+    font-weight: 700;
+    position: relative;
+}
+
+.nav-menu li.active a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 2px;
+}
+
+/* Custom Cursor Styles */
+body {
+    cursor: none !important;
+}
+
+.custom-cursor {
+    position: fixed;
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease;
+}
+
+.custom-cursor.active {
+    transform: translate(-50%, -50%) scale(1.5);
+}
+
+html,
+body,
+a,
+button,
+input[type="submit"],
+input[type="button"] {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 12 12"><circle cx="6" cy="6" r="6" fill="white"/></svg>') 6 6, auto !important;
+}
+
+/* Header Layout */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo Styles */
+.logo img {
+    height: 158px;
+    transition: height 0.3s ease;
+}
+
+/* Mobile Menu Toggle Styles */
+.menu-toggle {
+    display: none;
+    /* Hidden by default on desktop */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 15px;
+    z-index: 1001;
+    margin-left: 20px;
+}
+
+.hamburger {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Mobile menu styles */
+@media (max-width: 992px) {
+    .menu-toggle {
+        display: block;
+        order: 2;
+        margin-top: 60px;
+    }
+
+    .main-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.95);
+        transition: right 0.3s ease;
+        z-index: 1000;
+        padding-top: 100px;
+        overflow-y: auto;
+    }
+
+    .main-nav.active {
+        right: 0;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-menu li {
+        margin: 15px 0;
+    }
+
+    .nav-menu a {
+        font-size: 18px;
+        padding: 10px 0;
+        display: block;
+    }
+
+    /* Logo adjustment for mobile */
+    .logo img {
+        height: 150px !important;
+    }
+
+    /* Hamburger animation when menu is open */
+    .menu-toggle.active .hamburger:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .menu-toggle.active .hamburger:nth-child(2) {
+        opacity: 0;
+    }
+
+    .menu-toggle.active .hamburger:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Body no-scroll when menu is open */
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    /* Header adjustments for mobile */
+    .header-container {
+        padding: 15px 0;
+    }
+
+    .header-right {
+        position: static;
     }
 }
