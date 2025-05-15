@@ -4,7 +4,15 @@ Template Name: Home Page
 */
 get_header(); ?>
 
-<div class="hero-section" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/homePageBGImage.png');">
+<div class="hero-section">
+    <div class="hero-video">
+        <iframe 
+            src="https://www.youtube.com/embed/eEjNUWMfuD4?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&modestbranding=1&playlist=eEjNUWMfuD4" 
+            frameborder="0" 
+            allow="autoplay; muted" 
+            allowfullscreen
+        ></iframe>
+    </div>
     <div class="hero-content">
         <h1>We are Australia’s Premier Drone Show Storytellers</h1>
         <p>Stellar Lights crafts exceptional drone light shows across Australia, blending captivating creative storytelling with advanced drone technology. From large-scale public celebrations to corporate events, our bespoke drone shows offer unique, immersive experiences designed to captivate and inspire.</p>

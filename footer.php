@@ -9,19 +9,32 @@
 <footer class="site-footer">
     <div class="footer-collaborators">
         <h3>Our Collaborations</h3>
-        <div class="collaborator-icons">
-            <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-1.png" alt="Collaborator 1"></a>
-            <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-2.png" alt="Collaborator 2"></a>
-            <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-3.png" alt="Collaborator 3"></a>
-            <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-4.png" alt="Collaborator 4"></a>
-            <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-5.png" alt="Collaborator 5"></a>
-            <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-6.png" alt="Collaborator 6"></a>
-            <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-7.png" alt="Collaborator 7"></a>
-            <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-8.png" alt="Collaborator 8"></a>
-            <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-9.png" alt="Collaborator 9"></a>
+        <div class="collaborator-carousel">
+            <div class="collaborator-track">
+                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-1.png" alt="Collaborator 1" class="collaborator-logo" data-height="40" data-width="70"></a>
+                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-2.png" alt="Collaborator 2" class="collaborator-logo" data-height="70" data-width="100"></a>
+                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-3.png" alt="Collaborator 3" class="collaborator-logo" data-height="50" data-width="80"></a>
+                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-4.png" alt="Collaborator 4" class="collaborator-logo" data-height="60" data-width="90"></a>
+                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-5.png" alt="Collaborator 5" class="collaborator-logo" data-height="65" data-width="95"></a>
+                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-6.png" alt="Collaborator 6" class="collaborator-logo" data-height="55" data-width="85"></a>
+                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-7.png" alt="Collaborator 7" class="collaborator-logo" data-height="60" data-width="90"></a>
+                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-8.png" alt="Collaborator 8" class="collaborator-logo" data-height="70" data-width="100"></a>
+                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-9.png" alt="Collaborator 9" class="collaborator-logo" data-height="50" data-width="80"></a>
+                <!-- Duplicate items for seamless looping -->
+                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-1.png" alt="Collaborator 1" class="collaborator-logo" data-height="40" data-width="70"></a>
+                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-2.png" alt="Collaborator 2" class="collaborator-logo" data-height="70" data-width="100"></a>
+                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-3.png" alt="Collaborator 3" class="collaborator-logo" data-height="50" data-width="80"></a>
+                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-4.png" alt="Collaborator 4" class="collaborator-logo" data-height="60" data-width="90"></a>
+                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-5.png" alt="Collaborator 5" class="collaborator-logo" data-height="65" data-width="95"></a>
+                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-6.png" alt="Collaborator 6" class="collaborator-logo" data-height="55" data-width="85"></a>
+                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-7.png" alt="Collaborator 7" class="collaborator-logo" data-height="60" data-width="90"></a>
+                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-8.png" alt="Collaborator 8" class="collaborator-logo" data-height="70" data-width="100"></a>
+                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-9.png" alt="Collaborator 9" class="collaborator-logo" data-height="50" data-width="80"></a>
+            </div>
         </div>
     </div>
 
+    <!-- Rest of your footer code remains the same -->
     <div class="footer-logo">
         <img src="<?php echo get_template_directory_uri(); ?>/assets/images/logo.png" alt="Stellar Lights Logo">
     </div>
@@ -46,7 +59,6 @@
             <li><a href="<?php echo home_url('/process'); ?>">PROCESS</a></li>
             <li><a href="<?php echo home_url('/journal'); ?>">JOURNAL</a></li>
             <li><a href="<?php echo home_url('/faq'); ?>">FAQ</a></li>
-            настаживание: 1
             <li><a href="<?php echo home_url('/contact'); ?>">CONTACT</a></li>
         </ul>
     </div>

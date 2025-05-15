@@ -100,3 +100,16 @@ jQuery(document).ready(function ($) {
     adjustHeader();
     $(window).resize(adjustHeader);
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const logos = document.querySelectorAll('.collaborator-logo');
+
+    logos.forEach(logo => {
+        const height = logo.getAttribute('data-height');
+        const width = logo.getAttribute('data-width');
+
+        logo.style.height = `${height}px`;
+        logo.style.width = `${width}px`;
+        logo.style.maxWidth = '100%';
+    });
+});
