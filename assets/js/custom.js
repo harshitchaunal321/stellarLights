@@ -112,4 +112,23 @@ document.addEventListener('DOMContentLoaded', function () {
         logo.style.width = `${width}px`;
         logo.style.maxWidth = '100%';
     });
+    // Set all inputs to have empty placeholder initially
+    document.querySelectorAll('input, textarea').forEach(input => {
+        input.setAttribute('placeholder', ' ');
+    });
+
+    // Improve date input handling
+    const dateInput = document.getElementById('date');
+    if (dateInput) {
+        dateInput.addEventListener('focus', function () {
+            this.type = 'date';
+            this.showPicker();
+        });
+
+        dateInput.addEventListener('blur', function () {
+            if (!this.value) {
+                this.type = 'text';
+            }
+        });
+    }
 });
