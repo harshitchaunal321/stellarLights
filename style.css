@@ -29,6 +29,7 @@ body {
     left: 0;
     z-index: 1000;
     padding: 2rem 0;
+    margin-top: 10px;
 }
 
 .header-container {
@@ -149,43 +150,61 @@ body {
     font-family: 'Titillium Web', sans-serif;
     font-size: 35px;
     font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 3rem;
 }
 
-.collaborator-icons {
+/* Collaborator Carousel Styles */
+.collaborator-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.collaborator-track {
     display: flex;
+    align-items: center;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+    will-change: transform;
+}
+
+.collaborator-track:hover {
+    animation-play-state: paused;
+}
+
+.collaborator-carousel a {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    /* Reduced from 1rem to bring icons closer */
-    max-width: 100%;
-    margin-bottom: 5rem;
+    margin: 0 15px;
+    flex-shrink: 0;
 }
 
-.collaborator-icons a {
-    display: block;
-    flex: 0 0 9.5%;
-    /* Reduced from 10% to 9.5% (5% reduction) */
-}
-
-.collaborator-icons img {
-    height: 40px;
-    width: auto;
-    max-width: 100%;
-    filter: grayscale(100%);
-    transition: filter 0.3s ease;
-    opacity: 1px;
+.collaborator-logo {
     object-fit: contain;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+    opacity: 0.8;
 }
 
-.collaborator-icons img:hover {
+.collaborator-logo:hover {
     filter: grayscale(0%);
+    opacity: 1;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .footer-logo {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 0.2rem;
 }
 
 .footer-logo img {
@@ -199,8 +218,7 @@ body {
 }
 
 .footer-address p {
-    margin: 0.5rem 0;
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     letter-spacing: 1.8px;
 }
 
@@ -272,7 +290,7 @@ body {
 
 .subscribe-text {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin-bottom: 1.5rem;
     letter-spacing: 2.2px;
 }
@@ -294,7 +312,6 @@ body {
     width: 356px;
     border-radius: 9px;
     font-style: italic;
-
 }
 
 .subscribe-input::placeholder {
@@ -311,16 +328,16 @@ body {
 }
 
 .signup-button {
-    background-color: #fff;
-    color: black;
     font-family: 'Titillium Web', sans-serif;
     font-size: 1rem;
     text-transform: uppercase;
-    padding: 0.5rem 2rem;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    border-radius: 9px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 .signup-button:hover {
@@ -340,7 +357,7 @@ body {
 
 .footer-copyright p {
     margin: 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-style: italic;
     color: grey;
     letter-spacing: 2.2px;
@@ -418,20 +435,12 @@ body {
         font-size: 1.2rem;
     }
 
-    .collaborator-icons {
-        gap: 0.8rem;
-        /* Reduced from 1rem */
-        flex-direction: column;
+    .collaborator-track {
+        animation: scroll 30s linear infinite;
     }
 
-    .collaborator-icons a {
-        flex: 0 0 100%;
-        text-align: center;
-    }
-
-    .collaborator-icons img {
-        height: 40px;
-        max-width: 150px;
+    .collaborator-carousel a {
+        margin: 0 10px;
     }
 
     .footer-logo img {
@@ -544,21 +553,12 @@ body {
         font-size: 1.3rem;
     }
 
-    .collaborator-icons {
-        gap: 0.8rem;
-        /* Reduced from 1rem */
-        flex-wrap: wrap;
+    .collaborator-track {
+        animation: scroll 35s linear infinite;
     }
 
-    .collaborator-icons a {
-        flex: 0 0 46%;
-        /* Reduced from 48% (approx. 5% reduction) */
-        text-align: center;
-    }
-
-    .collaborator-icons img {
-        height: 35px;
-        max-width: 120px;
+    .collaborator-carousel a {
+        margin: 0 12px;
     }
 
     .footer-logo img {
@@ -612,19 +612,12 @@ body {
         max-width: 90%;
     }
 
-    .collaborator-icons {
-        gap: 0.8rem;
-        /* Reduced from 1rem */
+    .collaborator-track {
+        animation: scroll 35s linear infinite;
     }
 
-    .collaborator-icons a {
-        flex: 0 0 22%;
-        /* Reduced from 24% (approx. 5% reduction) */
-    }
-
-    .collaborator-icons img {
-        height: 35px;
-        max-width: 100px;
+    .collaborator-carousel a {
+        margin: 0 15px;
     }
 
     .footer-logo img {
@@ -655,19 +648,12 @@ body {
         max-width: 90%;
     }
 
-    .collaborator-icons {
-        gap: 0.8rem;
-        /* Reduced from 1rem */
+    .collaborator-track {
+        animation: scroll 40s linear infinite;
     }
 
-    .collaborator-icons a {
-        flex: 0 0 9.5%;
-        /* Reduced from 10% (5% reduction) */
-    }
-
-    .collaborator-icons img {
-        height: 40px;
-        max-width: 120px;
+    .collaborator-carousel a {
+        margin: 0 20px;
     }
 
     .footer-logo img {
