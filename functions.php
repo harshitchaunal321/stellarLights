@@ -78,6 +78,14 @@ function stellar_lights_enqueue_scripts() {
         '1.0.1',
         true
     );
+
+    wp_enqueue_script(
+        'stellar-lights-gradient-scroll',
+        get_template_directory_uri() . '/assets/js/gradient-scroll.js',
+        array(),
+        '1.0.0',
+        true
+    );
 }
 add_action('wp_enqueue_scripts', 'stellar_lights_enqueue_scripts');
 

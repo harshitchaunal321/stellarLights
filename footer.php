@@ -12,24 +12,23 @@
         <div class="collaborator-carousel">
             <div class="collaborator-track">
                 <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-1.png" alt="Collaborator 1" class="collaborator-logo" data-height="40" data-width="70"></a>
-                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-2.png" alt="Collaborator 2" class="collaborator-logo" data-height="70" data-width="100"></a>
-                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-3.png" alt="Collaborator 3" class="collaborator-logo" data-height="50" data-width="80"></a>
-                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-4.png" alt="Collaborator 4" class="collaborator-logo" data-height="60" data-width="90"></a>
-                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-5.png" alt="Collaborator 5" class="collaborator-logo" data-height="65" data-width="95"></a>
-                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-6.png" alt="Collaborator 6" class="collaborator-logo" data-height="55" data-width="85"></a>
-                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-7.png" alt="Collaborator 7" class="collaborator-logo" data-height="60" data-width="90"></a>
-                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-8.png" alt="Collaborator 8" class="collaborator-logo" data-height="70" data-width="100"></a>
-                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-9.png" alt="Collaborator 9" class="collaborator-logo" data-height="50" data-width="80"></a>
+                <a href="https://www.amway.com.au/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-2.png" alt="Collaborator 2" class="collaborator-logo" data-height="70" data-width="100"></a>
+                <a href="https://www.visitsealife.com/melbourne/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-3.png" alt="Collaborator 4" class="collaborator-logo" data-height="60" data-width="90"></a>
+                <a href="https://www.perthfestival.com.au/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-4.png" alt="Collaborator 5" class="collaborator-logo" data-height="65" data-width="95"></a>
+                <a href="https://fremantlebiennale.com.au/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-5.png" alt="Collaborator 6" class="collaborator-logo" data-height="55" data-width="85"></a>
+                <a href="https://www.wanneroo.wa.gov.au/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-6.png" alt="Collaborator 7" class="collaborator-logo" data-height="60" data-width="90"></a>
+                <a href="https://www.fremantle.wa.gov.au/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-7.png" alt="Collaborator 8" class="collaborator-logo" data-height="70" data-width="100"></a>
+                <a href="https://aronuiartsfestival.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-8.png" alt="Collaborator 9" class="collaborator-logo" data-height="50" data-width="80"></a>
+                <a href="https://www.darwinfestival.org.au/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-9.png" alt="Collaborator 9" class="collaborator-logo" data-height="50" data-width="80"></a>
                 <!-- Duplicate items for seamless looping -->
                 <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-1.png" alt="Collaborator 1" class="collaborator-logo" data-height="40" data-width="70"></a>
-                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-2.png" alt="Collaborator 2" class="collaborator-logo" data-height="70" data-width="100"></a>
-                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-3.png" alt="Collaborator 3" class="collaborator-logo" data-height="50" data-width="80"></a>
-                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-4.png" alt="Collaborator 4" class="collaborator-logo" data-height="60" data-width="90"></a>
-                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-5.png" alt="Collaborator 5" class="collaborator-logo" data-height="65" data-width="95"></a>
-                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-6.png" alt="Collaborator 6" class="collaborator-logo" data-height="55" data-width="85"></a>
-                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-7.png" alt="Collaborator 7" class="collaborator-logo" data-height="60" data-width="90"></a>
-                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-8.png" alt="Collaborator 8" class="collaborator-logo" data-height="70" data-width="100"></a>
-                <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-9.png" alt="Collaborator 9" class="collaborator-logo" data-height="50" data-width="80"></a>
+                <a href="https://www.amway.com.au/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-2.png" alt="Collaborator 2" class="collaborator-logo" data-height="70" data-width="100"></a>                
+                <a href="https://www.perthfestival.com.au/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-4.png" alt="Collaborator 5" class="collaborator-logo" data-height="65" data-width="95"></a>
+                <a href="https://fremantlebiennale.com.au/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-5.png" alt="Collaborator 6" class="collaborator-logo" data-height="55" data-width="85"></a>
+                <a href="https://www.wanneroo.wa.gov.au/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-6.png" alt="Collaborator 7" class="collaborator-logo" data-height="60" data-width="90"></a>
+                <a href="https://www.fremantle.wa.gov.au/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-7.png" alt="Collaborator 8" class="collaborator-logo" data-height="70" data-width="100"></a>
+                <a href="https://aronuiartsfestival.com/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-8.png" alt="Collaborator 9" class="collaborator-logo" data-height="50" data-width="80"></a>
+                <a href="https://www.darwinfestival.org.au/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/collaborator-9.png" alt="Collaborator 9" class="collaborator-logo" data-height="50" data-width="80"></a>
             </div>
         </div>
     </div>
