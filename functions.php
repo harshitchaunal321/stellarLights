@@ -15,7 +15,7 @@ function stellar_lights_enqueue_scripts() {
         'stellar-lights-style',
         get_stylesheet_uri(),
         array(),
-        '1.0.0'
+        filemtime(get_template_directory() . '/style.css')
     );
 
     // Enqueue homepage stylesheet for front-page.php or page-home.php
@@ -24,8 +24,9 @@ function stellar_lights_enqueue_scripts() {
             'stellar-lights-home-style',
             get_template_directory_uri() . '/assets/css/home.css',
             array('stellar-lights-style'),
-            '1.0.3'
+            filemtime(get_template_directory() . '/assets/css/home.css')
         );
+        // Enqueue carousel script for home page
     }
 
     // Enqueue FAQ stylesheet for page-faq.php
@@ -34,11 +35,13 @@ function stellar_lights_enqueue_scripts() {
             'stellar-lights-faq-style',
             get_template_directory_uri() . '/assets/css/faq.css',
             array('stellar-lights-style'),
-            '1.0.1'
+            filemtime(get_template_directory() . '/assets/css/faq.css')
         );
-        error_log('Enqueuing faq.css for FAQ page.');
-    } else {
-        error_log('Not enqueuing faq.css - not using page-faq.php template.');
+        if (defined('WP_DEBUG') && WP_DEBUG) {
+            error_log('Stellar Lights: Enqueuing faq.css for FAQ page.');
+        }
+    } elseif (defined('WP_DEBUG') && WP_DEBUG) {
+        error_log('Stellar Lights: Not enqueuing faq.css - not using page-faq.php template.');
     }
 
     // Enqueue Our Story stylesheet for page-our-story.php
@@ -47,19 +50,23 @@ function stellar_lights_enqueue_scripts() {
             'stellar-lights-our-story-style',
             get_template_directory_uri() . '/assets/css/our-story.css',
             array('stellar-lights-style'),
-            '1.0.0'
+            filemtime(get_template_directory() . '/assets/css/our-story.css')
         );
-      // Enqueue FAQ stylesheet for page-contact.php
+    }
+
+    // Enqueue Contact stylesheet for page-contact.php
     if (is_page_template('page-contact.php')) {
         wp_enqueue_style(
             'stellar-lights-contact-style',
             get_template_directory_uri() . '/assets/css/contact.css',
             array('stellar-lights-style'),
-            '1.0.1'
+            filemtime(get_template_directory() . '/assets/css/contact.css')
         );
-        error_log('Enqueuing contact.css for contact page.');
-    } else {
-        error_log('Not enqueuing contact.css - not using page-contact.php template.');
+        if (defined('WP_DEBUG') && WP_DEBUG) {
+            error_log('Stellar Lights: Enqueuing contact.css for Contact page.');
+        }
+    } elseif (defined('WP_DEBUG') && WP_DEBUG) {
+        error_log('Stellar Lights: Not enqueuing contact.css - not using page-contact.php template.');
     }
 
     // Enqueue Google Fonts (Titillium Web) with weights 400 and 700
@@ -75,15 +82,16 @@ function stellar_lights_enqueue_scripts() {
         'stellar-lights-custom-js',
         get_template_directory_uri() . '/assets/js/custom.js',
         array('jquery'),
-        '1.0.1',
+        filemtime(get_template_directory() . '/assets/js/custom.js'),
         true
     );
 
+    // Enqueue gradient scroll script
     wp_enqueue_script(
         'stellar-lights-gradient-scroll',
         get_template_directory_uri() . '/assets/js/gradient-scroll.js',
         array(),
-        '1.0.0',
+        filemtime(get_template_directory() . '/assets/js/gradient-scroll.js'),
         true
     );
 }
@@ -105,7 +113,10 @@ add_action('init', 'stellar_lights_register_menus');
  * Custom Menu Walker to add active class and other enhancements
  */
 class Stellar_Lights_Menu_Walker extends Walker_Nav_Menu {
-    public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
+    public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
+        // Ensure $args is an object
+        $args = is_object($args) ? $args : new stdClass();
+        
         $classes = empty($item->classes) ? array() : (array) $item->classes;
         $classes[] = 'menu-item-' . $item->ID;
         
@@ -124,11 +135,13 @@ class Stellar_Lights_Menu_Walker extends Walker_Nav_Menu {
         $attributes .= !empty($item->xfn) ? ' rel="' . esc_attr($item->xfn) . '"' : '';
         $attributes .= !empty($item->url) ? ' href="' . esc_attr($item->url) . '"' : '';
         
-        $item_output = $args->before;
+        $item_output = !empty($args->before) ? $args->before : '';
         $item_output .= '<a' . $attributes . '>';
-        $item_output .= $args->link_before . apply_filters('the_title', $item->title, $item->ID) . $args->link_after;
+        $item_output .= !empty($args->link_before) ? $args->link_before : '';
+        $item_output .= apply_filters('the_title', $item->title, $item->ID);
+        $item_output .= !empty($args->link_after) ? $args->link_after : '';
         $item_output .= '</a>';
-        $item_output .= $args->after;
+        $item_output .= !empty($args->after) ? $args->after : '';
         
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
     }
@@ -185,3 +198,4 @@ function stellar_lights_body_class($classes) {
     return $classes;
 }
 add_filter('body_class', 'stellar_lights_body_class');
+?>

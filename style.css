@@ -12,13 +12,50 @@ Tags: custom, light, responsive
 */
 
 /* Base styles */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.content-section {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem auto;
+    max-width: 1200px;
+    position: relative;
+    z-index: 2;
+}
+
+.main-content {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 1200px;
+    border-radius: 8px;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, black 0%, var(--gradient-end-color, #333) 100%);
+    background: linear-gradient(135deg,
+            var(--gradient-corner, black) 0%,
+            var(--gradient-left, black) 25%,
+            var(--gradient-mid, black) 50%,
+            var(--gradient-right, black) 75%,
+            var(--gradient-corner, black) 100%);
     color: white;
     font-family: 'Titillium Web', sans-serif;
-    transition: --gradient-end-color 0.3s ease;
+    transition: --gradient-left 0.5s ease,
+        --gradient-mid 0.5s ease,
+        --gradient-right 0.5s ease,
+        --gradient-corner 0.5s ease;
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-size: 200% 200%;
+    background-position: bottom left;
 }
 
 /* Ensure sections with solid black backgrounds */
@@ -27,6 +64,9 @@ body {
 .cta-section,
 .site-footer {
     background-color: black;
+    position: relative;
+    /* Ensure they stay above the body gradient */
+    z-index: 1;
 }
 
 /* Header styles */
