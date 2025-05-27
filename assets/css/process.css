@@ -1,0 +1,568 @@
+/*
+ * Process Page Styles - Fixed Version
+ * Theme: Stellar Lights
+ */
+
+/* Hero Section */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: -70px;
+    padding-top: 100px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 90%;
+}
+
+.hero-content h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    max-width: 1364px;
+    margin-top: -155px;
+}
+
+.hero-content p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 1088px;
+    margin: 0 auto 30px;
+    text-align: center;
+    letter-spacing: 2.5px;
+}
+
+/* Photo Credit Container */
+.photo-credit-container {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    left: 0;
+}
+
+.photo-credit {
+    position: relative;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    color: white;
+    opacity: 0.8;
+    font-style: italic;
+    text-align: right;
+    margin-bottom: 15px;
+    padding-right: 80px;
+}
+
+.photo-credit-line {
+    width: 100%;
+    height: 1px;
+    background-color: #707070;
+    opacity: 0.4;
+}
+
+/* FAQ Dropdowns */
+.faq-dropdown {
+    position: relative;
+    width: 80%;
+    max-width: 1264px;
+    margin: 0 auto;
+    opacity: 1;
+    margin-bottom: 30px;
+}
+
+.dropdown-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-bottom: 1px solid #707070;
+    padding-bottom: 10px;
+}
+
+.dropdown-header h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    letter-spacing: 3.5px;
+    color: #FFFFFF;
+    text-align: left;
+    margin: 0;
+}
+
+.dropdown-icon {
+    font-size: 34px;
+    color: #FFFFFF;
+    transition: transform 0.3s ease;
+    margin-left: 15px;
+    transform-origin: center;
+}
+
+.dropdown-content {
+    display: none;
+    padding-top: 20px;
+}
+
+.dropdown-content p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.dropdown-content a {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Call to Action Section */
+.cta-section {
+    background-color: black;
+    padding: 4rem 0;
+    padding-bottom: 0;
+    text-align: center;
+    margin-top: 0;
+}
+
+.cta-content {
+    max-width: 60rem;
+    margin: 0 auto 2rem;
+}
+
+.cta-content h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    margin-bottom: 1.5rem;
+}
+
+.cta-content .enquire-button {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 29px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    font-weight: bold;
+    padding: 10px 27px;
+    text-decoration: none;
+    border-radius: 20px;
+    letter-spacing: 2.9px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-content .enquire-button:hover {
+    background-color: white;
+    border: 2px solid white;
+    color: black;
+}
+
+.additional-images {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.additional-images .image-wrapper {
+    width: 23%;
+    height: 250px;
+    position: relative;
+}
+
+.additional-images .image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+.additional-images .image-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    padding: 0.5rem 1rem;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+/* Process Content Section */
+.process-content-section {
+    background-color: #000;
+    color: #fff;
+    padding: 6rem 0;
+}
+
+.process-container {
+    max-width: 1264px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.process-intro {
+    margin-bottom: 4rem;
+}
+
+.process-intro p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 2.5px;
+    max-width: 1088px;
+    margin: 0 auto;
+}
+
+/* Interactive Process Sections */
+.interactive-process-section {
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.process-card {
+    background: #000;
+    border-radius: 114px;
+    padding: 2rem 3rem;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.process-card:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(255, 255, 255, 0.1);
+}
+
+.process-card.expanded {
+    background: #fff;
+    color: #000;
+    border-radius: 160px;
+    box-shadow: 0 25px 50px rgba(255, 255, 255, 0.15);
+    padding: 3rem 4rem;
+}
+
+.process-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    gap: 2rem;
+}
+
+.process-header>div:first-child {
+    flex: 1;
+}
+
+.process-header h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0 0 1rem 0;
+    transition: color 0.3s ease;
+}
+
+.short-description {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    letter-spacing: 1px;
+    margin: 0;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.process-card.expanded .short-description {
+    display: none;
+}
+
+/* Fixed Expand Icon Styling */
+.expand-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    flex-shrink: 0;
+    border: 2px solid #fff;
+    margin-top: 25px;
+}
+
+.expand-icon::before {
+    content: '>';
+    font-size: 2rem;
+    color: #000;
+    font-weight: 500;
+    transition: transform 0.4s ease;
+    transform: rotate(0deg);
+}
+
+/* Hover state for expand icon */
+.process-card:hover .expand-icon {
+    background: #4A4848;
+    border-color: #4A4848;
+}
+
+.process-card:hover .expand-icon::before {
+    color: #fff;
+}
+
+/* Expanded state for expand icon */
+.process-card.expanded .expand-icon {
+    background: #4A4848;
+    border-color: #4A4848;
+}
+
+.process-card.expanded .expand-icon::before {
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+/* Process Content Animation */
+.process-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 0;
+    margin-top: 0;
+    padding-top: 0;
+    will-change: max-height, opacity, margin-top, padding-top;
+}
+
+.process-card.expanded .process-content {
+    max-height: 500px;
+    opacity: 1;
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ddd;
+}
+
+.process-content p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 5vw;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+
+    .photo-credit {
+        padding-right: 50px;
+    }
+
+    .faq-dropdown {
+        width: 85%;
+    }
+
+    .dropdown-header h2 {
+        font-size: 30px;
+        letter-spacing: 3px;
+    }
+
+    .additional-images .image-wrapper {
+        width: 24%;
+        height: 200px;
+    }
+
+    .additional-images .image-overlay {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .process-card {
+        padding: 1.5rem 2rem;
+    }
+
+    .process-header {
+        gap: 1rem;
+    }
+
+    .process-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .short-description {
+        font-size: 1rem;
+    }
+
+    .expand-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .expand-icon::before {
+        font-size: 1.5rem;
+    }
+
+    .additional-images {
+        flex-wrap: wrap;
+    }
+
+    .additional-images .image-wrapper {
+        width: 48%;
+        height: 180px;
+    }
+
+    .additional-images .image-overlay {
+        font-size: 1.1rem;
+        padding: 0.4rem 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        margin-top: -5rem;
+        padding-top: 5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 8vw;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .photo-credit-container {
+        bottom: 60px;
+    }
+
+    .photo-credit {
+        padding-right: 20px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .faq-dropdown {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .dropdown-header h2 {
+        font-size: 20px;
+        line-height: 1.2;
+        letter-spacing: 2px;
+    }
+
+    .dropdown-icon {
+        font-size: 18px;
+    }
+
+    .dropdown-content p {
+        font-size: 14px;
+    }
+
+    .cta-section {
+        padding: 2rem 0;
+    }
+
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .process-card {
+        padding: 1rem 1.5rem;
+        border-radius: 30px;
+    }
+
+    .process-card.expanded {
+        border-radius: 40px;
+    }
+
+    .process-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .expand-icon {
+        align-self: flex-end;
+        width: 40px;
+        height: 40px;
+    }
+
+    .expand-icon::before {
+        font-size: 1.2rem;
+    }
+
+    .process-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .short-description {
+        font-size: 0.9rem;
+    }
+
+    .additional-images {
+        flex-direction: column;
+    }
+
+    .additional-images .image-wrapper {
+        width: 100%;
+        height: 150px;
+    }
+
+    .additional-images .image-overlay {
+        font-size: 1rem;
+        padding: 0.3rem 0.8rem;
+    }
+}

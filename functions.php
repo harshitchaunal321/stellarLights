@@ -69,6 +69,21 @@ function stellar_lights_enqueue_scripts() {
         error_log('Stellar Lights: Not enqueuing contact.css - not using page-contact.php template.');
     }
 
+    // Enqueue Process stylesheet for page-process.php
+    if (is_page_template('page-process.php')) {
+        wp_enqueue_style(
+            'stellar-lights-faq-style',
+            get_template_directory_uri() . '/assets/css/process.css',
+            array('stellar-lights-style'),
+            filemtime(get_template_directory() . '/assets/css/process.css')
+        );
+        if (defined('WP_DEBUG') && WP_DEBUG) {
+            error_log('Stellar Lights: Enqueuing process.css for Process page.');
+        }
+    } elseif (defined('WP_DEBUG') && WP_DEBUG) {
+        error_log('Stellar Lights: Not enqueuing process.css - not using page-process.php template.');
+    }
+
     // Enqueue Google Fonts (Titillium Web) with weights 400 and 700
     wp_enqueue_style(
         'stellar-lights-fonts',
