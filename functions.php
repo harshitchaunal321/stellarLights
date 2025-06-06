@@ -18,6 +18,22 @@ function stellar_lights_enqueue_scripts() {
         filemtime(get_template_directory() . '/style.css')
     );
 
+    // Enqueue header stylesheet
+    wp_enqueue_style(
+        'stellar-lights-header-style',
+        get_template_directory_uri() . '/assets/css/header.css',
+        array('stellar-lights-style'),
+        filemtime(get_template_directory() . '/assets/css/header.css')
+    );
+
+    // Enqueue footer stylesheet
+    wp_enqueue_style(
+        'stellar-lights-footer-style',
+        get_template_directory_uri() . '/assets/css/footer.css',
+        array('stellar-lights-style'),
+        filemtime(get_template_directory() . '/assets/css/footer.css')
+    );
+
     // Enqueue homepage stylesheet for front-page.php or page-home.php
     if (is_front_page() || is_page_template('page-home.php')) {
         wp_enqueue_style(

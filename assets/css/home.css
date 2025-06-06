@@ -69,7 +69,6 @@
 .enquire-button {
     font-family: 'Titillium Web', sans-serif;
     font-size: 1rem;
-    text-transform: uppercase;
     color: white;
     background-color: transparent;
     border: 1px solid white;
@@ -77,6 +76,8 @@
     text-decoration: none;
     border-radius: 20px;
     transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    /* Ensure proper centering */
 }
 
 .enquire-button:hover {
@@ -129,7 +130,6 @@
     font-family: 'Titillium Web', sans-serif;
     font-size: 2rem;
     font-weight: 700;
-    text-transform: uppercase;
     margin-bottom: 1rem;
 }
 
@@ -144,7 +144,6 @@
 .carousel-button {
     font-family: 'Titillium Web', sans-serif;
     font-size: 1rem;
-    text-transform: uppercase;
     color: white;
     background-color: transparent;
     border: 1px solid white;
@@ -212,7 +211,6 @@
     font-family: 'Titillium Web', sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
-    text-transform: uppercase;
     text-align: center;
     border-radius: 5px;
     white-space: nowrap;
@@ -252,7 +250,6 @@
     font-family: 'Titillium Web', sans-serif;
     font-size: 1.5rem;
     font-weight: 700;
-    text-transform: uppercase;
     margin-bottom: 1.5rem;
 }
 
@@ -294,8 +291,12 @@
     }
 
     .enquire-button {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
+        font-size: 1rem;
+        /* Slightly larger for better readability */
+        padding: 0.6rem 1.2rem;
+        /* Increased padding for better tap target */
+        border-radius: 15px;
+        /* Slightly smaller radius for a more compact look */
     }
 
     .carousel-section {
@@ -305,10 +306,16 @@
     .carousel-intro p {
         font-size: 0.9rem;
         max-width: 90%;
+        margin: 0 auto;
+        /* Center the paragraph horizontally */
+        text-align: center;
+        /* Ensure text is centered */
     }
 
     .carousel-wrapper {
         min-height: 12rem;
+        padding: 0 2.5rem;
+        /* Add padding to accommodate larger arrows */
     }
 
     .carousel-item h2 {
@@ -327,12 +334,23 @@
 
     .carousel-arrow {
         font-size: 1rem;
-        width: 2rem;
-        height: 2rem;
+        width: 2.5rem;
+        /* Slightly larger for better tap target */
+        height: 2.5rem;
+        border: 2px solid white;
+        background: rgba(0, 0, 0, 0.5);
+        /* Add semi-transparent background for better visibility */
+        color: white;
+    }
+
+    .carousel-arrow:hover {
+        background-color: white;
+        color: black;
     }
 
     .carousel-arrow-left {
         left: 0.5rem;
+        /* Keep position but adjust with padding in wrapper */
     }
 
     .carousel-arrow-right {
@@ -401,6 +419,9 @@
 
     .carousel-intro p {
         font-size: 1rem;
+        max-width: 90%;
+        margin: 0 auto;
+        text-align: center;
     }
 
     .carousel-wrapper {
@@ -481,6 +502,9 @@
 
     .carousel-intro p {
         font-size: 1.1rem;
+        max-width: 80%;
+        margin: 0 auto;
+        text-align: center;
     }
 
     .carousel-wrapper {
@@ -522,6 +546,13 @@
 
     .hero-content p {
         font-size: 1.2rem;
+    }
+
+    .carousel-intro p {
+        font-size: 1.2rem;
+        max-width: 70%;
+        margin: 0 auto;
+        text-align: center;
     }
 
     .carousel-item h2 {

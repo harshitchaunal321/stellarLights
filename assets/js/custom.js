@@ -1,4 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // Prevent browser scroll restoration and scroll to top of the page on load
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
     // Navigation menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navMenu = document.querySelector('.nav-menu');
@@ -54,8 +60,41 @@ document.addEventListener('DOMContentLoaded', function () {
             rightArrow: !!rightArrow
         });
     }
+
+    // Collaborator logo sizing
+    const logos = document.querySelectorAll('.collaborator-logo');
+    logos.forEach(logo => {
+        const height = logo.getAttribute('data-height');
+        const width = logo.getAttribute('data-width');
+        logo.style.height = `${height}px`;
+        logo.style.width = `${width}px`;
+        logo.style.maxWidth = '100%';
+    });
+
+    // Set placeholders to empty for all inputs except those in footer-subscribe
+    document.querySelectorAll('input, textarea').forEach(input => {
+        if (!input.closest('.footer-subscribe')) {
+            input.setAttribute('placeholder', ' ');
+        }
+    });
+
+    // Date input handling
+    const dateInput = document.getElementById('date');
+    if (dateInput) {
+        dateInput.addEventListener('focus', function () {
+            this.type = 'date';
+            this.showPicker();
+        });
+
+        dateInput.addEventListener('blur', function () {
+            if (!this.value) {
+                this.type = 'text';
+            }
+        });
+    }
 });
-// Update your custom.js with this responsive handling
+
+// Responsive menu and logo sizing with jQuery
 jQuery(document).ready(function ($) {
     // Handle menu toggle for all mobile/tablet sizes
     $('.menu-toggle').click(function (e) {
@@ -99,36 +138,4 @@ jQuery(document).ready(function ($) {
     // Run on load and resize
     adjustHeader();
     $(window).resize(adjustHeader);
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-    const logos = document.querySelectorAll('.collaborator-logo');
-
-    logos.forEach(logo => {
-        const height = logo.getAttribute('data-height');
-        const width = logo.getAttribute('data-width');
-
-        logo.style.height = `${height}px`;
-        logo.style.width = `${width}px`;
-        logo.style.maxWidth = '100%';
-    });
-    // Set all inputs to have empty placeholder initially
-    document.querySelectorAll('input, textarea').forEach(input => {
-        input.setAttribute('placeholder', ' ');
-    });
-
-    // Improve date input handling
-    const dateInput = document.getElementById('date');
-    if (dateInput) {
-        dateInput.addEventListener('focus', function () {
-            this.type = 'date';
-            this.showPicker();
-        });
-
-        dateInput.addEventListener('blur', function () {
-            if (!this.value) {
-                this.type = 'text';
-            }
-        });
-    }
 });
