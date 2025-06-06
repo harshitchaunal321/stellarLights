@@ -37,6 +37,31 @@ html {
 body {
     margin: 0;
     padding: 0;
+    background: linear-gradient(to bottom,
+            #000000 0%,
+            /* Pure black at the very top */
+            #000000 30%,
+            /* Stays black until 30% down */
+            #111111 60%,
+            /* Starts transitioning to dark gray */
+            #1a1a1a 80%,
+            /* Gets slightly lighter */
+            #222222 100%
+            /* Ends at a medium gray at the bottom */
+        );
+    color: white;
+    font-family: 'Titillium Web', sans-serif;
+    min-height: 100vh;
+    background-size: 100% 100%;
+    /* Covers full page */
+    background-repeat: no-repeat;
+    /* Prevents tiling */
+    /* Remove background-attachment: fixed */
+}
+
+/* body {
+    margin: 0;
+    padding: 0;
     background: linear-gradient(135deg,
             var(--gradient-corner, black) 0%,
             var(--gradient-left, black) 25%,
@@ -53,12 +78,12 @@ body {
     background-attachment: fixed;
     background-size: 200% 200%;
     background-position: bottom left;
-}
+} */
 
 .carousel-section,
 .gallery-section,
 .cta-section {
-    background-color: black;
+    /* background-color: black; */
     position: relative;
     z-index: 1;
 }

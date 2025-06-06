@@ -1,7 +1,7 @@
 /* Our Story Page Styles */
 body {
     font-family: 'Titillium Web', sans-serif;
-    background-color: #000;
+    /* background-color: #000; */
     color: #fff;
     margin: 0;
     padding: 0;
@@ -37,6 +37,7 @@ body {
     line-height: 1.8;
     margin: 0 auto;
     max-width: 1000px;
+
 }
 
 /* Image Gallery Section */
@@ -72,10 +73,10 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 30px;
+    font-weight: 600;
     color: #fff;
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     margin: 0;
 }
 
@@ -87,20 +88,22 @@ body {
 
 .strengths-section h2 {
     font-size: 32px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 
 .strengths-section p {
-    font-size: 16px;
+    font-size: 20px;
     line-height: 1.8;
     margin-bottom: 20px;
+    letter-spacing: 2.2px;
+    text-align: center;
 }
 
 /* Shows Section */
 .shows-section {
     padding: 50px 0;
-    background-color: #111;
+    /* background-color: #111; */
 }
 
 .shows-grid {
@@ -117,8 +120,8 @@ body {
 }
 
 .show-item h3 {
-    font-size: 20px;
-    font-weight: 700;
+    font-size: 25px;
+    font-weight: 600;
     margin-bottom: 10px;
 }
 
@@ -132,10 +135,10 @@ body {
     display: inline-block;
     padding: 10px 20px;
     border: 2px solid #fff;
-    border-radius: 25px;
+    border-radius: 20px;
     color: #fff;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 20px;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -148,7 +151,7 @@ body {
 footer {
     padding: 20px 0;
     text-align: center;
-    background-color: #000;
+    /* background-color: #000; */
     border-top: 1px solid #333;
 }
 
@@ -172,4 +175,46 @@ footer p {
     font-style: italic;
     text-align: right;
     margin-bottom: 15px;
+    top: 90px;
+}
+
+/* Call to Action Section */
+.cta-section {
+    padding: 4rem 0;
+    padding-bottom: 0;
+    text-align: center;
+    margin-top: 0;
+}
+
+.cta-content {
+    max-width: 60rem;
+    margin: 0 auto 2rem;
+}
+
+.cta-content h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+    margin-bottom: 1.5rem;
+}
+
+.cta-content .enquire-button {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    font-weight: bold;
+    padding: 10px 27px;
+    text-decoration: none;
+    border-radius: 20px;
+    letter-spacing: 2.9px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-content .enquire-button:hover {
+    background-color: white;
+    border: 2px solid white;
+    color: black;
 }

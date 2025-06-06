@@ -1,8 +1,8 @@
 /* Footer styles */
 .site-footer {
-    background-color: black;
+    /* background-color: black; */
     color: white;
-    padding: clamp(1.5rem, 4vw, 2.5rem) 0;
+    /* padding: clamp(1.5rem, 4vw, 2.5rem) 0; */
     position: relative;
     z-index: 1;
     font-family: 'Titillium Web', sans-serif;

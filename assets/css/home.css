@@ -88,7 +88,7 @@
 
 /* Carousel Section */
 .carousel-section {
-    background-color: black;
+    /* background-color: black; */
     padding: 4rem 0;
     text-align: center;
 }
@@ -218,7 +218,7 @@
 
 /* Gallery Section */
 .gallery-section {
-    background-color: black;
+    /* background-color: black; */
     padding: 4rem 0;
 }
 
@@ -236,9 +236,10 @@
 
 /* Call to Action Section */
 .cta-section {
-    background-color: black;
     padding: 4rem 0;
+    padding-bottom: 0;
     text-align: center;
+    margin-top: 0;
 }
 
 .cta-content {
@@ -248,14 +249,30 @@
 
 .cta-content h2 {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 3.5px;
     margin-bottom: 1.5rem;
 }
 
 .cta-content .enquire-button {
-    font-size: 1rem;
-    border-radius: 1rem;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    font-weight: bold;
+    padding: 10px 27px;
+    text-decoration: none;
+    border-radius: 20px;
+    letter-spacing: 2.9px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-content .enquire-button:hover {
+    background-color: white;
+    border: 2px solid white;
+    color: black;
 }
 
 .additional-images {
@@ -572,7 +589,7 @@
     }
 
     .image-overlay {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 
     .additional-images .image-wrapper {
