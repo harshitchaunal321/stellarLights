@@ -107,7 +107,7 @@
     letter-spacing: 3.5px;
     color: #FFFFFF;
     text-align: left;
-    margin: 0;
+    margin-top: 25px;
 }
 
 .dropdown-icon {
@@ -139,7 +139,7 @@
 
 /* Call to Action Section (shared with home.css) */
 .cta-section {
-    background-color: black;
+    /* background-color: black; */
     padding: 4rem 0;
     padding-bottom: 0;
     text-align: center;
@@ -153,20 +153,19 @@
 
 .cta-content h2 {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 35px;
-    font-weight: 700;
+    font-size: 30px;
+    font-weight: 600;
     letter-spacing: 3.5px;
-    /* text-transform: uppercase; */
     margin-bottom: 1.5rem;
 }
 
 .cta-content .enquire-button {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 29px;
+    font-size: 25px;
     color: white;
     background-color: transparent;
     border: 2px solid white;
-    font-weight: bold;
+    font-weight: 500;
     padding: 10px 27px;
     text-decoration: none;
     border-radius: 20px;
@@ -411,6 +410,6 @@
     }
 
     .additional-images .image-overlay {
-        font-size: 1.2rem;
+        font-size: 1.8rem;
     }
 }

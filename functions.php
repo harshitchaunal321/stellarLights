@@ -67,7 +67,11 @@ function stellar_lights_enqueue_scripts() {
             get_template_directory_uri() . '/assets/css/our-story.css',
             array('stellar-lights-style'),
             filemtime(get_template_directory() . '/assets/css/our-story.css')
-        );
+        );if (defined('WP_DEBUG') && WP_DEBUG) {
+            error_log('Stellar Lights: Enqueuing our-story.css for Our Story page.');
+        }
+    } elseif (defined('WP_DEBUG') && WP_DEBUG) {
+        error_log('Stellar Lights: Not enqueuing our-story.css - not using page-our-story.php template.');
     }
 
     // Enqueue Contact stylesheet for page-contact.php
