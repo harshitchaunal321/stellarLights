@@ -59,27 +59,6 @@ body {
     /* Remove background-attachment: fixed */
 }
 
-/* body {
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg,
-            var(--gradient-corner, black) 0%,
-            var(--gradient-left, black) 25%,
-            var(--gradient-mid, black) 50%,
-            var(--gradient-right, black) 75%,
-            var(--gradient-corner, black) 100%);
-    color: white;
-    font-family: 'Titillium Web', sans-serif;
-    transition: --gradient-left 0.5s ease,
-        --gradient-mid 0.5s ease,
-        --gradient-right 0.5s ease,
-        --gradient-corner 0.5s ease;
-    min-height: 100vh;
-    background-attachment: fixed;
-    background-size: 200% 200%;
-    background-position: bottom left;
-} */
-
 .carousel-section,
 .gallery-section,
 .cta-section {

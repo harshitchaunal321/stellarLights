@@ -232,6 +232,7 @@
 
 .footer-copyright {
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .footer-copyright p {
@@ -277,7 +278,8 @@
     }
 
     .footer-social-icons img {
-        height: 16px;
+        height: 20px;
+        background-color: #610d0d;
     }
 
     .footer-menu {
@@ -581,4 +583,24 @@
         width: clamp(240px, 20vw, 320px);
         /* Increased width */
     }
+}
+
+
+.collaborator-logo {
+    object-fit: contain;
+    /* Remove the grayscale filter and opacity from CSS since we'll control it via JS */
+    transition: all 0.3s ease;
+    height: clamp(30px, 8vw, 60px);
+    width: clamp(50px, 12vw, 90px);
+    background-color: transparent;
+    /* Will be set via JS */
+    padding: 5px;
+    /* Add some padding to prevent edge artifacts */
+    border-radius: 4px;
+    /* Soften edges */
+}
+
+.collaborator-logo:hover {
+    opacity: 1 !important;
+    /* Override JS opacity on hover */
 }
