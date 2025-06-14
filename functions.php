@@ -93,7 +93,7 @@ function stellar_lights_enqueue_scripts() {
     // Enqueue Process stylesheet for page-process.php
     if (is_page_template('page-process.php')) {
         wp_enqueue_style(
-            'stellar-lights-faq-style',
+            'stellar-lights-process-style',
             get_template_directory_uri() . '/assets/css/process.css',
             array('stellar-lights-style'),
             filemtime(get_template_directory() . '/assets/css/process.css')
@@ -103,6 +103,21 @@ function stellar_lights_enqueue_scripts() {
         }
     } elseif (defined('WP_DEBUG') && WP_DEBUG) {
         error_log('Stellar Lights: Not enqueuing process.css - not using page-process.php template.');
+    }
+
+     // Enqueue Journal stylesheet for page-journal.php
+    if (is_page_template('page-journal.php')) {
+        wp_enqueue_style(
+            'stellar-lights-journal-style',
+            get_template_directory_uri() . '/assets/css/journal.css',
+            array('stellar-lights-style'),
+            filemtime(get_template_directory() . '/assets/css/journal.css')
+        );
+        if (defined('WP_DEBUG') && WP_DEBUG) {
+            error_log('Stellar Lights: Enqueuing journal.css for Journal page.');
+        }
+    } elseif (defined('WP_DEBUG') && WP_DEBUG) {
+        error_log('Stellar Lights: Not enqueuing journal.css - not using page-journal.php template.');
     }
 
     // Enqueue Google Fonts (Titillium Web) with weights 400 and 700

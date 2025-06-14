@@ -22,7 +22,7 @@ get_header(); ?>
             <span class="dropdown-icon">⌄</span>
         </div>
         <div class="dropdown-content">
-            <p>Planning begins with understanding your vision and goals. Our collaborative process involves clear, regular communication, simplifying complexity by managing logistics, technical planning, and regulatory approvals, ensuring you feel informed and confident from start to finish. <a href="#">See our Process page here.</a></p>
+            <p>Planning begins with understanding your vision and goals. Our collaborative process involves clear, regular communication, simplifying complexity by managing logistics, technical planning, and regulatory approvals, ensuring you feel informed and confident from start to finish. <a href="/process">See our Process page here.</a></p>
         </div>
     </div>
 
