@@ -1,0 +1,381 @@
+/*
+ * Journal Page Styles - Fixed Version
+ * Theme: Stellar Lights
+ */
+
+/* Hero Section */
+.hero-section {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-top: -70px;
+    padding-top: 100px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 90%;
+}
+
+.hero-content h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    max-width: 1364px;
+    margin-top: -155px;
+}
+
+.hero-content p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    max-width: 1088px;
+    margin: 0 auto 30px;
+    text-align: center;
+    letter-spacing: 2.5px;
+}
+
+/* Photo Credit Container */
+.photo-credit-container {
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    left: 0;
+}
+
+.photo-credit {
+    position: relative;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    color: white;
+    opacity: 0.8;
+    font-style: italic;
+    text-align: right;
+    margin-bottom: 15px;
+    padding-right: 80px;
+}
+
+.photo-credit-line {
+    width: 100%;
+    height: 1px;
+    background-color: #707070;
+    opacity: 0.4;
+}
+
+/* Blog Posts Section */
+.blog-posts-section {
+    padding: 2rem 0;
+    color: white;
+    position: relative;
+}
+
+.blog-post {
+    width: 100%;
+    margin-bottom: 2rem;
+    /* Adjusted for tighter spacing */
+    position: relative;
+    height: auto;
+    min-height: 413px;
+    /* Ensure space for absolute-positioned content */
+}
+
+.blog-post:last-child {
+    margin-bottom: 0;
+}
+
+.blog-post a {
+    color: white;
+    text-decoration: none;
+}
+
+.blog-item {
+    position: relative;
+    width: 100%;
+    /* Changed to 100% for full-width responsiveness */
+    height: 100%;
+}
+
+.blog-item img {
+    position: absolute;
+    top: 0;
+    left: 140px;
+    width: 674px;
+    height: 413px;
+    background: transparent;
+    opacity: 1;
+}
+
+.blog-content {
+    position: absolute;
+    top: 0;
+    left: 864px;
+    width: 916px;
+    height: auto;
+    min-height: 238px;
+}
+
+.blog-content h3 {
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 38px;
+    letter-spacing: 3.5px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
+    opacity: 1;
+    margin-bottom: 1rem;
+}
+
+.blog-content p {
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 2.2px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
+    opacity: 1;
+}
+
+/* Call to Action Section */
+.cta-section {
+    padding: 4rem 0;
+    padding-bottom: 0;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 60rem;
+    margin: 0 auto 2rem;
+}
+
+.cta-content h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 35px;
+    font-weight: 700;
+    letter-spacing: 3.5px;
+    margin-bottom: 1.5rem;
+}
+
+.cta-content .enquire-button {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 29px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    font-weight: bold;
+    padding: 10px 27px;
+    text-decoration: none;
+    border-radius: 20px;
+    letter-spacing: 2.9px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-content .enquire-button:hover {
+    background-color: white;
+    border: 2px solid white;
+    color: black;
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 1920px) {
+    .blog-item img {
+        left: 5vw;
+        width: 35vw;
+        height: auto;
+        max-height: 360px;
+        top: 0;
+    }
+
+    .blog-content {
+        left: 45vw;
+        width: 50%;
+        top: 0;
+        height: auto;
+        min-height: unset;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero-content h1 {
+        font-size: 5vw;
+    }
+
+    .hero-content p {
+        font-size: 20px;
+    }
+
+    .photo-credit {
+        padding-right: 50px;
+    }
+
+    .blog-post {
+        min-height: auto;
+        /* Remove min-height for smaller screens */
+        margin-bottom: 1.5rem;
+        /* Tighter spacing for tablets */
+    }
+
+    .blog-item {
+        width: 95%;
+        padding: 0 1rem;
+        /* Add padding for better mobile spacing */
+    }
+
+    .blog-item img {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 674px;
+        height: auto;
+        margin: 0 auto;
+        /* Center image */
+    }
+
+    .blog-content {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        margin-top: 1rem;
+        padding: 0 1rem;
+        /* Add padding for text alignment */
+    }
+
+    .blog-content h3 {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+
+    .blog-content p {
+        font-size: 14px;
+        letter-spacing: 1.8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .hero-content p {
+        font-size: 18px;
+    }
+
+    .blog-post {
+        margin-bottom: 1rem;
+        /* Further reduce spacing for smaller screens */
+    }
+
+    .blog-item img {
+        max-width: 100%;
+        /* Ensure image fits screen width */
+    }
+
+    .blog-content h3 {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .blog-content p {
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 1.5px;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        margin-top: -5rem;
+        padding-top: 5rem;
+    }
+
+    .hero-content h1 {
+        font-size: 8vw;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+        max-width: 100%;
+    }
+
+    .photo-credit-container {
+        bottom: 60px;
+    }
+
+    .photo-credit {
+        padding-right: 20px;
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    .blog-posts-section {
+        padding: 1rem 0;
+        /* Reduce section padding for mobile */
+    }
+
+    .blog-post {
+        margin-bottom: 0.5rem;
+        /* Minimize spacing between posts */
+    }
+
+    .blog-item {
+        padding: 0.5rem;
+        /* Reduce padding for smaller screens */
+    }
+
+    .blog-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .blog-content {
+        padding: 0 0.5rem;
+        margin-top: 0.5rem;
+        /* Reduce margin for tighter layout */
+    }
+
+    .blog-content h3 {
+        font-size: 16px;
+        letter-spacing: 1.5px;
+        line-height: 22px;
+    }
+
+    .blog-content p {
+        font-size: 12px;
+        letter-spacing: 1px;
+        line-height: 18px;
+    }
+
+    .cta-section {
+        padding: 2rem 0;
+    }
+
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+}

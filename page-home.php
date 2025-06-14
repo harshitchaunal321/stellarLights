@@ -95,7 +95,7 @@ get_header(); ?>
 
 <section class="cta-section">
     <div class="cta-content">
-        <h2>Interested in planning your drone show?</h2>
+        <h2>Interested In Planning A Drone Light Show?</h2>
         <a href="/contact" class="enquire-button">Enquire Now</a>
     </div>
     <div class="additional-images">
