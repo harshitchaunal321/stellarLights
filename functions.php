@@ -105,8 +105,21 @@ function stellar_lights_enqueue_scripts() {
         error_log('Stellar Lights: Not enqueuing process.css - not using page-process.php template.');
     }
 
-     // Enqueue Journal stylesheet for page-journal.php
-    if (is_page_template('page-journal.php')) {
+     // Enqueue Journal stylesheet for page-journal.php and journal detail pages
+    if (is_page_template('page-journal.php') || 
+        is_page_template('page-behind-the-scenes-drone-light-shows.php') ||
+        is_page_template('page-inside-stellar-lights-storytelling.php') ||
+        is_page_template('page-stellar-lights-casestudy.php') ||
+        is_page_template('page-stellar-lights-insides.php') ||
+        // Additional check for journal detail pages by URL
+        (is_page() && (
+            strpos($_SERVER['REQUEST_URI'], '/journal/behind-the-scenes-drone-light-shows') !== false ||
+            strpos($_SERVER['REQUEST_URI'], '/journal/inside-stellar-lights-storytelling') !== false ||
+            strpos($_SERVER['REQUEST_URI'], '/journal/stellar-lights-casestudy') !== false ||
+            strpos($_SERVER['REQUEST_URI'], '/journal/stellar-lights-insides') !== false
+        )) ||
+        // Fallback: Load for any page with 'journal' in URL
+        strpos($_SERVER['REQUEST_URI'], '/journal/') !== false) {
         wp_enqueue_style(
             'stellar-lights-journal-style',
             get_template_directory_uri() . '/assets/css/journal.css',
@@ -114,10 +127,15 @@ function stellar_lights_enqueue_scripts() {
             filemtime(get_template_directory() . '/assets/css/journal.css')
         );
         if (defined('WP_DEBUG') && WP_DEBUG) {
-            error_log('Stellar Lights: Enqueuing journal.css for Journal page.');
+            error_log('Stellar Lights: Enqueuing journal.css for Journal page or journal detail page.');
         }
-    } elseif (defined('WP_DEBUG') && WP_DEBUG) {
-        error_log('Stellar Lights: Not enqueuing journal.css - not using page-journal.php template.');
+    } else {
+        // Debug: Check what template is being used
+        if (defined('WP_DEBUG') && WP_DEBUG) {
+            $current_template = get_page_template_slug();
+            error_log('Stellar Lights: Current page template: ' . $current_template);
+            error_log('Stellar Lights: Not enqueuing journal.css - not using journal template.');
+        }
     }
 
     // Enqueue Google Fonts (Titillium Web) with weights 400 and 700

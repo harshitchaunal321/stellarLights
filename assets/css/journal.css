@@ -159,8 +159,8 @@
 
 /* Call to Action Section */
 .cta-section {
-    padding: 4rem 0;
-    padding-bottom: 0;
+    padding: 2rem 0;
+    padding-bottom: 2rem;
     text-align: center;
 }
 
@@ -189,6 +189,7 @@
     border-radius: 20px;
     letter-spacing: 2.9px;
     transition: background-color 0.3s, color 0.3s;
+    margin-bottom: 2rem;
 }
 
 .cta-content .enquire-button:hover {
@@ -197,6 +198,193 @@
     color: black;
 }
 
+/* Journal Detail Page Styles */
+.journal-detail-section {
+    /* padding: 0rem 0; */
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+    position: relative;
+}
+
+.container {
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.journal-content {
+    /* Removed box styling - no background, border, or backdrop-filter */
+    padding: 0;
+}
+
+.journal-title {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
+    letter-spacing: 3.5px;
+}
+
+.journal-text {
+    margin-bottom: 3rem;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    color: #e0e0e0;
+}
+
+.journal-text p {
+    font-family: 'Titillium Web', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 27px;
+    letter-spacing: 2.2px;
+    color: #FFFFFF;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.16);
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.journal-images-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 3rem 0;
+    /* Make images use full width of screen with 140px gaps on sides */
+    max-width: calc(100vw - 280px);
+    width: calc(100vw - 280px);
+    margin-left: calc(-50vw + 50% + 140px);
+    padding: 0;
+}
+
+.journal-image {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journal-image:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.journal-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.next-journal-navigation {
+    text-align: center;
+    margin-top: 1rem;
+    padding-top: 2rem;
+    /* Removed border-top line */
+}
+
+.next-journal-link {
+    /* Removed button styling - just text with underline */
+    text-decoration: underline;
+    color: #ffffff;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.next-journal-link:hover {
+    color: #cccccc;
+}
+
+.next-journal-link em {
+    font-style: italic;
+    font-weight: 500;
+    font-size: 26px;
+}
+
+/* Responsive Design for Journal Detail */
+@media (max-width: 768px) {
+    .journal-detail-section {
+        padding: 2rem 0;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .journal-content {
+        padding: 0;
+    }
+
+    .journal-title {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .journal-images-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+        margin: 2rem 0;
+        /* Center the images on mobile */
+        max-width: 100%;
+        width: 100%;
+        margin-left: 0;
+        padding: 0 1rem;
+        justify-content: center;
+    }
+
+    .journal-image img {
+        height: 200px;
+    }
+
+    .journal-text {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .journal-text p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .journal-content {
+        padding: 0;
+    }
+
+    .journal-title {
+        font-size: 1.8rem;
+    }
+
+    .journal-images-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0.5rem;
+        padding: 0 0.5rem;
+        /* Ensure images stay in a row and are centered */
+        display: grid;
+        justify-items: center;
+    }
+
+    .journal-image {
+        width: 100%;
+        max-width: 120px;
+    }
+
+    .journal-image img {
+        height: 120px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .next-journal-link {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
 
 /* Responsive Design */
 
@@ -249,37 +437,36 @@
         top: 0;
         left: 0;
         width: 100%;
-        max-width: 674px;
         height: auto;
-        margin: 0 auto;
-        /* Center image */
+        max-height: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 1rem;
     }
 
     .blog-content {
         position: relative;
-        top: 0;
         left: 0;
         width: 100%;
+        top: 0;
         height: auto;
-        margin-top: 1rem;
-        padding: 0 1rem;
-        /* Add padding for text alignment */
+        min-height: unset;
     }
 
     .blog-content h3 {
-        font-size: 20px;
-        letter-spacing: 2px;
+        font-size: 28px;
+        line-height: 32px;
     }
 
     .blog-content p {
-        font-size: 14px;
-        letter-spacing: 1.8px;
+        font-size: 18px;
+        line-height: 24px;
     }
 }
 
 @media (max-width: 768px) {
     .hero-content h1 {
-        font-size: 3rem;
+        font-size: 6vw;
     }
 
     .hero-content p {
@@ -288,86 +475,78 @@
 
     .blog-post {
         margin-bottom: 1rem;
-        /* Further reduce spacing for smaller screens */
     }
 
     .blog-item img {
-        max-width: 100%;
-        /* Ensure image fits screen width */
+        max-height: 250px;
     }
 
     .blog-content h3 {
-        font-size: 18px;
-        line-height: 24px;
+        font-size: 24px;
+        line-height: 28px;
     }
 
     .blog-content p {
-        font-size: 12px;
-        line-height: 20px;
-        letter-spacing: 1.5px;
+        font-size: 16px;
+        line-height: 22px;
     }
 }
 
 @media (max-width: 576px) {
     .hero-section {
-        margin-top: -5rem;
-        padding-top: 5rem;
+        height: 80vh;
+        margin-top: -50px;
+        padding-top: 80px;
     }
 
     .hero-content h1 {
         font-size: 8vw;
+        margin-top: -100px;
     }
 
     .hero-content p {
         font-size: 16px;
-        max-width: 100%;
     }
 
     .photo-credit-container {
-        bottom: 60px;
+        bottom: 30px;
     }
 
     .photo-credit {
-        padding-right: 20px;
-        font-size: 12px;
-        margin-bottom: 10px;
+        padding-right: 30px;
+        font-size: 16px;
     }
 
     .blog-posts-section {
         padding: 1rem 0;
-        /* Reduce section padding for mobile */
     }
 
     .blog-post {
         margin-bottom: 0.5rem;
-        /* Minimize spacing between posts */
     }
 
     .blog-item {
-        padding: 0.5rem;
-        /* Reduce padding for smaller screens */
+        width: 100%;
+        padding: 0 0.5rem;
     }
 
     .blog-item img {
-        width: 100%;
-        height: auto;
+        max-height: 200px;
+        margin-bottom: 0.5rem;
     }
 
     .blog-content {
-        padding: 0 0.5rem;
-        margin-top: 0.5rem;
-        /* Reduce margin for tighter layout */
+        padding: 0;
     }
 
     .blog-content h3 {
-        font-size: 16px;
-        letter-spacing: 1.5px;
-        line-height: 22px;
+        font-size: 20px;
+        line-height: 24px;
+        margin-bottom: 0.5rem;
     }
 
     .blog-content p {
-        font-size: 12px;
-        letter-spacing: 1px;
+        font-size: 14px;
         line-height: 18px;
     }
 
@@ -376,6 +555,6 @@
     }
 
     .cta-content h2 {
-        font-size: 1.5rem;
+        font-size: 24px;
     }
 }

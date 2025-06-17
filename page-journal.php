@@ -16,7 +16,7 @@ get_header(); ?>
 
 <section id="blog-posts-section" class="blog-posts-section">
     <div class="blog-post">
-        <a href="/blog/behind-the-scenes-drone-light-shows">
+        <a href="/journal/behind-the-scenes-drone-light-shows">
             <div class="blog-item">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/drone-light-show.png" alt="Drone Light Show">
                 <div class="blog-content">
@@ -27,7 +27,7 @@ get_header(); ?>
         </a>
     </div>
     <div class="blog-post">
-        <a href="/blog/inside-stellar-lights-storytelling">
+        <a href="/journal/inside-stellar-lights-storytelling">
             <div class="blog-item">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/stellar-lights-storytelling.jpeg" alt="Stellar Lights Storytelling">
                 <div class="blog-content">
@@ -38,7 +38,7 @@ get_header(); ?>
         </a>
     </div>
      <div class="blog-post">
-        <a href="/blog/stellar-lights-casestudy">
+        <a href="/journal/stellar-lights-case-study">
             <div class="blog-item">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/stellar-lights-casestudy.png" alt="Stellar Lights Case Study">
                 <div class="blog-content">
@@ -49,7 +49,7 @@ get_header(); ?>
         </a>
     </div>
     <div class="blog-post">
-        <a href="/blog/stellar-lights-insides">
+        <a href="/journal/stellar-lights-insides">
             <div class="blog-item">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/stellar-lights-insides.png" alt="Stellar Lights Insides">
                 <div class="blog-content">
