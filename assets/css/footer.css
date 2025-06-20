@@ -52,16 +52,16 @@
 
 .collaborator-logo {
     object-fit: contain;
-    filter: grayscale(100%);
     transition: all 0.3s ease;
-    opacity: 0.8;
     height: clamp(30px, 8vw, 60px);
     width: clamp(50px, 12vw, 90px);
+    background-color: transparent;
+    padding: 5px;
+    border-radius: 4px;
 }
 
 .collaborator-logo:hover {
-    filter: grayscale(0%);
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 @keyframes scroll {
@@ -115,7 +115,7 @@
 }
 
 .footer-social-icons img {
-    height: clamp(18px, 4vw, 22px);
+    height: clamp(24px, 5vw, 28px);
     width: auto;
     transition: opacity 0.3s ease;
 }
@@ -278,7 +278,7 @@
     }
 
     .footer-social-icons img {
-        height: 20px;
+        height: clamp(22px, 5vw, 26px);
         background-color: #610d0d;
     }
 
@@ -307,7 +307,6 @@
         font-size: 0.7rem;
         padding: 0.4rem;
         margin: 0 auto;
-        /* Center the input horizontally */
     }
 
     .consent-text {
@@ -354,7 +353,7 @@
     }
 
     .footer-social-icons img {
-        height: 18px;
+        height: clamp(20px, 5vw, 24px);
     }
 
     .footer-menu {
@@ -380,7 +379,6 @@
         max-width: 200px;
         font-size: 0.8rem;
         margin: 0 auto;
-        /* Center the input horizontally */
     }
 
     .consent-text {
@@ -425,7 +423,7 @@
     }
 
     .footer-social-icons img {
-        height: 20px;
+        height: clamp(26px, 5vw, 30px);
     }
 
     .footer-menu {
@@ -449,7 +447,6 @@
 
     .subscribe-input {
         width: clamp(180px, 45vw, 260px);
-        /* Increased width */
         font-size: 0.85rem;
     }
 
@@ -489,6 +486,10 @@
         font-size: 0.8rem;
     }
 
+    .footer-social-icons img {
+        height: clamp(28px, 5vw, 32px);
+    }
+
     .footer-menu a {
         font-size: 0.9rem;
     }
@@ -503,7 +504,6 @@
 
     .subscribe-input {
         width: clamp(200px, 30vw, 280px);
-        /* Increased width */
     }
 
     .consent-text {
@@ -534,6 +534,10 @@
         height: 70px;
     }
 
+    .footer-social-icons img {
+        height: clamp(30px, 5vw, 34px);
+    }
+
     .footer-menu a {
         font-size: 0.95rem;
     }
@@ -544,7 +548,6 @@
 
     .subscribe-input {
         width: clamp(220px, 25vw, 300px);
-        /* Increased width */
     }
 }
 
@@ -571,6 +574,10 @@
         height: 80px;
     }
 
+    .footer-social-icons img {
+        height: clamp(32px, 5vw, 36px);
+    }
+
     .footer-menu a {
         font-size: 1rem;
     }
@@ -581,26 +588,5 @@
 
     .subscribe-input {
         width: clamp(240px, 20vw, 320px);
-        /* Increased width */
     }
-}
-
-
-.collaborator-logo {
-    object-fit: contain;
-    /* Remove the grayscale filter and opacity from CSS since we'll control it via JS */
-    transition: all 0.3s ease;
-    height: clamp(30px, 8vw, 60px);
-    width: clamp(50px, 12vw, 90px);
-    background-color: transparent;
-    /* Will be set via JS */
-    padding: 5px;
-    /* Add some padding to prevent edge artifacts */
-    border-radius: 4px;
-    /* Soften edges */
-}
-
-.collaborator-logo:hover {
-    opacity: 1 !important;
-    /* Override JS opacity on hover */
 }

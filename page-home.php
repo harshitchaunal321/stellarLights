@@ -55,43 +55,51 @@ get_header(); ?>
 <section class="gallery-section">
     <div class="gallery-grid">
         <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-1.png" alt="Public Events">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-1.png" alt="Public Events" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
             <span class="image-overlay">
                 Australian Education Union<br>For Every Child Campaign
             </span>
         </div>
         <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-2.png" alt="Corporate Shows">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-2.png" alt="Corporate Shows" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
             <span class="image-overlay">
                 Rotorua, New Zealand<br>Aronui Arts Festival
             </span>
         </div>
         <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-3.png" alt="Festivals">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-3.png" alt="Festivals" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
             <span class="image-overlay">
                 Sealife Melbourne<br>Exhibit Opening Night
             </span>
         </div>
         <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-4.png" alt="Cultural Celebrations">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-4.png" alt="Cultural Celebrations" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
             <span class="image-overlay">
                 Ningaloo, Exmouth<br>Solar Eclipse/Dark Sky Festival
             </span>
         </div>
         <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-5.png" alt="Private Events">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-5.png" alt="Private Events" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
             <span class="image-overlay">
                 Location<br>Darwin Festival
             </span>
         </div>
         <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-6.png" alt="Special Occasions">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-6.png" alt="Special Occasions" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
             <span class="image-overlay">
                 Viti Levu, Fiji<br>Private Celebration
             </span>
         </div>
     </div>
 </section>
+
+<!-- Video Player Overlay -->
+<div class="video-player-overlay" id="videoPlayerOverlay">
+    <button class="close-video-player" onclick="closeVideoPlayer()">×</button>
+    <div class="video-player-container">
+        <iframe id="videoPlayerIframe" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+</div>
 
 <section class="cta-section">
     <div class="cta-content">
@@ -117,5 +125,4 @@ get_header(); ?>
         </div>
     </div>
 </section>
-
 <?php get_footer(); ?>

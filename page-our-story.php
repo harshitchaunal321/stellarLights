@@ -12,8 +12,8 @@ get_header(); ?>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/our-story-home.png" alt="Our Story Hero Image">
         </div>
         <div class="photo-credit-container">
-        <div class="photo-credit">Photo Credit Line Here</div>
-    </div>
+            <div class="photo-credit">Photo Credit Line Here</div>
+        </div>
     </section>
 
     <!-- Hero Text Section -->
@@ -56,7 +56,7 @@ get_header(); ?>
         <div class="container">
             <h2>Our Technical Strengths</h2>
             <p>
-                 Our technical foundations stem from Global Unmanned Systems’ extensive international experience in complex drone operations. We have achieved groundbreaking, country-first permissions for drone operations on significant global construction and infrastructure projects across Australia, Kazakhstan, Timor-Leste, and Papua New Guinea. Our clients include global energy corporations, natural resource companies, NGOs, and aid organisations, all trusting us with challenging drone missions.
+                 Our technical foundations stem from Global Unmanned Systems' extensive international experience in complex drone operations. We have achieved groundbreaking, country-first permissions for drone operations on significant global construction and infrastructure projects across Australia, Kazakhstan, Timor-Leste, and Papua New Guinea. Our clients include global energy corporations, natural resource companies, NGOs, and aid organisations, all trusting us with challenging drone missions.
             </p>
             <p>
                 We develop, build, and operate drones globally under stringent regulatory frameworks, mastering aviation laws, stakeholder engagement, rigorous safety protocols, and operational compliance. Our meticulous approach guarantees the highest standards of safety and reliability, ensuring peace of mind for your event.
@@ -109,13 +109,13 @@ get_header(); ?>
             </div>
         </div>
     </section>
-<section id="cta-section" class="cta-section">
-    <div class="cta-content">
-        <h2>Interested In Planning A Drone Light Show?</h2>
-        <a href="/contact" class="enquire-button">Enquire Now</a>
-    </div>
-</section>
-
+    
+    <section id="cta-section" class="cta-section">
+        <div class="cta-content">
+            <h2>Interested In Planning A Drone Light Show?</h2>
+            <a href="/contact" class="enquire-button">Enquire Now</a>
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>
