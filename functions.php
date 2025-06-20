@@ -34,7 +34,7 @@ function stellar_lights_enqueue_scripts() {
         filemtime(get_template_directory() . '/assets/css/footer.css')
     );
 
-    // Enqueue homepage stylesheet for front-page.php or page-home.php
+    // Enqueue homepage stylesheet and scripts for front-page.php or page-home.php
     if (is_front_page() || is_page_template('page-home.php')) {
         wp_enqueue_style(
             'stellar-lights-home-style',
@@ -42,7 +42,14 @@ function stellar_lights_enqueue_scripts() {
             array('stellar-lights-style'),
             filemtime(get_template_directory() . '/assets/css/home.css')
         );
-        // Enqueue carousel script for home page
+        // Enqueue video player script for home page
+        wp_enqueue_script(
+            'stellar-lights-video-player',
+            get_template_directory_uri() . '/assets/js/video-player.js',
+            array('jquery'),
+            filemtime(get_template_directory() . '/assets/js/video-player.js'),
+            true
+        );
     }
 
     // Enqueue FAQ stylesheet for page-faq.php
@@ -172,6 +179,24 @@ function stellar_lights_enqueue_scripts() {
         filemtime(get_template_directory() . '/assets/js/gradient-scroll.js'),
         true
     );
+
+    // Enqueue the subscribe form script for the footer
+    wp_enqueue_script(
+        'stellar-lights-subscribe-form',
+        get_template_directory_uri() . '/assets/js/subscribe-form.js',
+        array('jquery'),
+        filemtime(get_template_directory() . '/assets/js/subscribe-form.js'),
+        true
+    );
+
+    // Localize script to pass ajaxurl
+    wp_localize_script(
+        'stellar-lights-subscribe-form',
+        'stellarLightsAjax',
+        array(
+            'ajaxurl' => admin_url('admin-ajax.php'),
+        )
+    );
 }
 add_action('wp_enqueue_scripts', 'stellar_lights_enqueue_scripts');
 
@@ -276,4 +301,46 @@ function stellar_lights_body_class($classes) {
     return $classes;
 }
 add_filter('body_class', 'stellar_lights_body_class');
+
+/**
+ * Handle footer subscribe form submission
+ */
+function handle_footer_subscribe() {
+    // Verify nonce for security
+    if (!isset($_POST['footer_subscribe_nonce_field']) || !wp_verify_nonce($_POST['footer_subscribe_nonce_field'], 'footer_subscribe_nonce')) {
+        wp_send_json_error(array('message' => 'Security check failed. Please try again.'));
+    }
+
+    // Sanitize input data
+    $name = isset($_POST['name']) ? sanitize_text_field($_POST['name']) : '';
+    $email = isset($_POST['email']) ? sanitize_email($_POST['email']) : '';
+
+    // Validate inputs
+    if (empty($name) || empty($email)) {
+        wp_send_json_error(array('message' => 'Please fill in all required fields.'));
+    }
+
+    if (!is_email($email)) {
+        wp_send_json_error(array('message' => 'Please enter a valid email address.'));
+    }
+
+    // Prepare email
+    $to = 'garwalshailesh4@gmail.com'; // Replace with your email address
+    $subject = 'New Subscription from Stellar Lights';
+    $message = "A new user has subscribed to the newsletter:\n\n";
+    $message .= "Name: $name\n";
+    $message .= "Email: $email\n";
+    $headers = array('Content-Type: text/plain; charset=UTF-8');
+
+    // Send email
+    $sent = wp_mail($to, $subject, $message, $headers);
+
+    if ($sent) {
+        wp_send_json_success(array('message' => 'Thank you for subscribing!'));
+    } else {
+        wp_send_json_error(array('message' => 'Failed to send email. Please try again later.'));
+    }
+}
+add_action('wp_ajax_handle_footer_subscribe', 'handle_footer_subscribe');
+add_action('wp_ajax_nopriv_handle_footer_subscribe', 'handle_footer_subscribe');
 ?>

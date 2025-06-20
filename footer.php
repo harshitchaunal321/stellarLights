@@ -62,10 +62,10 @@
     </div>
 
     <div class="footer-social-icons">
-        <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedIn.png" alt="LinkedIn"></a>
-        <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram.png" alt="Instagram"></a>
-        <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="Facebook"></a>
-        <a href="#" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/youtube.png" alt="YouTube"></a>
+        <a href="https://www.linkedin.com/company/stellar-lights/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/linkedIn.png" alt="LinkedIn"></a>
+        <a href="https://www.instagram.com/stellar___lights/" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/instagram.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/stellardronelightshows" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/facebook.png" alt="Facebook"></a>
+        <a href="https://www.youtube.com/@stellar_lights" target="_blank"><img src="<?php echo get_template_directory_uri(); ?>/assets/images/youtube.png" alt="YouTube"></a>
     </div>
 
     <div class="footer-nav">
@@ -82,16 +82,17 @@
 
     <div class="footer-subscribe">
         <p class="subscribe-text">Subscribe to receive monthly insights from our award-winning team</p>
-        <div class="subscribe-form">
-            <input type="text" placeholder="Name" class="subscribe-input" id="Name" name="name" autocomplete="name">
-            <input type="email" placeholder="Email Address" class="subscribe-input" id="Email" name="email" autocomplete="email">
-
-        </div>
+        <form id="footer-subscribe-form" class="subscribe-form">
+            <?php wp_nonce_field('footer_subscribe_nonce', 'footer_subscribe_nonce_field'); ?>
+            <input type="text" placeholder="Name" class="subscribe-input" id="Name" name="name" autocomplete="name" required>
+            <input type="email" placeholder="Email Address" class="subscribe-input" id="Email" name="email" autocomplete="email" required>
+        </form>
         <p class="consent-text">
             By submitting your details, you consent to receiving our newsletter and emails about our services.<br>
             You can opt-out at any time.
         </p>
-        <button class="signup-button">Sign Up</button>
+        <button type="submit" form="footer-subscribe-form" class="signup-button">Sign Up</button>
+        <div id="subscribe-response" class="subscribe-response"></div>
     </div>
 
     <div class="footer-divider"></div>
