@@ -155,6 +155,16 @@ function stellar_lights_enqueue_scripts() {
         );
     }
 
+    // Enqueue Pre-Produced Show stylesheet for page-pre-produced-show.php
+    if (is_page_template('page-pre-produced-show.php')) {
+        wp_enqueue_style(
+            'stellar-lights-pre-produced-show-style',
+            get_template_directory_uri() . '/assets/css/pre-produced-show.css',
+            array('stellar-lights-style'),
+            filemtime(get_template_directory() . '/assets/css/pre-produced-show.css')
+        );
+    }
+
     // Enqueue Google Fonts (Titillium Web) with weights 400 and 700
     wp_enqueue_style(
         'stellar-lights-fonts',
