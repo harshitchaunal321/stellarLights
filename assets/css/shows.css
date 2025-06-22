@@ -36,7 +36,7 @@
 
 .hero-content h1 {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 70px;
+    font-size: 60px;
     font-weight: 600;
     margin-bottom: 20px;
     max-width: 1364px;
@@ -45,7 +45,7 @@
 
 .hero-content p {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 1.6;
     max-width: 1088px;
     margin: 0 auto 30px;
