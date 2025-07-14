@@ -185,7 +185,7 @@ body {
 /* Photo Credit */
 .photo-credit-container {
     position: absolute;
-    bottom: 2vw;
+    bottom: 1vw;
     width: 100%;
     left: 0;
 }

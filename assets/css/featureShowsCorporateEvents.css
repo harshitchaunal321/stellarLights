@@ -1,0 +1,361 @@
+/* Corporate Events Hero Section */
+.corporate-event-hero {
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.corporate-event-hero .hero-text {
+    z-index: 2;
+    text-align: center;
+}
+
+.corporate-event-hero .hero-text h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.corporate-event-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.corporate-event-hero .hero-text p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 20px auto;
+    color: #fff;
+}
+
+.corporate-event-hero .photo-credit {
+    position: absolute;
+    bottom: 10px;
+    right: 30px;
+    color: #fff;
+    font-size: 1.5rem;
+    z-index: 2;
+    font-style: italic;
+}
+
+/* Corporate Events Content Section */
+.corporate-event-content {
+    padding: 40px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.corporate-event-content .breadcrumb h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.corporate-event-content .breadcrumb .normal-weight {
+    font-weight: 400;
+}
+
+.corporate-event-content .breadcrumb .bold-weight {
+    font-weight: 700;
+}
+
+.corporate-event-content p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Show Section */
+.show-section {
+    padding: 40px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.show-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    margin: 0 auto 20px;
+    position: relative;
+}
+
+.show-header h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0;
+    text-align: left;
+    flex: 1;
+}
+
+.show-location {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    max-width: 50%;
+    /* Limit the location width to half the container */
+    white-space: nowrap;
+    /* Prevent wrapping initially */
+    overflow: hidden;
+    /* Hide overflow */
+    text-overflow: ellipsis;
+    /* Add ellipsis for long text */
+}
+
+.location-icon-img {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.show-location .location-icon {
+    display: none;
+}
+
+.show-explanation {
+    max-width: 800px;
+    margin: 0 0 20px 0;
+    text-align: left;
+    margin-left: 0;
+    padding-left: calc((100% - 800px) / 2);
+}
+
+.show-details img {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px 0;
+}
+
+.show-additional {
+    max-width: 800px;
+    margin: 0 auto 20px;
+}
+
+.show-navigation {
+    margin-top: 20px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.show-navigation .nav-text {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1rem;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.show-navigation .nav-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    border-radius: 50%;
+    color: black;
+    font-size: 1.5rem;
+    border: none;
+    padding: 0;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.show-navigation .nav-circle:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.1);
+    /* Slightly enlarge the circle */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Add a subtle shadow */
+    color: #333;
+    /* Darken text for contrast */
+    transition: all 0.3s ease;
+    /* Smooth transition for all changes */
+}
+
+
+.show-navigation .nav-circle.prev {
+    margin-right: 5px;
+}
+
+.show-navigation .nav-circle.next {
+    margin-left: 5px;
+}
+
+/* Other Features Section */
+.other-features {
+    padding: 40px;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.other-features h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #a0a0a0;
+    /* Gray color to match "See Our Other Feature Shows" in image */
+}
+
+.other-features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.other-feature-item {
+    max-width: 300px;
+    text-align: center;
+}
+
+.other-feature-item h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.other-feature-item p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #d3d3d3;
+    /* Light gray for description text */
+}
+
+.other-feature-item .feature-link {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1rem;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+    border-radius: 20px;
+    /* Circular button effect */
+    display: inline-block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.other-feature-item .feature-link:hover {
+    background-color: white;
+    color: black;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    .corporate-event-hero .hero-text h1 {
+        font-size: 2rem;
+    }
+
+    .show-header {
+        width: 100%;
+        flex-direction: column;
+        text-align: left;
+    }
+
+    .show-location {
+        max-width: 100%;
+        /* Allow full width on small screens */
+        white-space: normal;
+        /* Allow wrapping on small screens */
+        overflow: visible;
+        /* Show full text */
+        text-overflow: clip;
+        /* Remove ellipsis on small screens */
+        margin-top: 10px;
+        /* Add spacing when stacked */
+    }
+
+    .show-header h2 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .show-location {
+        font-size: 1rem;
+    }
+
+    .show-navigation {
+        gap: 10px;
+    }
+
+    .show-navigation .nav-circle {
+        width: 30px;
+        height: 30px;
+        font-size: 1.2rem;
+    }
+
+    .show-explanation {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .other-features-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .other-feature-item {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .corporate-event-hero .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .show-header {
+        width: 100%;
+    }
+
+    .show-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .show-explanation {
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .corporate-event-hero .hero-text h1 {
+        font-size: 2.8rem;
+    }
+
+    .show-header {
+        width: 100%;
+    }
+
+    .show-explanation {
+        margin-left: 0;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 993px) {
+    .corporate-event-hero .hero-text h1 {
+        font-size: 3rem;
+    }
+}

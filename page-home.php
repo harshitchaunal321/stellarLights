@@ -55,39 +55,39 @@ get_header(); ?>
 <section class="gallery-section">
     <div class="gallery-grid">
         <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-1.png" alt="Public Events" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-1.png" alt="Australian Education Union" data-video-id="ZDqIOKjJn8U" onclick="openVideoPlayer(this)">
             <span class="image-overlay">
-                Australian Education Union<br>For Every Child Campaign
+                Australian Education Union<br>For Every Child Campaign<br>Sydney, Australia
             </span>
         </div>
         <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-2.png" alt="Corporate Shows" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-2.png" alt="Aronui Arts Festival" data-video-id="_ZdkLLRWfSE" onclick="openVideoPlayer(this)">
             <span class="image-overlay">
-                Rotorua, New Zealand<br>Aronui Arts Festival
+                Aronui Arts Festival<br>Rotorua, New Zealand
             </span>
         </div>
         <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-3.png" alt="Festivals" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-3.png" alt="Sealife Melbourne" data-video-id="CrWockNS_YU" onclick="openVideoPlayer(this)">
             <span class="image-overlay">
-                Sealife Melbourne<br>Exhibit Opening Night
+                Sealife Melbourne<br>Exhibit Opening Night<br>Melbourne, Australia
             </span>
         </div>
         <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-4.png" alt="Cultural Celebrations" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-4.png" alt="Solar Eclipse Dark Sky Festival" data-video-id="kOAwmiLm7v0" onclick="openVideoPlayer(this)">
             <span class="image-overlay">
-                Ningaloo, Exmouth<br>Solar Eclipse/Dark Sky Festival
+                Solar Eclipse Dark Sky Festival<br>Exmouth, Australia
             </span>
         </div>
         <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-5.png" alt="Private Events" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-5.png" alt="Bula Fiji" data-video-id="BZiGpN4f8fg" onclick="openVideoPlayer(this)">
             <span class="image-overlay">
-                Location<br>Darwin Festival
+                Bula Fiji<br>Private Celebration<br>Viti Levu, Fiji
             </span>
         </div>
         <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-6.png" alt="Special Occasions" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-6.png" alt="Wanneroo 25" data-video-id="QSqzBKDUyZQ" onclick="openVideoPlayer(this)">
             <span class="image-overlay">
-                Viti Levu, Fiji<br>Private Celebration
+                Wanneroo 25<br>Community Event<br>Perth, Australia
             </span>
         </div>
     </div>

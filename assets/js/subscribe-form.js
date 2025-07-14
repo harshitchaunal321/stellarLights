@@ -1,40 +1,40 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const form = document.getElementById('footer-subscribe-form');
-    const responseDiv = document.getElementById('subscribe-response');
+jQuery(document).ready(function ($) {
+    $('#footer-subscribe-form').on('submit', function (e) {
+        e.preventDefault(); // Prevent default form submission
 
-    if (form) {
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
+        var form = $(this);
+        var responseDiv = $('#subscribe-response');
+        var name = $('#Name').val();
+        var email = $('#Email').val();
 
-            // Clear previous messages
-            responseDiv.style.display = 'none';
-            responseDiv.innerHTML = '';
+        // Clear previous response messages
+        responseDiv.removeClass('error success').text('');
 
-            const formData = new FormData(form);
-            formData.append('action', 'handle_footer_subscribe');
-
-            fetch(ajaxurl, {
-                method: 'POST',
-                body: formData,
-            })
-                .then(response => response.json())
-                .then(data => {
-                    responseDiv.style.display = 'block';
-                    if (data.success) {
-                        responseDiv.style.color = 'green';
-                        responseDiv.innerHTML = data.data.message;
-                        form.reset(); // Clear the form
-                    } else {
-                        responseDiv.style.color = 'red';
-                        responseDiv.innerHTML = data.data.message;
-                    }
-                })
-                .catch(error => {
-                    responseDiv.style.display = 'block';
-                    responseDiv.style.color = 'red';
-                    responseDiv.innerHTML = 'An error occurred. Please try again later.';
-                    console.error('Error:', error);
-                });
+        // Perform AJAX request
+        $.ajax({
+            url: stellarLightsAjax.ajaxurl, // Localized AJAX URL
+            type: 'POST',
+            data: {
+                action: 'handle_footer_subscribe',
+                footer_subscribe_nonce_field: form.find('input[name="footer_subscribe_nonce_field"]').val(),
+                name: name,
+                email: email
+            },
+            success: function (response) {
+                if (response.success) {
+                    // Display success message
+                    responseDiv.addClass('success').text(response.data.message);
+                    // Clear form fields
+                    form.find('input[name="name"]').val('');
+                    form.find('input[name="email"]').val('');
+                } else {
+                    // Display error message
+                    responseDiv.addClass('error').text(response.data.message);
+                }
+            },
+            error: function () {
+                responseDiv.addClass('error').text('An error occurred. Please try again.');
+            }
         });
-    }
+    });
 });

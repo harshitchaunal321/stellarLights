@@ -590,3 +590,19 @@
         width: clamp(240px, 20vw, 320px);
     }
 }
+
+.subscribe-response {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.subscribe-response.success {
+    color: #28a745;
+    /* Green for success */
+}
+
+.subscribe-response.error {
+    color: #dc3545;
+    /* Red for error */
+}
