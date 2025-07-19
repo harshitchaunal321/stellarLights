@@ -10,7 +10,7 @@ get_header(); ?>
         <p>Stellar Blog updated here</p>
     </div>
     <div class="photo-credit-container">
-        <div class="photo-credit">Photo Credit Line Here</div>
+        <div class="photo-credit">Unknown</div>
     </div>
 </div>
 

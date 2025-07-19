@@ -9,7 +9,7 @@ get_header(); ?>
         <h1>Corporate Events</h1>
         <p>Elevate product launches, brand activations, or milestone celebrations with custom-branded drone formations and stunning choreography designed to leave a lasting impression.</p>
     </div>
-    <p class="photo-credit">Photo: Asher King</p>
+    <p class="photo-credit">Asher King</p>
 </div>
 
 <div class="corporate-event-content">

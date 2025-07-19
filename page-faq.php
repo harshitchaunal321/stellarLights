@@ -10,7 +10,7 @@ get_header(); ?>
         <p>Let us answer some common questions about drone light shows</p>
     </div>
     <div class="photo-credit-container">
-        <div class="photo-credit">Photo Credit Line Here</div>
+        <div class="photo-credit">Unknown</div>
         <div class="photo-credit-line"></div>
     </div>
 </div>
