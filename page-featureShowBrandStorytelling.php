@@ -9,7 +9,7 @@ get_header(); ?>
         <h1>Brand Storytelling</h1>
         <p>Elevate your brand narrative with custom-branded drone formations and stunning choreography designed to create emotional resonance, viral potential, and creative impact.</p>
     </div>
-    <p class="photo-credit">Photo: Asher King</p>
+    <p class="photo-credit">Asher King</p>
 </div>
 
 <div class="corporate-event-content">

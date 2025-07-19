@@ -9,7 +9,7 @@ get_header(); ?>
         <!-- Hero content can be empty for detail pages -->
     </div>
     <div class="photo-credit-container">
-        <div class="photo-credit">Photo Credit Line Here</div>
+        <div class="photo-credit">Unknown</div>
     </div>
 </div>
 

@@ -9,7 +9,7 @@ get_header(); ?>
         <h1>Public Events</h1>
         <p>Spectacular drone light shows designed to bring communities together through light, sound, and story, creating unforgettable public experiences.</p>
     </div>
-    <p class="photo-credit">Photo: Asher King</p>
+    <p class="photo-credit">Asher King</p>
 </div>
 
 <div class="corporate-event-content">

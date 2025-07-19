@@ -10,7 +10,7 @@ get_header(); ?>
     <p>For those after premium impact with lower lead times, our pre-produced, award-winning drone shows are ready to license. These beautifully crafted shows deliver high-end experiences with seamless setup and excellent value.</p>
     </div>
     <div class="photo-credit-container">
-        <div class="photo-credit">Photo: Jarrad Russel</div>
+        <div class="photo-credit">Jarrad Russel</div>
     </div>
 </div>
 

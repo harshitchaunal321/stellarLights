@@ -10,7 +10,7 @@ get_header(); ?>
         <p>Overview of the show process lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
     </div>
     <div class="photo-credit-container">
-        <div class="photo-credit">Photo: Duncan Wright</div>
+        <div class="photo-credit">Duncan Wright</div>
     </div>
 </div>
 
@@ -90,7 +90,7 @@ get_header(); ?>
         <h2>Interested In Planning A Drone Light Show?</h2>
         <a href="/contact" class="enquire-button">Enquire Now</a>
     </div>
-    <div class="additional-images">
+    <!-- <div class="additional-images">
         <div class="image-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/corporateEvent.png" alt="Corporate Shows">
             <span class="image-overlay">Corporate Events</span>
@@ -107,8 +107,9 @@ get_header(); ?>
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/privateEvent.png" alt="Cultural Celebrations">
             <span class="image-overlay">Private Events</span>
         </div>
-    </div>
+    </div> -->
 </section>
+
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -137,9 +138,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (this.classList.contains('expanded')) {
                 content.style.maxHeight = content.scrollHeight + 'px';
                 content.style.opacity = '1';
-                content.style.marginTop = '2rem';
-                content.style.paddingTop = '2rem';
-                content.style.borderTop = '1px solid #eee';
+                // content.style.marginTop = '2rem';
+                // content.style.paddingTop = '2rem';
+                content.style.borderTop = 'none'; // Remove border line
                 shortDesc.style.display = 'none';
             } else {
                 content.style.maxHeight = '0';

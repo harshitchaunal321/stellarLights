@@ -9,7 +9,7 @@ get_header(); ?>
         <h1>Let us tell your story</h1>
     </div>
     <div class="photo-credit-container">
-        <div class="photo-credit">Photo Credit Line Here</div>
+        <div class="photo-credit">Stuart Bensley</div>
     </div>
 </div>
 
