@@ -66,23 +66,25 @@
     margin: 0 auto 30px;
 }
 
-.enquire-button {
+.enquire-button, .cta-content .enquire-button {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 1.3rem;
+    font-size: 20px;
     color: white;
-    background-color: transparent;
-    border: 1px solid white;
-    padding: 0.75rem 1.5rem;
-    text-decoration: none;
-    border-radius: 15px;
-    transition: background-color 0.3s, color 0.3s;
+    background: transparent;
+    border: 2px solid white;
+    font-weight: bold;
+    padding: 10px 27px;
+    border-radius: 20px;
+    letter-spacing: 2px;
+    transition: background 0.3s, color 0.3s;
     display: inline-block;
+    margin: 10px 0;
+    text-decoration: none;
 }
-
-.enquire-button:hover {
-    background-color: white;
-    border: 1px solid white;
+.enquire-button:hover, .cta-content .enquire-button:hover {
+    background: white;
     color: black;
+    border: 2px solid white;
 }
 
 /* Carousel Section */
@@ -290,6 +292,10 @@
 
 .gallery-grid .image-wrapper {
     height: 400px;
+}
+
+.gallery-grid .image-wrapper img {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 12 12"><circle cx="6" cy="6" r="6" fill="white"/></svg>') 6 6, auto !important;
 }
 
 /* Call to Action Section */

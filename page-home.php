@@ -107,22 +107,22 @@ get_header(); ?>
         <a href="/contact" class="enquire-button">Enquire Now</a>
     </div>
     <div class="additional-images">
-        <div class="image-wrapper">
+        <a href="/corporate-events" class="image-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/corporateEvent.png" alt="Corporate Shows">
             <span class="image-overlay">Corporate Events</span>
-        </div>
-        <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brandStorytelling.png" alt="Public Events">
+        </a>
+        <a href="/brand-storytelling" class="image-wrapper">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brandStorytelling.png" alt="Brand Storytelling">
             <span class="image-overlay">Brand Storytelling</span>
-        </div>
-        <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/publicEvent.png" alt="Festivals">
+        </a>
+        <a href="/public-events" class="image-wrapper">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/publicEvent.png" alt="Public Events">
             <span class="image-overlay">Public Events</span>
-        </div>
-        <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/privateEvent.png" alt="Cultural Celebrations">
+        </a>
+        <a href="/private-events" class="image-wrapper">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/privateEvent.png" alt="Private Events">
             <span class="image-overlay">Private Events</span>
-        </div>
+        </a>
     </div>
 </section>
 <?php get_footer(); ?>
