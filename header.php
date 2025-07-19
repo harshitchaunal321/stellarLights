@@ -4,6 +4,17 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap">
+    
+    <title><?php wp_title('|', true, 'right'); ?></title>
+    <?php if (is_singular()) {
+        global $post;
+        $description = strip_tags($post->post_excerpt ? $post->post_excerpt : $post->post_content);
+        $description = mb_substr(trim($description), 0, 155);
+    } else {
+        $description = get_bloginfo('description');
+    } ?>
+    <meta name="description" content="<?php echo esc_attr($description); ?>">
+    
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> style="background-color: black;">
