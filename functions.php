@@ -5,7 +5,6 @@
  * Author: Your Name
  * Text Domain: stellarlights
  */
-
 /**
  * Enqueue styles and scripts
  */
@@ -42,7 +41,6 @@ function stellar_lights_enqueue_scripts() {
             array('stellar-lights-style'),
             filemtime(get_template_directory() . '/assets/css/home.css')
         );
-        // Enqueue video player script for home page
         wp_enqueue_script(
             'stellar-lights-video-player',
             get_template_directory_uri() . '/assets/js/video-player.js',
@@ -51,7 +49,6 @@ function stellar_lights_enqueue_scripts() {
             true
         );
     }
-
     // Enqueue FAQ stylesheet for page-faq.php
     if (is_page_template('page-faq.php')) {
         wp_enqueue_style(
@@ -66,7 +63,6 @@ function stellar_lights_enqueue_scripts() {
     } elseif (defined('WP_DEBUG') && WP_DEBUG) {
         error_log('Stellar Lights: Not enqueuing faq.css - not using page-faq.php template.');
     }
-
     // Enqueue Our Story stylesheet for page-our-story.php
     if (is_page_template('page-our-story.php')) {
         wp_enqueue_style(
@@ -81,7 +77,6 @@ function stellar_lights_enqueue_scripts() {
     } elseif (defined('WP_DEBUG') && WP_DEBUG) {
         error_log('Stellar Lights: Not enqueuing our-story.css - not using page-our-story.php template.');
     }
-
     // Enqueue Contact stylesheet for page-contact.php
     if (is_page_template('page-contact.php')) {
         wp_enqueue_style(
@@ -96,7 +91,6 @@ function stellar_lights_enqueue_scripts() {
     } elseif (defined('WP_DEBUG') && WP_DEBUG) {
         error_log('Stellar Lights: Not enqueuing contact.css - not using page-contact.php template.');
     }
-
     // Enqueue Process stylesheet for page-process.php
     if (is_page_template('page-process.php')) {
         wp_enqueue_style(
@@ -111,21 +105,18 @@ function stellar_lights_enqueue_scripts() {
     } elseif (defined('WP_DEBUG') && WP_DEBUG) {
         error_log('Stellar Lights: Not enqueuing process.css - not using page-process.php template.');
     }
-
-     // Enqueue Journal stylesheet for page-journal.php and journal detail pages
+    // Enqueue Journal stylesheet for page-journal.php and journal detail pages
     if (is_page_template('page-journal.php') || 
         is_page_template('page-behind-the-scenes-drone-light-shows.php') ||
         is_page_template('page-inside-stellar-lights-storytelling.php') ||
         is_page_template('page-stellar-lights-casestudy.php') ||
         is_page_template('page-stellar-lights-insides.php') ||
-        // Additional check for journal detail pages by URL
         (is_page() && (
             strpos($_SERVER['REQUEST_URI'], '/journal/behind-the-scenes-drone-light-shows') !== false ||
             strpos($_SERVER['REQUEST_URI'], '/journal/inside-stellar-lights-storytelling') !== false ||
             strpos($_SERVER['REQUEST_URI'], '/journal/stellar-lights-casestudy') !== false ||
             strpos($_SERVER['REQUEST_URI'], '/journal/stellar-lights-insides') !== false
         )) ||
-        // Fallback: Load for any page with 'journal' in URL
         strpos($_SERVER['REQUEST_URI'], '/journal/') !== false) {
         wp_enqueue_style(
             'stellar-lights-journal-style',
@@ -137,14 +128,12 @@ function stellar_lights_enqueue_scripts() {
             error_log('Stellar Lights: Enqueuing journal.css for Journal page or journal detail page.');
         }
     } else {
-        // Debug: Check what template is being used
         if (defined('WP_DEBUG') && WP_DEBUG) {
             $current_template = get_page_template_slug();
             error_log('Stellar Lights: Current page template: ' . $current_template);
             error_log('Stellar Lights: Not enqueuing journal.css - not using journal template.');
         }
     }
-
     // Enqueue Shows stylesheet for page-shows.php
     if (is_page_template('page-shows.php')) {
         wp_enqueue_style(
@@ -154,17 +143,121 @@ function stellar_lights_enqueue_scripts() {
             filemtime(get_template_directory() . '/assets/css/shows.css')
         );
     }
-
-    // Enqueue Pre-Produced Show stylesheet for page-pre-produced-show.php
-    if (is_page_template('page-pre-produced-show.php')) {
+    // Enqueue Feature Shows stylesheet for page-featureShows.php
+    if (is_page_template('page-featureShows.php')) {
         wp_enqueue_style(
-            'stellar-lights-pre-produced-show-style',
-            get_template_directory_uri() . '/assets/css/pre-produced-show.css',
+            'stellar-lights-feature-shows-style',
+            get_template_directory_uri() . '/assets/css/featureShows.css',
             array('stellar-lights-style'),
-            filemtime(get_template_directory() . '/assets/css/pre-produced-show.css')
+            filemtime(get_template_directory() . '/assets/css/featureShows.css')
         );
+        if (defined('WP_DEBUG') && WP_DEBUG) {
+            error_log('Stellar Lights: Enqueuing featureShows.css for Feature Shows page.');
+        }
+    } elseif (defined('WP_DEBUG') && WP_DEBUG) {
+        error_log('Stellar Lights: Not enqueuing featureShows.css - not using page-featureShows.php template.');
     }
-
+    // Enqueue Corporate Events stylesheet for page-corporate-events.php
+    if (is_page_template('page-corporate-events.php')) {
+        wp_enqueue_style(
+            'corporate-events-style',
+            get_template_directory_uri() . '/assets/css/corporate-events.css',
+            array('stellar-lights-style'),
+            filemtime(get_template_directory() . '/assets/css/corporate-events.css')
+        );
+        if (defined('WP_DEBUG') && WP_DEBUG) {
+            error_log('Stellar Lights: Enqueuing corporate-events.css for Corporate Events page.');
+        }
+    } elseif (defined('WP_DEBUG') && WP_DEBUG) {
+        error_log('Stellar Lights: Not enqueuing corporate-events.css - not using page-corporate-events.php template.');
+    }
+    // Enqueue Feature Show Corporate Events stylesheet and script for page-featureShowCorporateEvents.php
+    if (is_page_template('page-featureShowCorporateEvents.php')) {
+        wp_enqueue_style(
+            'feature-shows-corporate-events-style',
+            get_template_directory_uri() . '/assets/css/featureShowsCorporateEvents.css',
+            array('stellar-lights-style'),
+            filemtime(get_template_directory() . '/assets/css/featureShowsCorporateEvents.css')
+        );
+        wp_enqueue_script(
+            'stellar-lights-show-navigation',
+            get_template_directory_uri() . '/assets/js/script.js',
+            array('jquery'),
+            filemtime(get_template_directory() . '/assets/js/script.js'),
+            true
+        );
+        // Localize script to pass theme directory URL
+        wp_localize_script(
+            'stellar-lights-show-navigation',
+            'themeData',
+            array(
+                'templateUrl' => get_template_directory_uri()
+            )
+        );
+        if (defined('WP_DEBUG') && WP_DEBUG) {
+            error_log('Stellar Lights: Enqueuing featureShowsCorporateEvents.css and script.js for Feature Show Corporate Events page.');
+        }
+    } elseif (defined('WP_DEBUG') && WP_DEBUG) {
+        error_log('Stellar Lights: Not enqueuing featureShowsCorporateEvents.css or script.js - not using page-featureShowCorporateEvents.php template.');
+    }
+    // Enqueue Brand Storytelling stylesheet and script for page-brand-storytelling.php
+    if (is_page_template('page-featureShowBrandStorytelling.php')) {
+        wp_enqueue_style(
+            'brand-storytelling-style',
+            get_template_directory_uri() . '/assets/css/featureShowsCorporateEvents.css',
+            array('stellar-lights-style'),
+            filemtime(get_template_directory() . '/assets/css/featureShowsCorporateEvents.css')
+        );
+        wp_enqueue_script(
+            'stellar-lights-show-navigation',
+            get_template_directory_uri() . '/assets/js/script.js',
+            array('jquery'),
+            filemtime(get_template_directory() . '/assets/js/script.js'),
+            true
+        );
+        // Localize script to pass theme directory URL
+        wp_localize_script(
+            'stellar-lights-show-navigation',
+            'themeData',
+            array(
+                'templateUrl' => get_template_directory_uri()
+            )
+        );
+        if (defined('WP_DEBUG') && WP_DEBUG) {
+            error_log('Stellar Lights: Enqueuing featureShowsCorporateEvents.css and script.js for Brand Storytelling page.');
+        }
+    } elseif (defined('WP_DEBUG') && WP_DEBUG) {
+        error_log('Stellar Lights: Not enqueuing featureShowsCorporateEvents.css or script.js - not using page-brand-storytelling.php template.');
+    }
+    // Enqueue Public Events stylesheet and script for page-featureShowPublicEvents.php
+    if (is_page_template('page-featureShowPublicEvents.php')) {
+        wp_enqueue_style(
+            'public-events-style',
+            get_template_directory_uri() . '/assets/css/featureShowsCorporateEvents.css', // Reuse the same CSS file
+            array('stellar-lights-style'),
+            filemtime(get_template_directory() . '/assets/css/featureShowsCorporateEvents.css')
+        );
+        wp_enqueue_script(
+            'stellar-lights-show-navigation',
+            get_template_directory_uri() . '/assets/js/script.js',
+            array('jquery'),
+            filemtime(get_template_directory() . '/assets/js/script.js'),
+            true
+        );
+        // Localize script to pass theme directory URL
+        wp_localize_script(
+            'stellar-lights-show-navigation',
+            'themeData',
+            array(
+                'templateUrl' => get_template_directory_uri()
+            )
+        );
+        if (defined('WP_DEBUG') && WP_DEBUG) {
+            error_log('Stellar Lights: Enqueuing featureShowsCorporateEvents.css and script.js for Public Events page.');
+        }
+    } elseif (defined('WP_DEBUG') && WP_DEBUG) {
+        error_log('Stellar Lights: Not enqueuing featureShowsCorporateEvents.css or script.js - not using page-featureShowPublicEvents.php template.');
+    }
     // Enqueue Google Fonts (Titillium Web) with weights 400 and 700
     wp_enqueue_style(
         'stellar-lights-fonts',
@@ -173,6 +266,14 @@ function stellar_lights_enqueue_scripts() {
         null
     );
 
+    if (is_page_template('page-pre-produced-show.php')) {
+        wp_enqueue_style(
+            'stellar-lights-pre-produced-show-style',
+            get_template_directory_uri() . '/assets/css/pre-produced-show.css',
+            array('stellar-lights-style'),
+            filemtime(get_template_directory() . '/assets/css/pre-produced-show.css')
+        );
+    }
     // Enqueue custom JavaScript for menu toggle, carousel, and header effects
     wp_enqueue_script(
         'stellar-lights-custom-js',
@@ -237,13 +338,11 @@ add_action('init', 'stellar_lights_register_menus');
  */
 class Stellar_Lights_Menu_Walker extends Walker_Nav_Menu {
     public function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
-        // Ensure $args is an object
         $args = is_object($args) ? $args : new stdClass();
         
         $classes = empty($item->classes) ? array() : (array) $item->classes;
         $classes[] = 'menu-item-' . $item->ID;
         
-        // Add 'active' class if current item is active
         if (in_array('current-menu-item', $classes)) {
             $classes[] = 'active';
         }
@@ -269,21 +368,13 @@ class Stellar_Lights_Menu_Walker extends Walker_Nav_Menu {
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
     }
 }
-
 /**
  * Theme setup
  */
 function stellar_lights_theme_setup() {
-    // Add support for title tag
     add_theme_support('title-tag');
-
-    // Add support for post thumbnails
     add_theme_support('post-thumbnails');
-
-    // Add support for HTML5 markup
     add_theme_support('html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption'));
-    
-    // Add theme support for custom logo
     add_theme_support('custom-logo', array(
         'height'      => 200,
         'width'       => 400,
@@ -325,10 +416,14 @@ add_filter('body_class', 'stellar_lights_body_class');
 /**
  * Handle footer subscribe form submission
  */
+/**
+ * Handle footer subscribe form submission
+ */
 function handle_footer_subscribe() {
     // Verify nonce for security
     if (!isset($_POST['footer_subscribe_nonce_field']) || !wp_verify_nonce($_POST['footer_subscribe_nonce_field'], 'footer_subscribe_nonce')) {
         wp_send_json_error(array('message' => 'Security check failed. Please try again.'));
+        exit;
     }
 
     // Sanitize input data
@@ -338,14 +433,16 @@ function handle_footer_subscribe() {
     // Validate inputs
     if (empty($name) || empty($email)) {
         wp_send_json_error(array('message' => 'Please fill in all required fields.'));
+        exit;
     }
 
     if (!is_email($email)) {
         wp_send_json_error(array('message' => 'Please enter a valid email address.'));
+        exit;
     }
 
     // Prepare email
-    $to = 'garwalshailesh4@gmail.com'; // Replace with your email address
+    $to = 'garwalshailesh4@gmail.com'; // Replace with your personal email
     $subject = 'New Subscription from Stellar Lights';
     $message = "A new user has subscribed to the newsletter:\n\n";
     $message .= "Name: $name\n";

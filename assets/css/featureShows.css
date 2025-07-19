@@ -1,0 +1,188 @@
+.feature-shows-hero {
+    height: 800px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: #fff;
+}
+
+.sub-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+}
+
+.sub-nav ul li {
+    margin: 0 15px;
+}
+
+.sub-nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.feature-shows-content {
+    padding: 40px;
+    text-align: center;
+    background: #000;
+    color: #fff;
+}
+
+.section-title h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.section-title h2 .normal-weight {
+    font-weight: 100 !important;
+}
+
+.section-title h2 .bold-weight {
+    font-weight: 700;
+}
+
+.feature-shows-content p {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.feature-shows-carousel {
+    display: flex;
+    overflow-x: auto;
+    padding: 20px;
+    background: #000;
+    width: 100%;
+    box-sizing: border-box;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.feature-shows-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel-item {
+    min-width: 600px;
+    height: 500px;
+    width: 600px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 20px;
+    color: #fff;
+    text-align: center;
+    padding-top: 250px;
+    box-sizing: border-box;
+    text-decoration: none;
+    /* Ensure no underline on the link itself */
+}
+
+.carousel-item.corporate-event {
+    background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/corporate-event.jpg');
+}
+
+.carousel-item.brand-storytelling {
+    background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/brand-storytelling.jpg');
+}
+
+.carousel-item.public-event {
+    background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/public-event.jpg');
+}
+
+.carousel-item.private-event {
+    background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/private-event.jpg');
+}
+
+.carousel-item h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.carousel-item p {
+    font-size: 1.5em;
+    font-style: italic;
+    text-decoration: none;
+    margin-top: 0;
+    /* Ensure no extra top margin */
+}
+
+/* Call to Action Section */
+.cta-section {
+    padding: 4rem 0;
+    padding-bottom: 0;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 100px;
+}
+
+.cta-content {
+    max-width: 60rem;
+    margin: 0 auto 2rem;
+}
+
+.cta-content h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+    margin-bottom: 1.5rem;
+}
+
+.cta-content .enquire-button {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 20px;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+    font-weight: bold;
+    padding: 10px 27px;
+    text-decoration: none;
+    border-radius: 20px;
+    letter-spacing: 2.9px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.cta-content .enquire-button:hover {
+    background-color: white;
+    border: 2px solid white;
+    color: black;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    .cta-section {
+        padding: 2rem 0;
+    }
+
+    .cta-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+    .cta-section {
+        padding: 3rem 0;
+    }
+
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+    .cta-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (min-width: 993px) {
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+}

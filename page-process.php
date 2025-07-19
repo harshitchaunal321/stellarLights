@@ -10,7 +10,7 @@ get_header(); ?>
         <p>Overview of the show process lorem ipsum dolor sit amet, cons ectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
     </div>
     <div class="photo-credit-container">
-        <div class="photo-credit">Photo Credit Line Here</div>
+        <div class="photo-credit">Photo: Duncan Wright</div>
     </div>
 </div>
 

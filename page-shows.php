@@ -10,7 +10,7 @@ get_header(); ?>
         <p>Every project begins with a conversation. We take the time to understand your vision and objectives, then match it with the right creative direction and technical approach.</p>
     </div>
     <div class="photo-credit-container">
-        <div class="photo-credit">Photo Credit Line Here</div>
+        <div class="photo-credit">Photo: Rosie Hastie</div>
     </div>
 </div>
 
