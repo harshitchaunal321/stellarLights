@@ -246,10 +246,23 @@
 
 /* Mobile menu styles */
 @media (max-width: 992px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: flex-start;
+        position: relative;
+    }
+
     .menu-toggle {
         display: block;
-        order: 2;
-        margin-top: 0;
+        position: absolute;
+        top: 1.2rem;
+        right: 1.2rem;
+        left: auto;
+        z-index: 1200;
+        background: rgba(0, 0, 0, 0.95);
+        padding: 0.7rem 1.2rem;
+        border-radius: 8px;
     }
 
     .main-nav {
@@ -261,8 +274,11 @@
         background-color: rgba(0, 0, 0, 0.95);
         transition: right 0.3s ease;
         z-index: 1000;
-        padding-top: clamp(80px, 20vw, 100px);
+        padding-top: 6.5rem !important;
         overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
     }
 
     .main-nav.active {
@@ -271,71 +287,104 @@
 
     .nav-menu {
         flex-direction: column;
-        padding: 20px;
+        align-items: flex-end;
+        padding: 0 2rem;
+        gap: 1.2rem;
+        width: 100%;
+        padding-top: 6.5rem !important;
     }
 
     .nav-menu li {
-        margin: 15px 0;
+        margin: 0;
+        width: auto;
     }
 
     .nav-menu a {
         font-size: clamp(1rem, 3vw, 1.2rem);
-        padding: 10px 0;
+        padding: 0.7rem 1.2rem;
         display: block;
+        text-align: right;
+        min-width: 120px;
     }
 
-    /* Submenu styles for mobile */
+    .main-nav {
+        padding-top: 6.5rem;
+        /* Enough space for hamburger + gap */
+    }
+
+    .nav-menu li:first-child {
+        margin-top: 0;
+    }
+
     .nav-menu ul.sub-menu {
-        position: static;
-        background-color: rgba(0, 0, 0, 0.8);
-        width: 100%;
-        padding: 0.5rem 0;
+        position: static !important;
+        left: 0 !important;
+        width: 100% !important;
+        min-width: 0 !important;
+        background: rgba(0, 0, 0, 0.85);
+        margin-left: 0.5rem;
+        border-left: 2px solid #444;
+        padding-left: 1rem;
+        box-shadow: none;
         display: none;
     }
 
-    /* Show submenu when parent has 'open' class */
-    .nav-menu li.open>ul.sub-menu {
+    .nav-menu li.active>ul.sub-menu {
         display: block;
     }
 
     .nav-menu ul.sub-menu li {
-        margin: 0;
+        margin: 0.3rem 0;
     }
 
     .nav-menu ul.sub-menu a {
-        font-size: clamp(0.9rem, 2.5vw, 1rem);
-        padding: 0.5rem 1.5rem;
+        font-size: 0.98em;
+        padding: 0.4rem 0.8rem;
+        text-align: left;
+        word-break: break-word;
     }
 
-    /* Nested submenu on mobile */
+    /* Nested submenus */
     .nav-menu ul.sub-menu ul.sub-menu {
-        position: static;
-        left: 0;
-        padding-left: 1rem;
-        padding-top: 0;
+        margin-left: 1rem;
+        border-left: 2px solid #333;
+        background: rgba(0, 0, 0, 0.8);
+        position: static !important;
+        left: 0 !important;
+        width: 100% !important;
+        min-width: 0 !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-nav {
+        width: 100vw;
+        min-width: unset;
+        padding-top: 6.5rem !important;
     }
 
-    /* Hamburger animation when menu is open */
-    .menu-toggle.active .hamburger:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
+    .nav-menu {
+        padding: 0 1rem;
+        gap: 1rem;
+        padding-top: 6.5rem !important;
     }
 
-    .menu-toggle.active .hamburger:nth-child(2) {
-        opacity: 0;
+    .nav-menu li:first-child {
+        margin-top: 0;
     }
 
-    .menu-toggle.active .hamburger:nth-child(3) {
-        transform: rotate(-45deg) translate(5px, -5px);
+    .menu-toggle {
+        top: 3rem;
+        right: 1.5rem;
+        padding: 0.7rem 1.2rem;
     }
 
-    /* Body no-scroll when menu is open */
-    body.menu-open {
-        overflow: hidden;
+    .nav-menu ul.sub-menu {
+        margin-left: 0.2rem;
     }
 
-    /* Header adjustments for mobile */
-    .header-container {
-        padding: clamp(10px, 3vw, 15px) 0;
+    .nav-menu ul.sub-menu ul.sub-menu {
+        margin-left: 0.5rem;
     }
 }
 
@@ -606,3 +655,5 @@
         font-size: 1rem;
     }
 }
+
+/* NOTE: If the Home menu item is missing, add it in WP Admin > Appearance > Menus > Primary Menu. */

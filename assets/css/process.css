@@ -162,26 +162,25 @@
     padding: 0 20px;
 }
 
-.cta-content .enquire-button {
+.enquire-button, .cta-content .enquire-button {
     font-family: 'Titillium Web', sans-serif;
-    font-size: clamp(16px, 2vw, 20px);
+    font-size: 20px;
     color: white;
-    background-color: transparent;
+    background: transparent;
     border: 2px solid white;
     font-weight: bold;
     padding: 10px 27px;
-    text-decoration: none;
     border-radius: 20px;
-    letter-spacing: 1.5px;
-    transition: all 0.3s;
+    letter-spacing: 2px;
+    transition: background 0.3s, color 0.3s;
     display: inline-block;
     margin: 10px 0;
+    text-decoration: none;
 }
-
-.cta-content .enquire-button:hover {
-    background-color: white;
-    border: 2px solid white;
+.enquire-button:hover, .cta-content .enquire-button:hover {
+    background: white;
     color: black;
+    border: 2px solid white;
 }
 
 .additional-images {
