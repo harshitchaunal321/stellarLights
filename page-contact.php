@@ -19,6 +19,7 @@ get_header(); ?>
         <p class="contact-intro">Get in touch & tell us your story—our team will be more than happy to talk you through our wider offering and work with you to identify the best outdoor, indoor or residency solution to suit your requirements.</p>
         
         <form id="contact-form" class="contact-form" method="post">
+            <?php wp_nonce_field('contact_form_nonce', 'contact_form_nonce'); ?>
             <div class="form-grid">
                 <div class="form-group">
                     <input type="text" id="name" name="name" required>
@@ -48,10 +49,12 @@ get_header(); ?>
             
             <div class="form-group event-detail-group">
                 <textarea id="message" name="message" rows="5" ></textarea>
-                 <label for="date">Event Detail</label>
+                 <label for="message">Event Detail</label>
             </div>
             
-             <button class="submit-button">Send</button>
+            <div id="form-message" class="form-message" style="display: none;"></div>
+            
+            <button type="submit" class="submit-button">Send</button>
             <div class="instagram-section">
     <div class="instagram-header">
         <span class="follow-text">Follow Our Shows On Instagram</span>

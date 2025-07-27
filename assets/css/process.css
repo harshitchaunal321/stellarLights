@@ -162,7 +162,8 @@
     padding: 0 20px;
 }
 
-.enquire-button, .cta-content .enquire-button {
+.enquire-button,
+.cta-content .enquire-button {
     font-family: 'Titillium Web', sans-serif;
     font-size: 20px;
     color: white;
@@ -177,7 +178,9 @@
     margin: 10px 0;
     text-decoration: none;
 }
-.enquire-button:hover, .cta-content .enquire-button:hover {
+
+.enquire-button:hover,
+.cta-content .enquire-button:hover {
     background: white;
     color: black;
     border: 2px solid white;
@@ -276,7 +279,7 @@
 .process-card.expanded {
     background: #fff;
     color: #000;
-    border-radius: 160px;
+    border-radius: 200px;
     box-shadow: 0 25px 50px rgba(255, 255, 255, 0.15);
     padding: 3rem 4rem;
     padding-left: 4rem;

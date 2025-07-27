@@ -7,7 +7,7 @@ get_header(); ?>
 <div class="hero-section" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/journal.png');">
     <div class="hero-content">
         <h1>The Stellar Blog</h1>
-        <p>Stellar Blog updated here</p>
+        <p>Insights, stories, and behind-the-scenes moments from the world of drone storytelling.</p>
     </div>
     <div class="photo-credit-container">
         <div class="photo-credit">Unknown</div>

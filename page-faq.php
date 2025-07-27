@@ -74,20 +74,28 @@ get_header(); ?>
     </div>
     <div class="additional-images">
         <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/corporateEvent.png" alt="Corporate Shows">
-            <span class="image-overlay">Corporate Events</span>
+            <a href="/featureShowCorporateEvents">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/corporateEvent.png" alt="Corporate Shows">
+                <span class="image-overlay">Corporate Events</span>
+            </a>
         </div>
         <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brandStorytelling.png" alt="Public Events">
-            <span class="image-overlay">Brand Storytelling</span>
+            <a href="/featureShowBrandStorytelling">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brandStorytelling.png" alt="Public Events">
+                <span class="image-overlay">Brand Storytelling</span>
+            </a>
         </div>
         <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/publicEvent.png" alt="Festivals">
-            <span class="image-overlay">Public Events</span>
+            <a href="/featureShowPublicEvents">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/publicEvent.png" alt="Festivals">
+                <span class="image-overlay">Public Events</span>
+            </a>
         </div>
         <div class="image-wrapper">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/privateEvent.png" alt="Cultural Celebrations">
-            <span class="image-overlay">Private Events</span>
+            <a href="/featureShowPrivateEvents">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/privateEvent.png" alt="Cultural Celebrations">
+                <span class="image-overlay">Private Events</span>
+            </a>
         </div>
     </div>
 </section>

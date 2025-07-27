@@ -82,16 +82,14 @@
 
     <div class="footer-subscribe">
         <p class="subscribe-text">Subscribe to receive monthly insights from our award-winning team</p>
-        <form id="footer-subscribe-form" class="subscribe-form">
-            <?php wp_nonce_field('footer_subscribe_nonce', 'footer_subscribe_nonce_field'); ?>
-            <input type="text" placeholder="Name" class="subscribe-input" id="Name" name="name" autocomplete="name" required>
-            <input type="email" placeholder="Email Address" class="subscribe-input" id="Email" name="email" autocomplete="email" required>
-        </form>
+        <?php echo do_shortcode('[wpforms id="68"]'); ?>
         <p class="consent-text">
             By submitting your details, you consent to receiving our newsletter and emails about our services.<br>
             You can opt-out at any time.
         </p>
-        <button type="submit" form="footer-subscribe-form" class="signup-button">Sign Up</button>
+        <!--
+        Add custom CSS in your theme's stylesheet to style the WPForms output to match your previous form UI.
+        -->
         <div id="subscribe-response" class="subscribe-response"></div>
     </div>
 
