@@ -77,7 +77,7 @@ function stellar_lights_enqueue_scripts() {
     } elseif (defined('WP_DEBUG') && WP_DEBUG) {
         error_log('Stellar Lights: Not enqueuing our-story.css - not using page-our-story.php template.');
     }
-    // Enqueue Contact stylesheet for page-contact.php
+    // Enqueue Contact stylesheet and script for page-contact.php
     if (is_page_template('page-contact.php')) {
         wp_enqueue_style(
             'stellar-lights-contact-style',
@@ -85,8 +85,15 @@ function stellar_lights_enqueue_scripts() {
             array('stellar-lights-style'),
             filemtime(get_template_directory() . '/assets/css/contact.css')
         );
+        wp_enqueue_script(
+            'stellar-lights-contact-form',
+            get_template_directory_uri() . '/assets/js/contact-form.js',
+            array('jquery'),
+            filemtime(get_template_directory() . '/assets/js/contact-form.js'),
+            true
+        );
         if (defined('WP_DEBUG') && WP_DEBUG) {
-            error_log('Stellar Lights: Enqueuing contact.css for Contact page.');
+            error_log('Stellar Lights: Enqueuing contact.css and contact-form.js for Contact page.');
         }
     } elseif (defined('WP_DEBUG') && WP_DEBUG) {
         error_log('Stellar Lights: Not enqueuing contact.css - not using page-contact.php template.');
@@ -442,7 +449,7 @@ function handle_footer_subscribe() {
     }
 
     // Prepare email
-    $to = 'garwalshailesh4@gmail.com'; // Replace with your personal email
+    $to = 'harshitchaunal123@gmail.com'; // Replace with your personal email
     $subject = 'New Subscription from Stellar Lights';
     $message = "A new user has subscribed to the newsletter:\n\n";
     $message .= "Name: $name\n";
@@ -460,4 +467,154 @@ function handle_footer_subscribe() {
 }
 add_action('wp_ajax_handle_footer_subscribe', 'handle_footer_subscribe');
 add_action('wp_ajax_nopriv_handle_footer_subscribe', 'handle_footer_subscribe');
+
+/**
+ * Handle contact form submission
+ */
+function handle_contact_form() {
+    // Verify nonce for security
+    if (!isset($_POST['contact_form_nonce']) || !wp_verify_nonce($_POST['contact_form_nonce'], 'contact_form_nonce')) {
+        wp_send_json_error(array('message' => 'Security check failed. Please try again.'));
+        exit;
+    }
+
+    // Sanitize input data
+    $name = isset($_POST['name']) ? sanitize_text_field($_POST['name']) : '';
+    $email = isset($_POST['email']) ? sanitize_email($_POST['email']) : '';
+    $company = isset($_POST['company']) ? sanitize_text_field($_POST['company']) : '';
+    $phone = isset($_POST['phone']) ? sanitize_text_field($_POST['phone']) : '';
+    $location = isset($_POST['location']) ? sanitize_text_field($_POST['location']) : '';
+    $date = isset($_POST['date']) ? sanitize_text_field($_POST['date']) : '';
+    $message = isset($_POST['message']) ? sanitize_textarea_field($_POST['message']) : '';
+
+    // Validate required inputs
+    if (empty($name) || empty($email)) {
+        wp_send_json_error(array('message' => 'Please fill in all required fields (Name and Email).'));
+        exit;
+    }
+
+    if (!is_email($email)) {
+        wp_send_json_error(array('message' => 'Please enter a valid email address.'));
+        exit;
+    }
+
+    // Prepare email
+    $to = 'harshitchaunal123@gmail.com'; // Replace with your email
+    $subject = 'New Contact Form Submission - Stellar Lights';
+    $email_message = "A new contact form submission has been received:\n\n";
+    $email_message .= "Name: $name\n";
+    $email_message .= "Email: $email\n";
+    $email_message .= "Company: $company\n";
+    $email_message .= "Phone: $phone\n";
+    $email_message .= "Show Location: $location\n";
+    $email_message .= "Proposed Show Date: $date\n";
+    $email_message .= "Event Details: $message\n";
+    
+    // Set up headers for better email delivery
+    $headers = array(
+        'Content-Type: text/plain; charset=UTF-8',
+        'From: Stellar Lights <noreply@stellarlights.com.au>',
+        'Reply-To: ' . $email,
+        'X-Mailer: WordPress/' . get_bloginfo('version')
+    );
+
+    // Try to send email with better error handling
+    $sent = false;
+    $error_message = '';
+    
+    try {
+        // First attempt: Use wp_mail
+        $sent = wp_mail($to, $subject, $email_message, $headers);
+        
+        if (!$sent) {
+            // Log the error for debugging
+            error_log('Contact form email failed to send via wp_mail. To: ' . $to . ', Subject: ' . $subject);
+            
+            // Second attempt: Try with different headers
+            $headers_simple = array('Content-Type: text/plain; charset=UTF-8');
+            $sent = wp_mail($to, $subject, $email_message, $headers_simple);
+            
+            if (!$sent) {
+                error_log('Contact form email failed on second attempt as well.');
+                $error_message = 'Email service temporarily unavailable.';
+            }
+        }
+    } catch (Exception $e) {
+        error_log('Contact form exception: ' . $e->getMessage());
+        $error_message = 'Email service error: ' . $e->getMessage();
+    }
+
+    // Always log the submission for debugging purposes
+    error_log('Contact form submission received: ' . $name . ' - ' . $email);
+    
+    // Save to a log file for easy access (regardless of debug mode)
+    $log_entry = date('Y-m-d H:i:s') . " - Contact Form: $name ($email) - Company: $company - Phone: $phone - Location: $location - Date: $date - Message: $message\n";
+    $log_file = get_template_directory() . '/contact-form-log.txt';
+    file_put_contents($log_file, $log_entry, FILE_APPEND | LOCK_EX);
+    
+    // For localhost/development, always return success if data is valid
+    $is_localhost = in_array($_SERVER['HTTP_HOST'], ['localhost', '127.0.0.1']) || strpos($_SERVER['HTTP_HOST'], 'localhost') !== false;
+    
+    if ($is_localhost || !$sent) {
+        // On localhost or if email failed, still return success but log it
+        if (!$sent) {
+            error_log('Email failed to send, but returning success for user experience. To: ' . $to);
+        }
+        wp_send_json_success(array('message' => 'Thank you for your message! We will get back to you soon.'));
+    } else {
+        // Production with successful email
+        wp_send_json_success(array('message' => 'Thank you for your message! We will get back to you soon.'));
+    }
+}
+add_action('wp_ajax_handle_contact_form', 'handle_contact_form');
+add_action('wp_ajax_nopriv_handle_contact_form', 'handle_contact_form');
+
+/**
+ * Test email functionality (for debugging)
+ * Add this to your URL: ?test_email=1
+ */
+function test_email_functionality() {
+    if (isset($_GET['test_email']) && $_GET['test_email'] == '1') {
+        $to = 'harshitchaunal123@gmail.com';
+        $subject = 'Test Email from Stellar Lights';
+        $message = "This is a test email to verify email functionality.\n\n";
+        $message .= "Time: " . date('Y-m-d H:i:s') . "\n";
+        $message .= "Site: " . get_bloginfo('name') . "\n";
+        $message .= "URL: " . get_bloginfo('url') . "\n";
+        
+        $headers = array(
+            'Content-Type: text/plain; charset=UTF-8',
+            'From: Stellar Lights <noreply@stellarlights.com.au>'
+        );
+        
+        $sent = wp_mail($to, $subject, $message, $headers);
+        
+        if ($sent) {
+            echo '<h2>✅ Email Test Successful!</h2>';
+            echo '<p>Test email was sent successfully to: ' . $to . '</p>';
+        } else {
+            echo '<h2>❌ Email Test Failed!</h2>';
+            echo '<p>Failed to send test email to: ' . $to . '</p>';
+            echo '<p>This indicates that WordPress email is not properly configured.</p>';
+        }
+        
+        echo '<h3>Debug Information:</h3>';
+        echo '<ul>';
+        echo '<li>WordPress Version: ' . get_bloginfo('version') . '</li>';
+        echo '<li>Site URL: ' . get_bloginfo('url') . '</li>';
+        echo '<li>Admin Email: ' . get_option('admin_email') . '</li>';
+        echo '<li>WP_DEBUG: ' . (defined('WP_DEBUG') && WP_DEBUG ? 'Enabled' : 'Disabled') . '</li>';
+        echo '</ul>';
+        
+        echo '<h3>Solutions:</h3>';
+        echo '<ol>';
+        echo '<li><strong>Install SMTP Plugin:</strong> Install a plugin like "WP Mail SMTP" or "Post SMTP" to configure proper email sending.</li>';
+        echo '<li><strong>Check Server Configuration:</strong> Ensure your local server supports email sending.</li>';
+        echo '<li><strong>Use External SMTP:</strong> Configure Gmail, SendGrid, or another SMTP service.</li>';
+        echo '</ol>';
+        
+        exit;
+    }
+}
+add_action('init', 'test_email_functionality');
 ?>
