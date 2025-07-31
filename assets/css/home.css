@@ -170,7 +170,6 @@
     font-size: 1.5rem;
     width: 3rem;
     height: 3rem;
-    cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -204,7 +203,7 @@
     object-fit: cover;
     border-radius: 5px;
     display: block;
-    cursor: pointer;
+    pointer-events: none;
 }
 
 .image-overlay {
@@ -222,6 +221,7 @@
     white-space: nowrap;
     opacity: 0.9;
     transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
 .image-wrapper:hover .image-overlay {
@@ -268,7 +268,6 @@
     border: none;
     color: white;
     font-size: 2rem;
-    cursor: pointer;
     transition: color 0.3s;
     z-index: 1001;
 }
