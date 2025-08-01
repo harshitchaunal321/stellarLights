@@ -222,11 +222,15 @@
     justify-content: center;
     gap: 20px;
     text-align: center;
+    align-items: stretch;
 }
 
 .other-feature-item {
     max-width: 300px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .other-feature-item h3 {
@@ -254,6 +258,7 @@
     /* Circular button effect */
     display: inline-block;
     transition: background-color 0.3s, color 0.3s;
+    margin-top: auto;
 }
 
 .other-feature-item .feature-link:hover {
@@ -317,6 +322,7 @@
 
     .other-feature-item {
         max-width: 100%;
+        min-height: auto;
     }
 }
 
@@ -337,6 +343,14 @@
         margin-left: 0;
         padding-left: 0;
     }
+
+    .other-features-grid {
+        gap: 15px;
+    }
+
+    .other-feature-item {
+        max-width: 280px;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 992px) {
@@ -352,10 +366,26 @@
         margin-left: 0;
         padding-left: 0;
     }
+
+    .other-features-grid {
+        gap: 25px;
+    }
+
+    .other-feature-item {
+        max-width: 320px;
+    }
 }
 
 @media (min-width: 993px) {
     .corporate-event-hero .hero-text h1 {
         font-size: 3rem;
+    }
+
+    .other-features-grid {
+        gap: 30px;
+    }
+
+    .other-feature-item {
+        max-width: 350px;
     }
 }
