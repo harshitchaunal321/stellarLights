@@ -18,26 +18,26 @@ get_header(); ?>
 <section class="shows-gallery-scroll">
     <div class="shows-gallery-scroll-inner">
         <a href="/shows/pre-produced" class="shows-gallery-image-link">
-            <div class="shows-gallery-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/pre-produced.png');">
+            <div class="shows-gallery-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/Seagull&SeaHeader.png');">
                 <div class="shows-gallery-overlay">
                     <div class="shows-gallery-title">Pre-Produced Shows</div>
-                    <div class="shows-gallery-subtitle">Overview Here</div>
+                    <div class="shows-gallery-subtitle">For those after premium impact with lower lead times, our pre-produced, award-winning drone shows are ready to license.</div>
                 </div>
             </div>
         </a>
-        <a href="/shows/featured" class="shows-gallery-image-link">
-            <div class="shows-gallery-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/featured.png');">
+        <a href="/shows/feature-show" class="shows-gallery-image-link">
+            <div class="shows-gallery-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/featured.jpg');">
                 <div class="shows-gallery-overlay">
                     <div class="shows-gallery-title">Featured Shows</div>
-                    <div class="shows-gallery-subtitle">Overview Here</div>
+                    <div class="shows-gallery-subtitle">We create every feature show in close collaboration with you—taking the time to understand the story you want to tell.</div>
                 </div>
             </div>
         </a>
         <a href="/shows/first-lights" class="shows-gallery-image-link">
-            <div class="shows-gallery-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/featured.png');">
+            <div class="shows-gallery-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/firstLights.jpg');">
                 <div class="shows-gallery-overlay">
                     <div class="shows-gallery-title">First Lights</div>
-                    <div class="shows-gallery-subtitle">Overview Here</div>
+                    <div class="shows-gallery-subtitle">A place-responsive, choreographed drone, light, and sound experience, celebrating and honouring first nations storytelling and cultural heritage.</div>
                 </div>
             </div>
         </a>
@@ -45,7 +45,7 @@ get_header(); ?>
             <div class="shows-gallery-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/featured.png');">
                 <div class="shows-gallery-overlay">
                     <div class="shows-gallery-title">Longform Shows</div>
-                    <div class="shows-gallery-subtitle">Overview Here</div>
+                    <div class="shows-gallery-subtitle">Longer-format performances blend drones, original sound, narration, lighting, and special effects into immersive, cinematic experiences.</div>
                 </div>
             </div>
         </a>
@@ -67,22 +67,23 @@ get_header(); ?>
 
 <section id="cta-section" class="cta-section">
 <div class="additional-images">
-        <div class="image-wrapper">
+<a href="/corporate-events" class="image-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/corporateEvent.png" alt="Corporate Shows">
             <span class="image-overlay">Corporate Events</span>
-        </div>
-        <div class="image-wrapper">
+         </a>
+         <a href="/brand-storytelling" class="image-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brandStorytelling.png" alt="Public Events">
             <span class="image-overlay">Brand Storytelling</span>
-        </div>
-        <div class="image-wrapper">
+            </a>
+            <a href="/public-events" class="image-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/publicEvent.png" alt="Festivals">
             <span class="image-overlay">Public Events</span>
-        </div>
-        <div class="image-wrapper">
+            </a>
+            <a href="/private-events" class="image-wrapper">
+
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/privateEvent.png" alt="Cultural Celebrations">
             <span class="image-overlay">Private Events</span>
-        </div>
+            </a>
     </div>
 </section>
 
@@ -95,12 +96,12 @@ get_header(); ?>
         <div class="offer-item">
             <h3>Pre-Produced Shows</h3>
             <p>For those after premium impact with lower lead times, our pre-produced, award-winning drone shows are ready to license. These beautifully crafted shows deliver high-end experiences with seamless setup and excellent value.</p>
-            <a href="/shows/pre-produced-shows" class="offer-button">See the Collection</a>
+            <a href="/shows/pre-produced" class="offer-button">See the Collection</a>
         </div>
         <div class="offer-item">
             <h3>Feature Shows</h3>
             <p>We create every Feature Show in close collaboration with you—taking the time to understand your audience, your event, and the story you want to tell.</p>
-            <a href="/shows/feature-shows" class="offer-button">See the Shows</a>
+            <a href="/shows/feature-show" class="offer-button">See the Shows</a>
         </div>
         <div class="offer-item">
             <h3>First Lights</h3>
@@ -117,37 +118,37 @@ get_header(); ?>
 
 <section class="shows-video-gallery-section">
     <div class="shows-video-gallery-inner">
-        <div class="shows-video-item" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
+        <div class="shows-video-item" data-video-id="ZDqIOKjJn8U" onclick="openVideoPlayer(this)">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-1.png" alt="Australian Education Union">
             <div class="shows-video-overlay">
                 <span class="shows-video-text">Australian Education Union<br>For Every Child Campaign</span>
             </div>
         </div>
-        <div class="shows-video-item" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
+        <div class="shows-video-item" data-video-id="_ZdkLLRWfSE" onclick="openVideoPlayer(this)">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-2.png" alt="Rotorua, New Zealand">
             <div class="shows-video-overlay">
                 <span class="shows-video-text">Rotorua, New Zealand<br>Aronui Arts Festival</span>
             </div>
         </div>
-        <div class="shows-video-item" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
+        <div class="shows-video-item" data-video-id="CrWockNS_YU" onclick="openVideoPlayer(this)">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-3.png" alt="Sealife Melbourne">
             <div class="shows-video-overlay">
                 <span class="shows-video-text">Sealife Melbourne<br>Exhibit Opening Night</span>
             </div>
         </div>
-        <div class="shows-video-item" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
+        <div class="shows-video-item" data-video-id="kOAwmiLm7v0" onclick="openVideoPlayer(this)">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-4.png" alt="Ningaloo, Exmouth">
             <div class="shows-video-overlay">
                 <span class="shows-video-text">Ningaloo, Exmouth<br>Solar Eclipse/Dark Sky Festival</span>
             </div>
         </div>
-        <div class="shows-video-item" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
+        <div class="shows-video-item" data-video-id="BZiGpN4f8fg" onclick="openVideoPlayer(this)">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-5.png" alt="Darwin Festival">
             <div class="shows-video-overlay">
                 <span class="shows-video-text">Location<br>Darwin Festival</span>
             </div>
         </div>
-        <div class="shows-video-item" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
+        <div class="shows-video-item" data-video-id="QSqzBKDUyZQ" onclick="openVideoPlayer(this)">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-6.png" alt="Viti Levu, Fiji">
             <div class="shows-video-overlay">
                 <span class="shows-video-text">Viti Levu, Fiji<br>Private Celebration</span>

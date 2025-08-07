@@ -35,7 +35,7 @@ get_header(); ?>
             <div class="carousel-item">
                 <h2>Pre-Produced Shows</h2>
                 <p>For those after premium impact with lower lead times, our pre-produced, award-winning drone shows are ready to license.</p>
-                <a href="/pre-produced-shows" class="carousel-button">See Our Pre-Produced Shows</a>
+                <a href="/pre-producedshows" class="carousel-button">See Our Pre-Produced Shows</a>
             </div>
             <div class="carousel-item">
                 <h2>First Lights</h2>

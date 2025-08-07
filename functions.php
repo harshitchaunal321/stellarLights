@@ -149,6 +149,13 @@ function stellar_lights_enqueue_scripts() {
             array('stellar-lights-style'),
             filemtime(get_template_directory() . '/assets/css/shows.css')
         );
+        wp_enqueue_script(
+            'stellar-lights-video-player',
+            get_template_directory_uri() . '/assets/js/video-player.js',
+            array('jquery'),
+            filemtime(get_template_directory() . '/assets/js/video-player.js'),
+            true
+        );
     }
     // Enqueue Feature Shows stylesheet for page-featureShows.php
     if (is_page_template('page-featureShows.php')) {

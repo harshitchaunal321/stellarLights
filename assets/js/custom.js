@@ -140,4 +140,28 @@ jQuery(document).ready(function ($) {
             $(this).parent().addClass('active');
         }
     });
+
+    // Carousel functionality
+    const $carouselItems = $('.carousel-item');
+    const $leftArrow = $('.carousel-arrow-left');
+    const $rightArrow = $('.carousel-arrow-right');
+    let currentIndex = 0;
+
+    // Function to update carousel
+    function updateCarousel() {
+        $carouselItems.removeClass('active');
+        $carouselItems.eq(currentIndex).addClass('active');
+    }
+
+    // Next button click
+    $rightArrow.on('click', function () {
+        currentIndex = (currentIndex + 1) % $carouselItems.length; // Loop to first item
+        updateCarousel();
+    });
+
+    // Previous button click
+    $leftArrow.on('click', function () {
+        currentIndex = (currentIndex - 1 + $carouselItems.length) % $carouselItems.length; // Loop to last item
+        updateCarousel();
+    });
 });

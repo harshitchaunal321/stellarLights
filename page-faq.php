@@ -74,25 +74,25 @@ get_header(); ?>
     </div>
     <div class="additional-images">
         <div class="image-wrapper">
-            <a href="/featureShowCorporateEvents">
+            <a href="/corporate-events">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/corporateEvent.png" alt="Corporate Shows">
                 <span class="image-overlay">Corporate Events</span>
             </a>
         </div>
         <div class="image-wrapper">
-            <a href="/featureShowBrandStorytelling">
+            <a href="/brand-storytelling">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brandStorytelling.png" alt="Public Events">
                 <span class="image-overlay">Brand Storytelling</span>
             </a>
         </div>
         <div class="image-wrapper">
-            <a href="/featureShowPublicEvents">
+            <a href="/public-events">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/publicEvent.png" alt="Festivals">
                 <span class="image-overlay">Public Events</span>
             </a>
         </div>
         <div class="image-wrapper">
-            <a href="/featureShowPrivateEvents">
+            <a href="/private-events">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/images/privateEvent.png" alt="Cultural Celebrations">
                 <span class="image-overlay">Private Events</span>
             </a>
