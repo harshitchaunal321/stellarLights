@@ -71,6 +71,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 explanation: "For the first time in its storied history, the Sydney Royal Easter Show featured a drone light show—integrated seamlessly into its iconic fireworks finale. Featuring dazzling formations and Australia's first drone pyrotechnics flown within a fireworks sequence, the performance set a new national benchmark for hybrid aerial entertainment in stadium-scale events.",
                 image: `${themeData.templateUrl}/assets/images/sydneyRoyalEasterShow.jpg`,
             }
+        ],
+        'private-events': [
+            {
+                title: "Engagement Celebration",
+                location: "Sofitel Resort, Fiji",
+                explanation: "To celebrate a recent engagement, this private event at Sofitel Resort Fiji featured a breathtaking pyrotechnic show with drone integration. Designed to complement the romantic beachfront setting, the display combined dynamic aerial effects with vibrant ground-based pyro to create a moment of pure spectacle. The drones added shape and story to the sky, but it was the carefully choreographed pyro that delivered the emotional punch. A stunning tribute to love, light, and commitment.",
+                image: `${themeData.templateUrl}/assets/images/privateEventShow1.jpg`,
+            },
+            {
+                title: "ASBA Conference – Darwin 2025",
+                explanation: "Created for the Australian School Business Administrators national conference, this bespoke drone show brought the theme Resilience at the Top End to life. Every element, from script to soundtrack, was crafted to reflect the spirit of Darwin and the strength of Australia's school leadership community. Staged as the closing moment of the welcome party following a Hot Dub Time Machine DJ set, the show lit up the Northern Territory sky and marked the beginning of a powerful and unifying week.",
+                image: `${themeData.templateUrl}/assets/images/ASBA.png`,
+            },
+            {
+                title: "AEU – For Every Child Campaign Staff Event",
+                explanation: "Commissioned to support a television segment designed to raise awareness and pressure policymakers, this drone show also served as a private celebration for the AEU team behind the For Every Child campaign. The creative brief called for a show that would resonate on screen while honouring the mission and dedication of campaign staff. Featuring child-voiced narration and vibrant, values-led visuals, the performance was both a strategic communication tool and a heartfelt tribute to public education advocacy.",
+                image: `${themeData.templateUrl}/assets/images/AEU.jpg`,
+            },
+            {
+                title: "Amway Taiwan – Sandalford Estate",
+                explanation: "As the grand finale of an incentive trip across Western Australia, this high-energy drone and pyrotechnic show was staged at Sandalford Estate for Amway Taiwan's top sellers. Celebrating their journey across the state, the performance reflected key moments and destinations visited throughout their trip—blending local motifs with international ambition. It was a cinematic closing chapter to a week of connection, discovery, and recognition.",
+                image: `${themeData.templateUrl}/assets/images/AEU.jpg`,
+            },
+            {
+                title: "Lark Whisky – 30th Anniversary, Pontville",
+                explanation: "To mark three decades of Tasmanian whisky-making, Lark hosted a private drone show at its Pontville distillery for an invite-only crowd featuring some of the biggest names in the spirits industry. Rooted in legacy and forward vision, the show illuminated the Tasmanian sky with symbols of craft, landscape, and the pioneering spirit of Bill Lark. The result was a bold and elegant tribute to the past, present, and future of one of Australia's most iconic whisky brands. A powerful reminder of how far the industry has come, and where it's heading next.",
+                image: `${themeData.templateUrl}/assets/images/drone-show-6.png`,
+            },
+
+
         ]
     };
 
