@@ -4,7 +4,7 @@ Template Name: Brand Storytelling Page
 */
 get_header(); ?>
 
-<div class="corporate-event-hero" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/brandStorytellingHomepage.png');">
+<div class="corporate-event-hero" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/brandstorytellingbanner.jpeg');">
     <div class="hero-text">
         <h1>Brand Storytelling</h1>
         <p>Elevate your brand narrative with custom-branded drone formations and stunning choreography designed to create emotional resonance, viral potential, and creative impact.</p>

@@ -240,7 +240,7 @@ function stellar_lights_enqueue_scripts() {
     if (is_page_template('page-featureShowPublicEvents.php')) {
         wp_enqueue_style(
             'public-events-style',
-            get_template_directory_uri() . '/assets/css/featureShowsCorporateEvents.css', // Reuse the same CSS file
+            get_template_directory_uri() . '/assets/css/featureShowsCorporateEvents.css',
             array('stellar-lights-style'),
             filemtime(get_template_directory() . '/assets/css/featureShowsCorporateEvents.css')
         );
@@ -262,7 +262,34 @@ function stellar_lights_enqueue_scripts() {
         if (defined('WP_DEBUG') && WP_DEBUG) {
             error_log('Stellar Lights: Enqueuing featureShowsCorporateEvents.css and script.js for Public Events page.');
         }
-    } elseif (defined('WP_DEBUG') && WP_DEBUG) {
+    } 
+    if (is_page_template('page-featureShowPrivateEvents.php')) {
+        wp_enqueue_style(
+            'public-events-style',
+            get_template_directory_uri() . '/assets/css/featureShowsCorporateEvents.css',
+            array('stellar-lights-style'),
+            filemtime(get_template_directory() . '/assets/css/featureShowsCorporateEvents.css')
+        );
+        wp_enqueue_script(
+            'stellar-lights-show-navigation',
+            get_template_directory_uri() . '/assets/js/script.js',
+            array('jquery'),
+            filemtime(get_template_directory() . '/assets/js/script.js'),
+            true
+        );
+        // Localize script to pass theme directory URL
+        wp_localize_script(
+            'stellar-lights-show-navigation',
+            'themeData',
+            array(
+                'templateUrl' => get_template_directory_uri()
+            )
+        );
+        if (defined('WP_DEBUG') && WP_DEBUG) {
+            error_log('Stellar Lights: Enqueuing featureShowsCorporateEvents.css and script.js for Public Events page.');
+        }
+    }
+    elseif (defined('WP_DEBUG') && WP_DEBUG) {
         error_log('Stellar Lights: Not enqueuing featureShowsCorporateEvents.css or script.js - not using page-featureShowPublicEvents.php template.');
     }
     // Enqueue Google Fonts (Titillium Web) with weights 400 and 700
@@ -287,15 +314,6 @@ function stellar_lights_enqueue_scripts() {
         get_template_directory_uri() . '/assets/js/custom.js',
         array('jquery'),
         filemtime(get_template_directory() . '/assets/js/custom.js'),
-        true
-    );
-
-    // Enqueue mobile menu script for header navigation
-    wp_enqueue_script(
-        'stellar-lights-mobile-menu',
-        get_template_directory_uri() . '/assets/js/mobile-menu.js',
-        array('jquery'),
-        filemtime(get_template_directory() . '/assets/js/mobile-menu.js'),
         true
     );
 
@@ -354,6 +372,11 @@ class Stellar_Lights_Menu_Walker extends Walker_Nav_Menu {
             $classes[] = 'active';
         }
         
+        // Add has-submenu class for items with children
+        if ($this->has_children) {
+            $classes[] = 'has-submenu';
+        }
+        
         $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args, $depth));
         $class_names = $class_names ? ' class="' . esc_attr($class_names) . '"' : '';
         
@@ -375,6 +398,7 @@ class Stellar_Lights_Menu_Walker extends Walker_Nav_Menu {
         $output .= apply_filters('walker_nav_menu_start_el', $item_output, $item, $depth, $args);
     }
 }
+
 /**
  * Theme setup
  */
@@ -423,9 +447,6 @@ add_filter('body_class', 'stellar_lights_body_class');
 /**
  * Handle footer subscribe form submission
  */
-/**
- * Handle footer subscribe form submission
- */
 function handle_footer_subscribe() {
     // Verify nonce for security
     if (!isset($_POST['footer_subscribe_nonce_field']) || !wp_verify_nonce($_POST['footer_subscribe_nonce_field'], 'footer_subscribe_nonce')) {
@@ -449,7 +470,7 @@ function handle_footer_subscribe() {
     }
 
     // Prepare email
-    $to = 'harshitchaunal123@gmail.com'; // Replace with your personal email
+    $to = 'harshitchaunal123@gmail.com';
     $subject = 'New Subscription from Stellar Lights';
     $message = "A new user has subscribed to the newsletter:\n\n";
     $message .= "Name: $name\n";
@@ -499,7 +520,7 @@ function handle_contact_form() {
     }
 
     // Prepare email
-    $to = 'harshitchaunal123@gmail.com'; // Replace with your email
+    $to = 'harshitchaunal123@gmail.com';
     $subject = 'New Contact Form Submission - Stellar Lights';
     $email_message = "A new contact form submission has been received:\n\n";
     $email_message .= "Name: $name\n";
