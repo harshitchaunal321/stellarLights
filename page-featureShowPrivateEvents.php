@@ -4,17 +4,19 @@ Template Name: Private Events Page
 */
 get_header(); ?>
 
-<div class="corporate-event-hero" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/privateEventBanner.jpg');">
-    <div class="hero-text">
+<div class="hero-section" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/privateEventBanner.jpg');">
+    <div class="hero-content">
         <h1>Private Events</h1>
         <p>Intimate, emotional, and unforgettable—private drone shows designed just for you, creating personalized experiences that leave a lasting impression.</p>
     </div>
-    <p class="photo-credit">Asher King</p>
+    <div class="photo-credit-container">
+        <div class="photo-credit">Asher King</div>
+    </div>
 </div>
 
 <div class="corporate-event-content">
-    <div class="breadcrumb">
-        <h2><span class="normal-weight">SHOWS > FEATURE SHOWS ></span> <span class="bold-weight">PRIVATE EVENTS</span></h2>
+    <div class="breadcrumbs">
+        <a href="/shows">SHOWS</a> > <a href="/feature-shows">FEATURE SHOWS</a> > PRIVATE EVENTS
     </div>
 </div>
 

@@ -21,7 +21,7 @@ get_header(); ?>
             <div class="shows-gallery-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/Seagull&SeaHeader.png');">
                 <div class="shows-gallery-overlay">
                     <div class="shows-gallery-title">Pre-Produced Shows</div>
-                    <div class="shows-gallery-subtitle">For those after premium impact with lower lead times, our pre-produced, award-winning drone shows are ready to license.</div>
+                    <div class="shows-gallery-subtitle">Award-winning shows, ready to license with premium impact and faster lead times.</div>
                 </div>
             </div>
         </a>
@@ -29,7 +29,7 @@ get_header(); ?>
             <div class="shows-gallery-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/featured.jpg');">
                 <div class="shows-gallery-overlay">
                     <div class="shows-gallery-title">Featured Shows</div>
-                    <div class="shows-gallery-subtitle">We create every feature show in close collaboration with you—taking the time to understand the story you want to tell.</div>
+                    <div class="shows-gallery-subtitle">Custom-crafted performances designed in close collaboration with you.</div>
                 </div>
             </div>
         </a>
@@ -37,7 +37,7 @@ get_header(); ?>
             <div class="shows-gallery-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/firstLights.jpg');">
                 <div class="shows-gallery-overlay">
                     <div class="shows-gallery-title">First Lights</div>
-                    <div class="shows-gallery-subtitle">A place-responsive, choreographed drone, light, and sound experience, celebrating and honouring first nations storytelling and cultural heritage.</div>
+                    <div class="shows-gallery-subtitle">Place-responsive works honouring First Nations storytelling through light and sound.</div>
                 </div>
             </div>
         </a>
@@ -45,7 +45,7 @@ get_header(); ?>
             <div class="shows-gallery-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/featured.png');">
                 <div class="shows-gallery-overlay">
                     <div class="shows-gallery-title">Longform Shows</div>
-                    <div class="shows-gallery-subtitle">Longer-format performances blend drones, original sound, narration, lighting, and special effects into immersive, cinematic experiences.</div>
+                    <div class="shows-gallery-subtitle">Immersive, cinematic journeys blending drones, sound, story, and special effects.</div>
                 </div>
             </div>
         </a>

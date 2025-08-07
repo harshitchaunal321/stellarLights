@@ -4,15 +4,24 @@ Template Name: FeateureShows Page
 */
 get_header(); ?>
 
-<div class="feature-shows-hero" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/corporateEventFeatureShows.png');">
-   
+<div class="hero-section" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/corporateEventFeatureShows.png');">
+    <div class="hero-content">
+        <h1>Feature Shows</h1>
+        <p>We create every Feature Show in close collaboration with you—taking the time to understand your audience, your event, and the story you want to tell.</p>
+    </div>
+    <div class="photo-credit-container">
+        <div class="photo-credit">Stellar Lights</div>
+    </div>
 </div>
 
 <div class="feature-shows-content">
-    <div class="section-title">
-        <h2><span class="normal-weight">SHOWS &nbsp;></span> <span class="bold-weight">&nbsp; FEATURE SHOWS</span></h2>
+    <div class="breadcrumbs">
+        <a href="/shows">SHOWS</a> > FEATURE SHOWS
     </div>
-    <p>We have a range of Feature Shows from Corporate Events, Brand Storytelling to Public and Private events. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat voluptat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper slore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis.</p>
+
+    <section class="show-intro-section">
+        <p>We have a range of Feature Shows from Corporate Events, Brand Storytelling to Public and Private events. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat voluptat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper slore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis.</p>
+    </section>
 </div>
 
 <div class="feature-shows-carousel">
