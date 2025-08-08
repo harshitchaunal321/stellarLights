@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
             {
                 title: "Australian Education Union",
                 location: "SYDNEY",
-                explanation: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nil ut aliquip ex ea commodo consequat.",
+                explanation: "Flown as part of the For Every Child campaign, this powerful drone show turned the night sky into a rallying cry for fully funded public schools. Built around a child-voiced script and shaped by vibrant campaign visuals, the performance brought national attention to the issue—and became part of a movement that helped deliver lasting change just months later.",
                 image: `${themeData.templateUrl}/assets/images/corporateEventFeatureShows.png`,
                 additional: "Story by Ron Bradfield | Animation by Jarrad Russell </br> Music & Sound design by Envelope Audio </br> Performed by Ron Bradfield"
             },

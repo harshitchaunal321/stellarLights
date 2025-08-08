@@ -4,17 +4,19 @@ Template Name: Brand Storytelling Page
 */
 get_header(); ?>
 
-<div class="corporate-event-hero" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/brandstorytellingbanner.jpeg');">
-    <div class="hero-text">
+<div class="hero-section" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/brandstorytellingbanner.jpeg');">
+    <div class="hero-content">
         <h1>Brand Storytelling</h1>
         <p>Elevate your brand narrative with custom-branded drone formations and stunning choreography designed to create emotional resonance, viral potential, and creative impact.</p>
     </div>
-    <p class="photo-credit">Asher King</p>
+    <div class="photo-credit-container">
+        <div class="photo-credit">Asher King</div>
+    </div>
 </div>
 
 <div class="corporate-event-content">
-    <div class="breadcrumb">
-        <h2><span class="normal-weight">SHOWS > FEATURE SHOWS ></span> <span class="bold-weight">BRAND STORYTELLING</span></h2>
+    <div class="breadcrumbs">
+        <a href="/shows">SHOWS</a> > <a href="/feature-shows">FEATURE SHOWS</a> > BRAND STORYTELLING
     </div>
 </div>
 

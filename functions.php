@@ -149,6 +149,13 @@ function stellar_lights_enqueue_scripts() {
             array('stellar-lights-style'),
             filemtime(get_template_directory() . '/assets/css/shows.css')
         );
+        wp_enqueue_script(
+            'stellar-lights-video-player',
+            get_template_directory_uri() . '/assets/js/video-player.js',
+            array('jquery'),
+            filemtime(get_template_directory() . '/assets/js/video-player.js'),
+            true
+        );
     }
     // Enqueue Feature Shows stylesheet for page-featureShows.php
     if (is_page_template('page-featureShows.php')) {
@@ -163,6 +170,21 @@ function stellar_lights_enqueue_scripts() {
         }
     } elseif (defined('WP_DEBUG') && WP_DEBUG) {
         error_log('Stellar Lights: Not enqueuing featureShows.css - not using page-featureShows.php template.');
+    }
+
+    // Enqueue FirstLights Shows stylesheet for page-firstLights.php
+    if (is_page_template('page-firstLights.php')) {
+        wp_enqueue_style(
+            'stellar-lights-first-lights-style',
+            get_template_directory_uri() . '/assets/css/firstLights.css',
+            array('stellar-lights-style'),
+            filemtime(get_template_directory() . '/assets/css/firstLights.css')
+        );
+        if (defined('WP_DEBUG') && WP_DEBUG) {
+            error_log('Stellar Lights: Enqueuing firstLights.css for First Lights page.');
+        }
+    } elseif (defined('WP_DEBUG') && WP_DEBUG) {
+        error_log('Stellar Lights: Not enqueuing firstLights.css - not using page-firstLights.php template.');
     }
     // Enqueue Corporate Events stylesheet for page-corporate-events.php
     if (is_page_template('page-corporate-events.php')) {

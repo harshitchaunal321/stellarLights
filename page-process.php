@@ -7,7 +7,8 @@ get_header(); ?>
 <div class="hero-section" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/process.png');">
     <div class="hero-content">
         <h1>The Stellar Process</h1>
-        <p>Bringing a drone light show to life is not unlike producing a short film. It requires a blend of artistic vision, technical precision, and creative collaboration—pulling together sound designers, animators, writers, lighting specialists, and storytellers to shape an immersive experience that connects with audiences. Each show is unique, and our process ensures it's brought to life with clarity, care, and creativity.
+        <p>Every show, meticulously imagined, designed, and delivered.
+
         </p>
     </div>
     <div class="photo-credit-container">

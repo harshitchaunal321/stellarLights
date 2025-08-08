@@ -733,6 +733,7 @@
         max-width: 100% !important;
         min-width: 0 !important;
         margin: 0 !important;
+        padding: 0 !important;
     }
 
     .footer-subscribe .wpforms-field input[type="text"],
@@ -740,17 +741,66 @@
         width: 100% !important;
         min-width: 0 !important;
         font-size: 1rem !important;
+        margin: 0 !important;
+        padding: clamp(0.4rem, 1vw, 0.6rem) !important;
+        box-sizing: border-box !important;
     }
 
     .footer-subscribe .wpforms-submit {
         width: 100% !important;
         min-width: 0 !important;
         font-size: 1rem !important;
-        margin-left: 0 !important;
+        margin: 0 !important;
         margin-top: 1.5rem !important;
+        padding: clamp(0.3rem, 0.8vw, 0.4rem) clamp(2vw, 4vw, 3vw) !important;
+        box-sizing: border-box !important;
     }
 
     .footer-subscribe .wpforms-submit-container {
         margin-top: 1.5rem !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Ensure all form elements have consistent alignment */
+    .footer-subscribe .wpforms-field-container {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .footer-subscribe .wpforms-field-container .wpforms-field {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Additional fixes for WPForms alignment */
+    .footer-subscribe .wpforms-form .wpforms-field-container {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .footer-subscribe .wpforms-form .wpforms-field-container .wpforms-field {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    .footer-subscribe .wpforms-form .wpforms-field-container .wpforms-field input {
+        margin: 0 !important;
+        padding: clamp(0.4rem, 1vw, 0.6rem) !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Remove any default WPForms margins */
+    .footer-subscribe .wpforms-form * {
+        box-sizing: border-box !important;
+    }
+
+    .footer-subscribe .wpforms-form .wpforms-field-container,
+    .footer-subscribe .wpforms-form .wpforms-field-container * {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 }
