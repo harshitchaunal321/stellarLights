@@ -6,15 +6,22 @@ get_header(); ?>
 
 <div class="hero-section">
     <div class="hero-video">
+        <div class="video-placeholder" id="videoPlaceholder">
+            <div class="loading-spinner"></div>
+        </div>
         <iframe 
-            src="https://www.youtube.com/embed/eEjNUWMfuD4?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&modestbranding=1&playlist=eEjNUWMfuD4" 
+            id="heroVideo"
+            src="https://www.youtube.com/embed/eEjNUWMfuD4?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&modestbranding=1&playlist=eEjNUWMfuD4&rel=0&fs=0&iv_load_policy=3&disablekb=1&cc_load_policy=0&color=white&playsinline=1&enablejsapi=0&origin=<?php echo get_site_url(); ?>&wmode=transparent&vq=hd1080&modestbranding=1&showinfo=0&controls=0&rel=0&fs=0&iv_load_policy=3&disablekb=1&cc_load_policy=0&color=white&playsinline=1&enablejsapi=0&origin=<?php echo get_site_url(); ?>&wmode=transparent&vq=hd1080&modestbranding=1&showinfo=0&controls=0&rel=0&fs=0&iv_load_policy=3&disablekb=1&cc_load_policy=0&color=white&playsinline=1&enablejsapi=0&origin=<?php echo get_site_url(); ?>&wmode=transparent&vq=hd1080" 
             frameborder="0" 
-            allow="autoplay; muted" 
+            allow="autoplay; encrypted-media" 
             allowfullscreen
+            loading="lazy"
+            title="Stellar Lights Drone Show"
+            style="opacity: 0; transition: opacity 1s ease-in-out;"
         ></iframe>
     </div>
     <div class="hero-content">
-        <h1>We are Australia’s Premier Drone Show Storytellers</h1>
+        <h1>We are Australia's Premier Drone Show Storytellers</h1>
         <p>Stellar Lights crafts exceptional drone light shows across Australia, blending captivating creative storytelling with advanced drone technology. From large-scale public celebrations to corporate events, our bespoke drone shows offer unique, immersive experiences designed to captivate and inspire.</p>
         <a href="/contact" class="enquire-button">Enquire Now</a>
     </div>
