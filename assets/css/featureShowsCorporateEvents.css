@@ -2,7 +2,8 @@
 .hero-section {
     background-size: cover;
     background-position: center;
-    height: 100vh;
+    min-height: 100vh;
+    height: auto;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -10,7 +11,8 @@
     color: white;
     position: relative;
     margin-top: -70px;
-    padding-top: 100px;
+    padding: 100px 20px 20px;
+    overflow: hidden;
 }
 
 .hero-section::before {
@@ -26,61 +28,66 @@
     position: relative;
     z-index: 1;
     max-width: 90%;
+    width: 100%;
 }
 
 .hero-content h1 {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 60px;
+    font-size: clamp(28px, 8vw, 60px);
     font-weight: 600;
     margin-bottom: 20px;
     max-width: 1364px;
-    margin-top: -155px;
+    margin-top: 0;
+    line-height: 1.2;
 }
 
 .hero-content p {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 18px;
+    font-size: clamp(14px, 3vw, 18px);
     line-height: 1.6;
     max-width: 1088px;
     margin: 0 auto 30px;
     text-align: center;
-    letter-spacing: 2.5px;
+    letter-spacing: clamp(1px, 0.5vw, 2.5px);
 }
 
 /* Photo Credit Container */
 .photo-credit-container {
     position: absolute;
-    bottom: 50px;
+    bottom: 20px;
     width: 100%;
     left: 0;
+    padding: 0 20px;
 }
 
 .photo-credit {
     position: relative;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 20px;
+    font-size: clamp(12px, 4vw, 20px);
     color: white;
     opacity: 0.8;
     font-style: italic;
     text-align: right;
     margin-bottom: 15px;
-    padding-right: 80px;
+    padding-right: clamp(20px, 10vw, 80px);
 }
 
 /* Corporate Events Content Section */
 .corporate-event-content {
     max-width: 1088px;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0 clamp(1rem, 4vw, 2rem);
     color: #fff;
+    overflow-x: hidden;
 }
 
 .corporate-event-content .breadcrumbs {
     padding: 2rem 0;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 20px;
-    letter-spacing: 3.75px;
-    margin-left: -100px;
+    font-size: clamp(14px, 4vw, 20px);
+    letter-spacing: clamp(1px, 0.5vw, 3.75px);
+    margin-left: 0;
+    text-align: center;
 }
 
 .corporate-event-content .breadcrumbs a {
@@ -90,78 +97,98 @@
 
 .corporate-event-content .show-intro-section p {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 20px;
+    font-size: clamp(16px, 4vw, 20px);
     line-height: 1.7;
     margin-bottom: 1.5rem;
-    letter-spacing: 2.5px;
+    letter-spacing: clamp(1px, 0.5vw, 2.5px);
     text-align: center;
 }
 
 /* Show Section - UPDATED with 1088px max-width */
 .show-section {
-    padding: 40px 0;
+    padding: clamp(20px, 5vw, 40px) 0;
     color: #fff;
     max-width: 1088px;
     margin: 0 auto;
     position: relative;
+    overflow-x: hidden;
 }
 
 .show-container {
     width: 100%;
-    padding: 0 2rem;
+    padding: 0 clamp(1rem, 4vw, 2rem);
 }
 
 .show-header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 0 auto 20px;
+    align-items: flex-start;
+    margin: 0 auto clamp(15px, 3vw, 20px);
     width: 100%;
     position: relative;
+    flex-wrap: wrap;
+    gap: clamp(10px, 2vw, 15px);
 }
 
 .show-header h2 {
-    font-size: 2rem;
+    font-size: clamp(1.3rem, 5vw, 2rem);
     font-weight: 700;
     margin: 0;
     text-align: left;
     flex: 1;
-    max-width: 70%;
+    min-width: 200px;
+    line-height: 1.3;
+    word-wrap: break-word;
+    hyphens: auto;
 }
 
 .show-location {
-    font-size: 1.2rem;
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
     display: flex;
     align-items: center;
-    max-width: 30%;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     justify-content: flex-end;
+    min-width: 150px;
+    max-width: 100%;
+    flex-shrink: 0;
 }
 
 .location-icon-img {
-    width: 30px !important;
-    height: 30px !important;
-    margin-right: 20px;
+    width: clamp(20px, 5vw, 30px) !important;
+    height: clamp(20px, 5vw, 30px) !important;
+    margin-right: clamp(8px, 2vw, 20px);
     vertical-align: middle;
+    flex-shrink: 0;
 }
 
 .show-explanation {
     width: 100%;
-    margin: 0 auto 20px;
+    margin: 0 auto clamp(15px, 3vw, 20px);
     text-align: left;
+    font-size: clamp(14px, 3.5vw, 18px);
+    line-height: 1.6;
+    letter-spacing: clamp(0.5px, 0.2vw, 1px);
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+.show-details {
+    width: 100%;
+    overflow: hidden;
 }
 
 .show-details img {
     width: 100%;
     max-width: 100%;
-    margin: 20px 0;
+    margin: clamp(15px, 3vw, 20px) 0;
     height: auto;
     display: block;
     transition: all 0.5s ease;
     position: relative;
     z-index: 1;
+    border-radius: clamp(4px, 1vw, 8px);
 }
 
 .show-details img:hover {
@@ -172,44 +199,53 @@
 
 .show-additional {
     width: 100%;
-    margin: 20px auto;
+    margin: clamp(15px, 3vw, 20px) auto;
     text-align: center;
-    padding: 0 2rem;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    font-size: clamp(14px, 3.5vw, 16px);
+    line-height: 1.6;
+    color: #ccc;
 }
 
 .show-navigation {
-    margin-top: 20px;
+    margin-top: clamp(15px, 3vw, 20px);
     text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: clamp(10px, 2vw, 15px);
     width: 100%;
+    flex-wrap: wrap;
+    padding: clamp(10px, 2vw, 15px) 0;
 }
 
 .show-navigation .nav-text {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 2.5vw, 1rem);
     color: white;
     background-color: transparent;
     border: none;
     cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .show-navigation .nav-circle {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px;
-    height: 40px;
+    width: clamp(35px, 9vw, 40px);
+    height: clamp(35px, 9vw, 40px);
     background-color: white;
     border-radius: 50%;
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 3.5vw, 1.5rem);
     border: none;
     padding: 0;
-    margin: 0 10px;
+    margin: 0 clamp(5px, 1.5vw, 10px);
     transition: all 0.3s ease;
     cursor: pointer;
+    flex-shrink: 0;
+    min-width: clamp(35px, 9vw, 40px);
 }
 
 .show-navigation .nav-circle:hover {
@@ -219,59 +255,67 @@
     color: #333;
 }
 
+.show-navigation .nav-circle:active {
+    transform: scale(0.95);
+}
+
 /* Other Features Section */
 .other-features {
-    padding: 40px 0;
+    padding: clamp(30px, 6vw, 40px) 0;
     color: #fff;
     text-align: center;
     max-width: 1088px;
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 .other-features h2 {
-    font-size: 35px;
+    font-size: clamp(24px, 6vw, 35px);
     font-weight: 600;
-    margin-bottom: 3rem;
+    margin-bottom: clamp(1.5rem, 5vw, 3rem);
     color: #898989;
 }
 
 .other-features-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
     text-align: center;
     width: 100%;
-    padding: 0 2rem;
+    padding: 0 clamp(1rem, 4vw, 2rem);
 }
 
 .other-feature-item {
     display: flex;
     flex-direction: column;
+    min-height: 200px;
 }
 
 .other-feature-item h3 {
-    font-size: 22px;
+    font-size: clamp(18px, 4vw, 22px);
     margin-bottom: 1rem;
-    letter-spacing: 3.5px;
+    letter-spacing: clamp(1px, 0.5vw, 3.5px);
 }
 
 .other-feature-item p {
-    font-size: 16px;
+    font-size: clamp(14px, 3vw, 16px);
     line-height: 1.6;
     margin-bottom: 2rem;
     color: #ccc;
-    letter-spacing: 2.2px;
+    letter-spacing: clamp(1px, 0.3vw, 2.2px);
+    flex: 1;
 }
 
 .other-feature-item .feature-link {
     color: #fff;
     border: 1px solid #fff;
-    padding: 10px 20px;
+    padding: clamp(8px, 2vw, 10px) clamp(16px, 4vw, 20px);
     border-radius: 20px;
     text-decoration: none;
     transition: all 0.3s ease;
     margin-top: auto;
     align-self: center;
+    font-size: clamp(14px, 3vw, 16px);
 }
 
 .other-feature-item .feature-link:hover {
@@ -283,12 +327,7 @@
 /* Large devices (desktops, 992px and up) */
 @media (max-width: 1200px) {
     .hero-content h1 {
-        font-size: 50px;
-        margin-top: -130px;
-    }
-
-    .corporate-event-content .breadcrumbs {
-        margin-left: -50px;
+        margin-top: 0;
     }
 }
 
@@ -296,30 +335,7 @@
 @media (max-width: 991px) {
     .hero-section {
         padding-top: 80px;
-    }
-
-    .hero-content h1 {
-        font-size: 42px;
-        margin-top: -110px;
-    }
-
-    .hero-content p {
-        font-size: 16px;
-    }
-
-    .photo-credit {
-        font-size: 18px;
-        padding-right: 60px;
-    }
-
-    .corporate-event-content .breadcrumbs {
-        margin-left: 0;
-        font-size: 18px;
-    }
-
-    .other-features-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        min-height: 90vh;
     }
 
     .show-header {
@@ -328,12 +344,13 @@
     }
 
     .show-header h2 {
-        max-width: 100%;
-        margin-bottom: 15px;
+        min-width: auto;
+        width: 100%;
     }
 
     .show-location {
-        max-width: 100%;
+        min-width: auto;
+        width: 100%;
         justify-content: flex-start;
     }
 }
@@ -341,185 +358,210 @@
 /* Small devices (landscape phones, 576px to 767px) */
 @media (max-width: 767px) {
     .hero-section {
-        height: 80vh;
+        min-height: 80vh;
         margin-top: -50px;
-    }
-
-    .hero-content h1 {
-        font-size: 36px;
-        margin-top: -90px;
-    }
-
-    .hero-content p {
-        font-size: 15px;
-        letter-spacing: 2px;
-    }
-
-    .photo-credit {
-        font-size: 16px;
-        padding-right: 40px;
+        padding: 80px 15px 15px;
     }
 
     .corporate-event-content .breadcrumbs {
-        font-size: 16px;
         text-align: center;
         padding: 1.5rem 0;
     }
 
-    .corporate-event-content .show-intro-section p {
-        font-size: 18px;
-    }
-
     .show-section {
-        padding: 30px 0;
+        padding: clamp(15px, 4vw, 30px) 0;
     }
 
     .show-header h2 {
-        font-size: 1.8rem;
+        font-size: clamp(1.1rem, 4vw, 1.6rem);
+        text-align: center;
     }
 
     .show-location {
-        font-size: 1rem;
+        justify-content: center;
+        font-size: clamp(0.75rem, 2.5vw, 1rem);
     }
 
-    .other-features h2 {
-        font-size: 28px;
-        margin-bottom: 2rem;
+    .show-explanation {
+        font-size: clamp(12px, 3vw, 16px);
+        text-align: center;
+        margin: clamp(10px, 2.5vw, 15px) auto;
     }
 
-    .other-feature-item h3 {
-        font-size: 20px;
+    .show-details img {
+        margin: clamp(10px, 2.5vw, 15px) 0;
     }
 
-    .other-feature-item p {
-        font-size: 15px;
+    .show-additional {
+        font-size: clamp(12px, 3vw, 15px);
+        text-align: center;
+        margin: clamp(10px, 2.5vw, 15px) auto;
+    }
+
+    .show-navigation {
+        gap: clamp(8px, 2vw, 12px);
+        margin-top: clamp(10px, 2.5vw, 15px);
+    }
+
+    .show-navigation .nav-text {
+        font-size: clamp(0.75rem, 2.2vw, 0.9rem);
+    }
+
+    .show-navigation .nav-circle {
+        width: clamp(32px, 8vw, 38px);
+        height: clamp(32px, 8vw, 38px);
+        font-size: clamp(0.9rem, 3vw, 1.3rem);
+        min-width: clamp(32px, 8vw, 38px);
+    }
+
+    .other-features-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
     }
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
 @media (max-width: 575px) {
     .hero-section {
-        height: 70vh;
-    }
-
-    .hero-content h1 {
-        font-size: 28px;
-        margin-top: -70px;
-        margin-bottom: 15px;
-    }
-
-    .hero-content p {
-        font-size: 14px;
-        margin-bottom: 20px;
-    }
-
-    .photo-credit-container {
-        bottom: 30px;
-    }
-
-    .photo-credit {
-        font-size: 14px;
-        padding-right: 20px;
+        min-height: 70vh;
+        padding: 70px 10px 10px;
     }
 
     .corporate-event-content {
         padding: 0 1rem;
     }
 
-    .corporate-event-content .breadcrumbs {
-        font-size: 14px;
-        letter-spacing: 2px;
-        padding: 1rem 0;
-    }
-
-    .corporate-event-content .show-intro-section p {
-        font-size: 16px;
-        letter-spacing: 1.5px;
-    }
-
-    .show-section {
-        padding: 20px 0;
-    }
-
     .show-container {
         padding: 0 1rem;
     }
 
-    .show-header h2 {
-        font-size: 1.5rem;
-    }
-
-    .location-icon-img {
-        width: 25px !important;
-        height: 25px !important;
-        margin-right: 10px;
-    }
-
-    .other-features {
-        padding: 30px 0;
-    }
-
-    .other-features h2 {
-        font-size: 24px;
-        margin-bottom: 1.5rem;
-    }
-
     .other-features-grid {
-        grid-template-columns: 1fr;
         padding: 0 1rem;
         gap: 1rem;
     }
 
-    .other-feature-item h3 {
-        font-size: 18px;
+    .other-feature-item {
+        min-height: 180px;
     }
 
-    .other-feature-item p {
-        font-size: 14px;
-        margin-bottom: 1.5rem;
+    .show-section {
+        padding: clamp(10px, 3vw, 20px) 0;
     }
 
-    .other-feature-item .feature-link {
-        padding: 8px 16px;
-        font-size: 14px;
+    .show-header {
+        margin: 0 auto clamp(10px, 2.5vw, 15px);
+        gap: clamp(6px, 1.5vw, 10px);
     }
 
-    .show-navigation .nav-circle {
-        width: 35px;
-        height: 35px;
-        font-size: 1.3rem;
+    .show-header h2 {
+        font-size: clamp(1rem, 3.8vw, 1.4rem);
+        line-height: 1.4;
+    }
+
+    .show-location {
+        font-size: clamp(0.7rem, 2.2vw, 0.9rem);
+    }
+
+    .location-icon-img {
+        width: clamp(18px, 4.5vw, 25px) !important;
+        height: clamp(18px, 4.5vw, 25px) !important;
+        margin-right: clamp(6px, 1.5vw, 10px);
+    }
+
+    .show-explanation {
+        font-size: clamp(11px, 2.8vw, 15px);
+        line-height: 1.5;
+        margin: clamp(8px, 2vw, 12px) auto;
+    }
+
+    .show-details img {
+        margin: clamp(8px, 2vw, 12px) 0;
+    }
+
+    .show-additional {
+        font-size: clamp(11px, 2.8vw, 14px);
+        margin: clamp(8px, 2vw, 12px) auto;
+        padding: 0 clamp(0.5rem, 3vw, 1rem);
+    }
+
+    .show-navigation {
+        gap: clamp(6px, 1.5vw, 10px);
+        margin-top: clamp(8px, 2vw, 12px);
     }
 
     .show-navigation .nav-text {
-        font-size: 0.9rem;
+        font-size: clamp(0.7rem, 2vw, 0.8rem);
+    }
+
+    .show-navigation .nav-circle {
+        width: clamp(30px, 7.5vw, 35px);
+        height: clamp(30px, 7.5vw, 35px);
+        font-size: clamp(0.8rem, 2.5vw, 1.1rem);
+        min-width: clamp(30px, 7.5vw, 35px);
+        margin: 0 clamp(3px, 1vw, 8px);
     }
 }
 
 /* Very small devices (less than 400px) */
 @media (max-width: 399px) {
-    .hero-content h1 {
-        font-size: 24px;
+    .hero-section {
+        padding: 60px 8px 8px;
     }
 
-    .hero-content p {
-        font-size: 13px;
+    .corporate-event-content {
+        padding: 0 0.5rem;
     }
 
-    .photo-credit {
-        font-size: 12px;
+    .show-container {
+        padding: 0 0.5rem;
+    }
+
+    .other-features-grid {
+        padding: 0 0.5rem;
+    }
+
+    .other-feature-item {
+        min-height: 180px;
     }
 
     .show-header h2 {
-        font-size: 1.3rem;
+        font-size: clamp(0.9rem, 3.5vw, 1.2rem);
     }
 
     .show-location {
-        font-size: 0.9rem;
+        font-size: clamp(0.65rem, 2vw, 0.8rem);
+    }
+
+    .show-explanation {
+        font-size: clamp(10px, 2.5vw, 13px);
+    }
+
+    .show-additional {
+        font-size: clamp(10px, 2.5vw, 13px);
     }
 
     .show-navigation .nav-circle {
-        width: 30px;
-        height: 30px;
-        font-size: 1.1rem;
+        width: clamp(28px, 7vw, 32px);
+        height: clamp(28px, 7vw, 32px);
+        font-size: clamp(0.75rem, 2.2vw, 1rem);
+        min-width: clamp(28px, 7vw, 32px);
+    }
+}
+
+/* Prevent horizontal scrolling on all screen sizes */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+}
+
+/* Ensure all containers respect viewport width */
+* {
+    box-sizing: border-box;
+}
+
+/* Fix for iOS Safari viewport issues */
+@supports (-webkit-touch-callout: none) {
+    .hero-section {
+        min-height: -webkit-fill-available;
     }
 }
