@@ -82,7 +82,7 @@
 
     <div class="footer-subscribe">
         <p class="subscribe-text">Subscribe to receive monthly insights from our award-winning team</p>
-        <?php echo do_shortcode('[wpforms id="68"]'); ?>
+        <?php echo do_shortcode('[wpforms id="115"]'); ?>
         <p class="consent-text">
             By submitting your details, you consent to receiving our newsletter and emails about our services.<br>
             You can opt-out at any time.
