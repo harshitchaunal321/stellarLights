@@ -20,7 +20,9 @@ get_header(); ?>
     </div>
 
     <section class="show-intro-section">
-        <p>We have a range of Feature Shows from Corporate Events, Brand Storytelling to Public and Private events. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat voluptat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper slore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis.</p>
+        <p>Every Feature Show is custom-built in close collaboration with you. We take the time to understand your audience, your event, and the emotional response you want to create. Whether it's a corporate celebration, a branded activation, a public event, or a private moment, our drone light shows are designed to resonate — delivering precision, creativity, and unforgettable spectacle in the sky. <br>
+From product launches and gala dinners to large-scale festivals and intimate celebrations, we choreograph light, story, and sound into tailored experiences. As one of Australia's leading drone show companies, we specialise in creating bespoke aerial performances that engage, inspire, and elevate every occasion.
+</p>
     </section>
 </div>
 

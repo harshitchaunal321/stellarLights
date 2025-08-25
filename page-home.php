@@ -50,7 +50,7 @@ get_header(); ?>
             <div class="carousel-item">
                 <h2>Longform Shows</h2>
                 <p>Longer-format performances blend drones, original sound, narration, lighting, and special effects into immersive, cinematic experiences.</p>
-                <a href="/longform-shows" class="carousel-button">See Our Longform Shows</a>
+                <a href="/shows/longFormShows" class="carousel-button">See Our Longform Shows</a>
             </div>
         </div>
         <button class="carousel-arrow carousel-arrow-right" aria-label="Next slide">></button>

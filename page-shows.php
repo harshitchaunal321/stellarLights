@@ -41,7 +41,7 @@ get_header(); ?>
                 </div>
             </div>
         </a>
-        <a href="/shows/longform-shows" class="shows-gallery-image-link">
+        <a href="/shows/longFormShows" class="shows-gallery-image-link">
             <div class="shows-gallery-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/featured.png');">
                 <div class="shows-gallery-overlay">
                     <div class="shows-gallery-title">Longform Shows</div>
@@ -111,7 +111,7 @@ get_header(); ?>
         <div class="offer-item">
             <h3>Longform Shows</h3>
             <p>These longer-format performances blend drones, original sound, narration, lighting, and special effects into immersive, cinematic experiences. Rooted in place and story, they're designed for major public celebrations—inviting audiences on a journey that connects land, culture, and collective memory.</p>
-            <a href="/shows/longform-shows" class="offer-button">See the Shows</a>
+            <a href="/shows/longFormShows" class="offer-button">See the Shows</a>
         </div>
     </div>
 </section>

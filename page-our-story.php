@@ -105,7 +105,7 @@ get_header(); ?>
                 <p>
                     Longer-format performances blend drones, original sound, narration, lighting, and special effects into immersive, cinematic experiences.
                 </p>
-                <a href="/longform-shows" class="read-more">Read More</a>
+                <a href="/shows/longFormShows" class="read-more">Read More</a>
             </div>
         </div>
     </div>
