@@ -38,70 +38,27 @@
     background: #000;
 }
 
-/* Custom video placeholder and loading */
-.video-placeholder {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(135deg, #000 0%, #111 50%, #000 100%);
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.5s ease-in-out;
-}
 
-.loading-spinner {
-    width: 60px;
-    height: 60px;
-    border: 3px solid rgba(255, 255, 255, 0.1);
-    border-top: 3px solid #fff;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-}
 
-@keyframes spin {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-.hero-video iframe {
+.hero-video video {
     width: 100%;
     height: 100%;
     border: none;
     position: relative;
     z-index: 1;
-    /* Aggressively hide YouTube elements */
-    filter: brightness(1.1) contrast(1.1) saturate(1.1);
-    transform: scale(1.02);
-    /* Hide YouTube controls and branding */
+    object-fit: cover;
     pointer-events: none;
 }
 
-/* Hide YouTube branding completely */
-.hero-video iframe {
-    /* Remove YouTube watermark and controls */
-    -webkit-filter: brightness(1.1) contrast(1.1) saturate(1.1);
-    -moz-filter: brightness(1.1) contrast(1.1) saturate(1.1);
-    -ms-filter: brightness(1.1) contrast(1.1) saturate(1.1);
+/* Video styling */
+.hero-video video {
+    /* Ensure video covers the entire container */
+    object-fit: cover;
 }
 
-/* Video loaded state */
-.hero-video.video-loaded .video-placeholder {
-    opacity: 0;
-    pointer-events: none;
-}
 
-.hero-video.video-loaded iframe {
-    opacity: 1 !important;
-}
+
+
 
 .hero-content {
     position: relative;
@@ -157,7 +114,10 @@
 
 .carousel-intro {
     max-width: 60rem;
+    width: 100%;
     margin: 0 auto 3rem;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
 }
 
 .carousel-intro p {
@@ -170,8 +130,11 @@
 .carousel-wrapper {
     position: relative;
     max-width: 50rem;
+    width: 100%;
     margin: 0 auto;
     min-height: 15rem;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
 }
 
 .carousel-content {
@@ -400,7 +363,10 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     max-width: 70%;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
 }
 
 .gallery-grid .image-wrapper {
@@ -421,7 +387,10 @@
 
 .cta-content {
     max-width: 60rem;
+    width: 100%;
     margin: 0 auto 2rem;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
 }
 
 .cta-content h2 {
@@ -457,8 +426,11 @@
     justify-content: center;
     gap: 1rem;
     max-width: 90%;
+    width: 100%;
     margin: 0 auto;
     margin-top: 100px;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
 }
 
 .additional-images .image-wrapper {
@@ -467,6 +439,18 @@
 }
 
 /* Responsive Adjustments */
+
+/* Global responsive fixes */
+.hero-section,
+.carousel-section,
+.gallery-section,
+.cta-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
 
 /* Small screens (up to 576px) */
 @media (max-width: 576px) {
@@ -882,6 +866,137 @@ iframe {
     transform: scale(1.02) !important;
     pointer-events: none !important;
     overflow: hidden !important;
+}
+
+/* Additional responsive fixes for home page */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: clamp(2rem, 8vw, 4rem);
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    .hero-content p {
+        font-size: clamp(1rem, 4vw, 1.5rem);
+        line-height: 1.4;
+        margin-bottom: 1.5rem;
+    }
+
+    .enquire-button {
+        font-size: clamp(0.9rem, 3vw, 1.2rem);
+        padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem);
+    }
+
+    .carousel-intro p {
+        font-size: clamp(0.9rem, 3vw, 1.2rem);
+        line-height: 1.5;
+    }
+
+    .carousel-item h2 {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        line-height: 1.3;
+    }
+
+    .carousel-item p {
+        font-size: clamp(0.9rem, 3vw, 1.2rem);
+        line-height: 1.5;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: clamp(0.5rem, 2vw, 1rem);
+    }
+
+    .gallery-grid .image-wrapper {
+        height: clamp(200px, 50vw, 300px);
+    }
+
+    .additional-images {
+        flex-direction: column;
+        gap: clamp(0.5rem, 2vw, 1rem);
+        margin-top: clamp(3rem, 8vw, 6rem);
+    }
+
+    .additional-images .image-wrapper {
+        width: 100%;
+        height: clamp(150px, 40vw, 250px);
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-section {
+        margin-top: -3rem;
+        padding-top: 3rem;
+    }
+
+    .hero-content {
+        padding: 0 clamp(1rem, 8vw, 2rem);
+    }
+
+    .carousel-wrapper {
+        padding: 0 clamp(1rem, 8vw, 2rem);
+        min-height: clamp(10rem, 25vw, 15rem);
+    }
+
+    .carousel-arrow {
+        width: clamp(2rem, 8vw, 3rem);
+        height: clamp(2rem, 8vw, 3rem);
+        font-size: clamp(0.8rem, 3vw, 1.2rem);
+    }
+
+    .carousel-arrow-left {
+        left: clamp(0.5rem, 2vw, 1rem);
+    }
+
+    .carousel-arrow-right {
+        right: clamp(0.5rem, 2vw, 1rem);
+    }
+
+    .cta-content h2 {
+        font-size: clamp(1.5rem, 6vw, 2.5rem);
+        letter-spacing: clamp(1px, 1vw, 3px);
+    }
+
+    .cta-content .enquire-button {
+        font-size: clamp(0.9rem, 3vw, 1.2rem);
+        padding: clamp(0.5rem, 2vw, 1rem) clamp(1rem, 4vw, 2rem);
+        letter-spacing: clamp(1px, 1vw, 2px);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: clamp(1.8rem, 7vw, 3rem);
+    }
+
+    .hero-content p {
+        font-size: clamp(0.9rem, 3.5vw, 1.3rem);
+    }
+
+    .enquire-button {
+        font-size: clamp(0.8rem, 2.5vw, 1rem);
+        padding: clamp(0.4rem, 1.5vw, 0.8rem) clamp(0.8rem, 3vw, 1.5rem);
+    }
+
+    .carousel-intro p {
+        font-size: clamp(0.8rem, 2.5vw, 1rem);
+    }
+
+    .carousel-item h2 {
+        font-size: clamp(1.3rem, 4vw, 1.8rem);
+    }
+
+    .carousel-item p {
+        font-size: clamp(0.8rem, 2.5vw, 1rem);
+    }
+
+    .gallery-grid .image-wrapper {
+        height: clamp(180px, 45vw, 250px);
+    }
+
+    .additional-images .image-wrapper {
+        height: clamp(120px, 35vw, 200px);
+    }
 }
 
 /* Target YouTube's specific newer UI elements */

@@ -10,7 +10,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 clamp(1rem, 4vw, 2rem);
     width: 100%;
     box-sizing: border-box;
 }
@@ -73,7 +73,8 @@ body {
     line-height: 1.8;
     margin: 0 auto;
     max-width: 1000px;
-    padding: 0 20px;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
 }
 
 /* Image Gallery Section */

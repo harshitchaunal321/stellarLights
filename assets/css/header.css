@@ -134,12 +134,15 @@
 }
 
 .header-container {
-    max-width: 90%;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
     gap: 2rem;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
 }
 
 .logo img {
@@ -239,7 +242,8 @@
         justify-content: space-between;
         align-items: center;
         position: relative;
-        padding: 0 1rem;
+        padding: 0 clamp(1rem, 4vw, 2rem);
+        max-width: 100%;
     }
 
     .main-nav {
@@ -373,7 +377,8 @@
 /* Medium screens (768px to 992px) */
 @media (min-width: 768px) and (max-width: 992px) {
     .header-container {
-        padding: clamp(15px, 4vw, 20px) 5%;
+        padding: clamp(15px, 4vw, 20px) clamp(1rem, 4vw, 2rem);
+        max-width: 100%;
     }
 
     .logo img {
@@ -408,7 +413,8 @@
 /* Large tablets (993px to 1024px) */
 @media (min-width: 993px) and (max-width: 1024px) {
     .header-container {
-        max-width: 95%;
+        max-width: 100%;
+        padding: 0 clamp(1rem, 4vw, 2rem);
     }
 
     .nav-menu a {
@@ -449,7 +455,8 @@
     }
 
     .header-container {
-        padding: 0 0.8rem;
+        padding: 0 clamp(0.8rem, 4vw, 1rem);
+        max-width: 100%;
     }
 
     .logo img {
@@ -457,23 +464,89 @@
     }
 
     .menu-toggle {
-        right: 0.8rem;
+        right: clamp(0.8rem, 4vw, 1rem);
         padding: 0.4rem;
     }
 
     .main-nav {
         padding-top: 3.5rem;
-        padding-left: 0.8rem;
+        padding-left: clamp(0.8rem, 4vw, 1rem);
+        width: 100vw;
     }
 
     .nav-menu {
-        padding: 0 0.8rem;
+        padding: 0 clamp(0.8rem, 4vw, 1rem);
         gap: 0.8rem;
     }
 
     .nav-menu a {
         font-size: 0.9rem;
         padding: 0.4rem 0.8rem;
+    }
+}
+
+/* Additional responsive fixes for all screen sizes */
+@media (max-width: 1200px) {
+    .header-container {
+        max-width: 100%;
+        padding: 0 clamp(1rem, 5vw, 2rem);
+    }
+    
+    .main-nav {
+        margin-left: clamp(2rem, 8vw, 4rem);
+    }
+}
+
+@media (max-width: 1024px) {
+    .main-nav {
+        margin-left: clamp(1rem, 6vw, 3rem);
+    }
+    
+    .nav-menu a {
+        font-size: clamp(0.8rem, 2.2vw, 1.1rem);
+        padding: 0.4rem clamp(0.6rem, 1.5vw, 1rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .header-container {
+        padding: 0 clamp(1rem, 6vw, 2rem);
+    }
+    
+    .logo img {
+        height: clamp(60px, 12vw, 100px);
+    }
+    
+    .main-nav {
+        margin-left: 0;
+        width: 100vw;
+        left: -100vw;
+    }
+    
+    .main-nav.active {
+        left: 0;
+    }
+}
+
+/* Fix for devices with notches or unusual screen ratios */
+@media (max-width: 768px) and (max-aspect-ratio: 1/1) {
+    .main-nav {
+        padding-top: clamp(4rem, 8vw, 6rem);
+    }
+    
+    .menu-toggle {
+        top: clamp(20%, 25vw, 30%);
+    }
+}
+
+/* Fix for very wide mobile devices */
+@media (max-width: 768px) and (min-aspect-ratio: 16/9) {
+    .main-nav {
+        padding-top: clamp(3rem, 6vw, 4rem);
+    }
+    
+    .nav-menu {
+        gap: clamp(0.8rem, 2vw, 1.2rem);
     }
 }
 
