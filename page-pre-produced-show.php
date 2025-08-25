@@ -70,7 +70,7 @@ get_header(); ?>
             <div class="other-show-item">
                 <h4>Longform Shows</h4>
                 <p>Longer-format performances blend drones, original sound, narration, lighting, and special effects into immersive, cinematic experiences.</p>
-                <a href="/shows/longform-shows" class="read-more-btn">Read More</a>
+                <a href="/shows/longFormShows" class="read-more-btn">Read More</a>
             </div>
         </div>
     </section>

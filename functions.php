@@ -346,6 +346,16 @@ function stellar_lights_enqueue_scripts() {
             filemtime(get_template_directory() . '/assets/css/pre-produced-show.css')
         );
     }
+    
+    // Enqueue Longform Shows stylesheet for page-longform-shows.php
+    if (is_page_template('page-longform-shows.php')) {
+        wp_enqueue_style(
+            'stellar-lights-longform-shows-style',
+            get_template_directory_uri() . '/assets/css/longform-shows.css',
+            array('stellar-lights-style'),
+            filemtime(get_template_directory() . '/assets/css/longform-shows.css')
+        );
+    }
     // Enqueue custom JavaScript for menu toggle, carousel, and header effects
     wp_enqueue_script(
         'stellar-lights-custom-js',
