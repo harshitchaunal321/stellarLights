@@ -6,19 +6,17 @@ get_header(); ?>
 
 <div class="hero-section">
     <div class="hero-video">
-        <div class="video-placeholder" id="videoPlaceholder">
-            <div class="loading-spinner"></div>
-        </div>
-        <iframe 
+        <video 
             id="heroVideo"
-            src="https://www.youtube.com/embed/eEjNUWMfuD4?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&modestbranding=1&playlist=eEjNUWMfuD4&rel=0&fs=0&iv_load_policy=3&disablekb=1&cc_load_policy=0&color=white&playsinline=1&enablejsapi=0&origin=<?php echo get_site_url(); ?>&wmode=transparent&vq=hd1080&modestbranding=1&showinfo=0&controls=0&rel=0&fs=0&iv_load_policy=3&disablekb=1&cc_load_policy=0&color=white&playsinline=1&enablejsapi=0&origin=<?php echo get_site_url(); ?>&wmode=transparent&vq=hd1080&modestbranding=1&showinfo=0&controls=0&rel=0&fs=0&iv_load_policy=3&disablekb=1&cc_load_policy=0&color=white&playsinline=1&enablejsapi=0&origin=<?php echo get_site_url(); ?>&wmode=transparent&vq=hd1080" 
-            frameborder="0" 
-            allow="autoplay; encrypted-media" 
-            allowfullscreen
-            loading="lazy"
-            title="Stellar Lights Drone Show"
-            style="opacity: 0; transition: opacity 1s ease-in-out;"
-        ></iframe>
+            autoplay 
+            muted 
+            loop 
+            playsinline
+            style="opacity: 1;"
+        >
+            <source src="<?php echo get_template_directory_uri(); ?>/assets/images/homepagevideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
     </div>
     <div class="hero-content">
         <h1>We are Australia's Premier Drone Show Storytellers</h1>

@@ -17,21 +17,25 @@ html {
 }
 
 .content-section {
-    padding: 2rem;
+    padding: clamp(1rem, 4vw, 2rem);
     border-radius: 8px;
     margin: 2rem auto;
     max-width: 1200px;
+    width: 100%;
     position: relative;
     z-index: 2;
+    box-sizing: border-box;
 }
 
 .main-content {
     position: relative;
     z-index: 2;
-    padding: 2rem;
+    padding: clamp(1rem, 4vw, 2rem);
     margin: 2rem auto;
     max-width: 1200px;
+    width: 100%;
     border-radius: 8px;
+    box-sizing: border-box;
 }
 
 body {
@@ -70,12 +74,17 @@ body {
 .site-main {
     background-color: transparent;
     color: white;
-    padding: clamp(1rem, 3vw, 2rem);
+    padding: clamp(1rem, 4vw, 2rem);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .content-wrapper {
-    max-width: 90%;
+    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
 }
 
 body {
@@ -106,4 +115,140 @@ button,
 input[type="submit"],
 input[type="button"] {
     cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 12 12"><circle cx="6" cy="6" r="6" fill="white"/></svg>') 6 6, auto !important;
+}
+
+html {
+    scroll-behavior: auto !important;
+}
+
+body {
+    scroll-behavior: auto !important;
+}
+
+html.loaded,
+body.loaded {
+    scroll-behavior: smooth;
+}
+
+html::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 1px;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Global responsive fixes */
+* {
+    box-sizing: border-box;
+}
+
+/* Responsive container system */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 0 clamp(1rem, 5vw, 2rem);
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 0 clamp(1rem, 6vw, 2rem);
+    }
+    
+    .content-section,
+    .main-content {
+        padding: clamp(1rem, 5vw, 2rem);
+        margin: 1.5rem auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 clamp(1rem, 7vw, 2rem);
+    }
+    
+    .content-section,
+    .main-content {
+        padding: clamp(1rem, 6vw, 2rem);
+        margin: 1rem auto;
+    }
+    
+    .site-main {
+        padding: clamp(1rem, 5vw, 2rem);
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 clamp(1rem, 8vw, 2rem);
+    }
+    
+    .content-section,
+    .main-content {
+        padding: clamp(1rem, 7vw, 2rem);
+        margin: 0.5rem auto;
+    }
+    
+    .site-main {
+        padding: clamp(1rem, 6vw, 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 clamp(1rem, 10vw, 2rem);
+    }
+    
+    .content-section,
+    .main-content {
+        padding: clamp(1rem, 8vw, 2rem);
+    }
+    
+    .site-main {
+        padding: clamp(1rem, 7vw, 2rem);
+    }
+}
+
+/* Fix for left gap issues */
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ensure all sections are full width */
+section, .section, .hero-section, .carousel-section, .gallery-section, .cta-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Fix for any remaining left gaps */
+.main-content, .content-section, .site-main {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: clamp(1rem, 4vw, 2rem);
+    padding-right: clamp(1rem, 4vw, 2rem);
 }

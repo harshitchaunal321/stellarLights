@@ -1,0 +1,340 @@
+/*
+ * Global Responsive Fixes for Stellar Lights Theme
+ * This file fixes responsive issues and left gaps across all pages
+ */
+
+/* Global box-sizing fix */
+* {
+    box-sizing: border-box;
+}
+
+/* Fix for left gap issues */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ensure all sections are full width */
+section, .section, .hero-section, .carousel-section, .gallery-section, .cta-section, .blog-posts-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Fix for any remaining left gaps */
+.main-content, .content-section, .site-main, .hero-content, .cta-content, .carousel-intro, .carousel-wrapper, .gallery-grid, .additional-images, .feature-shows-content, .faq-dropdown {
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: clamp(1rem, 4vw, 2rem);
+    padding-right: clamp(1rem, 4vw, 2rem);
+}
+
+/* Responsive container system */
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    width: 100%;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
+}
+
+/* Responsive breakpoints */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        padding: 0 clamp(1rem, 5vw, 2rem);
+    }
+    
+    .hero-content, .cta-content, .carousel-intro, .carousel-wrapper, .gallery-grid, .additional-images, .feature-shows-content, .faq-dropdown {
+        padding-left: clamp(1rem, 5vw, 2rem);
+        padding-right: clamp(1rem, 5vw, 2rem);
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        padding: 0 clamp(1rem, 6vw, 2rem);
+    }
+    
+    .content-section,
+    .main-content {
+        padding: clamp(1rem, 5vw, 2rem);
+        margin: 1.5rem auto;
+    }
+    
+    .hero-content, .cta-content, .carousel-intro, .carousel-wrapper, .gallery-grid, .additional-images, .feature-shows-content, .faq-dropdown {
+        padding-left: clamp(1rem, 6vw, 2rem);
+        padding-right: clamp(1rem, 6vw, 2rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 clamp(1rem, 7vw, 2rem);
+    }
+    
+    .content-section,
+    .main-content {
+        padding: clamp(1rem, 6vw, 2rem);
+        margin: 1rem auto;
+    }
+    
+    .site-main {
+        padding: clamp(1rem, 5vw, 2rem);
+    }
+    
+    .hero-content, .cta-content, .carousel-intro, .carousel-wrapper, .gallery-grid, .additional-images, .feature-shows-content, .faq-dropdown {
+        padding-left: clamp(1rem, 7vw, 2rem);
+        padding-right: clamp(1rem, 7vw, 2rem);
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding: 0 clamp(1rem, 8vw, 2rem);
+    }
+    
+    .content-section,
+    .main-content {
+        padding: clamp(1rem, 7vw, 2rem);
+        margin: 0.5rem auto;
+    }
+    
+    .site-main {
+        padding: clamp(1rem, 6vw, 2rem);
+    }
+    
+    .hero-content, .cta-content, .carousel-intro, .carousel-wrapper, .gallery-grid, .additional-images, .feature-shows-content, .faq-dropdown {
+        padding-left: clamp(1rem, 8vw, 2rem);
+        padding-right: clamp(1rem, 8vw, 2rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 clamp(1rem, 10vw, 2rem);
+    }
+    
+    .content-section,
+    .main-content {
+        padding: clamp(1rem, 8vw, 2rem);
+    }
+    
+    .site-main {
+        padding: clamp(1rem, 7vw, 2rem);
+    }
+    
+    .hero-content, .cta-content, .carousel-intro, .carousel-wrapper, .gallery-grid, .additional-images, .feature-shows-content, .faq-dropdown {
+        padding-left: clamp(1rem, 10vw, 2rem);
+        padding-right: clamp(1rem, 10vw, 2rem);
+    }
+}
+
+/* Specific page fixes */
+
+/* Home page specific fixes */
+.hero-section, .carousel-section, .gallery-section, .cta-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* Shows page specific fixes */
+.photo-credit-container {
+    width: 100%;
+    left: 0;
+    right: 0;
+}
+
+/* Contact page specific fixes */
+.contact-form-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
+}
+
+/* FAQ page specific fixes */
+.faq-container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
+}
+
+/* Our Story page specific fixes */
+.hero-text-section {
+    width: 100%;
+    padding: 8vw clamp(1rem, 4vw, 2rem) 5vw;
+    box-sizing: border-box;
+}
+
+.image-gallery {
+    width: 100%;
+    padding: 5vw clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
+}
+
+/* Journal page specific fixes */
+.blog-posts-section {
+    width: 100%;
+    padding: 2rem clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
+}
+
+/* Process page specific fixes */
+.process-steps {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
+}
+
+/* Feature Shows page specific fixes */
+.show-section {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: clamp(1rem, 4vw, 2rem);
+    padding-right: clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
+}
+
+/* Pre-produced show page specific fixes */
+.show-details {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 clamp(1rem, 4vw, 2rem);
+    box-sizing: border-box;
+}
+
+/* Mobile-specific fixes */
+@media (max-width: 768px) {
+    /* Ensure proper mobile spacing */
+    .hero-content h1 {
+        font-size: clamp(2rem, 8vw, 4rem);
+        line-height: 1.2;
+    }
+    
+    .hero-content p {
+        font-size: clamp(1rem, 4vw, 1.5rem);
+        line-height: 1.4;
+    }
+    
+    /* Fix mobile navigation */
+    .main-nav {
+        width: 100vw;
+        left: -100vw;
+    }
+    
+    .main-nav.active {
+        left: 0;
+    }
+    
+    /* Fix mobile carousel arrows */
+    .carousel-arrow-left,
+    .carousel-arrow-right {
+        position: relative;
+        margin: 1rem 0;
+    }
+    
+    /* Fix mobile gallery */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    /* Fix mobile additional images */
+    .additional-images {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .additional-images .image-wrapper {
+        width: 100%;
+        height: auto;
+        min-height: 200px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Ultra-mobile fixes */
+    .hero-section {
+        padding-top: 80px;
+    }
+    
+    .hero-content {
+        padding: 0 clamp(1rem, 8vw, 2rem);
+    }
+    
+    /* Fix mobile menu toggle */
+    .menu-toggle {
+        right: clamp(1rem, 8vw, 2rem);
+    }
+    
+    /* Fix mobile form elements */
+    input, textarea, select {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Landscape mobile fixes */
+@media (max-width: 992px) and (orientation: landscape) {
+    .hero-section {
+        min-height: 100vh;
+        height: auto;
+    }
+    
+    .hero-content {
+        padding: 2rem clamp(1rem, 4vw, 2rem);
+    }
+}
+
+/* High DPI display fixes */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-content h1,
+    .hero-content p,
+    .cta-content h2 {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* Print styles */
+@media print {
+    .hero-section,
+    .carousel-section,
+    .gallery-section,
+    .cta-section {
+        page-break-inside: avoid;
+    }
+    
+    .hero-content,
+    .cta-content,
+    .carousel-intro,
+    .carousel-wrapper,
+    .gallery-grid,
+    .additional-images,
+    .feature-shows-content,
+    .faq-dropdown {
+        padding: 0;
+        margin: 1rem 0;
+    }
+}

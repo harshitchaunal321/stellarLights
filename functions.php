@@ -17,6 +17,22 @@ function stellar_lights_enqueue_scripts() {
         filemtime(get_template_directory() . '/style.css')
     );
 
+    // Enqueue global responsive fixes
+    wp_enqueue_style(
+        'stellar-lights-responsive-fixes',
+        get_template_directory_uri() . '/assets/css/responsive-fixes.css',
+        array('stellar-lights-style'),
+        filemtime(get_template_directory() . '/assets/css/responsive-fixes.css')
+    );
+
+    wp_enqueue_script(
+        'stellar-lights-scroll-to-top',
+        get_template_directory_uri() . '/assets/js/scroll-to-top.js',
+        array(), // No dependencies - load as early as possible
+        filemtime(get_template_directory() . '/assets/js/scroll-to-top.js'),
+        false // Load in header, not footer, for early execution
+    );
+
     // Enqueue header stylesheet
     wp_enqueue_style(
         'stellar-lights-header-style',
