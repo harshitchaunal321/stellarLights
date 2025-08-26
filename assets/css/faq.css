@@ -14,8 +14,8 @@
     text-align: center;
     color: white;
     position: relative;
-    margin-top: -20px;
-    padding-top: 100px;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .hero-section::before {
@@ -35,6 +35,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 clamp(1rem, 4vw, 2rem);
+    padding-top: 120px;
     box-sizing: border-box;
 }
 
@@ -231,8 +232,12 @@
 /* Small screens (up to 576px) */
 @media (max-width: 576px) {
     .hero-section {
-        margin-top: -5rem;
-        padding-top: 5rem;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .hero-content {
+        padding-top: 100px;
     }
 
     .hero-content h1 {
@@ -300,8 +305,12 @@
 /* Medium screens (576px to 768px) */
 @media (min-width: 577px) and (max-width: 768px) {
     .hero-section {
-        margin-top: -6rem;
-        padding-top: 6rem;
+        margin-top: 0;
+        padding-top: 0;
+    }
+
+    .hero-content {
+        padding-top: 110px;
     }
 
     .hero-content h1 {

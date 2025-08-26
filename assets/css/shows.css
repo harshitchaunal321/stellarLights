@@ -14,8 +14,8 @@
     text-align: center;
     color: white;
     position: relative;
-    margin-top: -70px;
-    padding-top: 100px;
+    margin-top: 0;
+    padding-top: 0;
 }
 
 .hero-section::before {
@@ -35,6 +35,7 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 clamp(1rem, 4vw, 2rem);
+    padding-top: 120px;
     box-sizing: border-box;
 }
 
