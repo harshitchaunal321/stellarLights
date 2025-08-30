@@ -118,7 +118,7 @@
 }
 
 .pre-produced-show-content {
-    max-width: 1088px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
     color: #fff;
@@ -129,12 +129,17 @@
     font-family: 'Titillium Web', sans-serif;
     font-size: 20px;
     letter-spacing: 3.75px;
-    margin-left: -100px;
+    margin-left: -20px;
 }
 
 .pre-produced-show-content .breadcrumbs a {
     color: #fff;
     text-decoration: none;
+}
+
+.pre-produced-show-content .breadcrumbs .current-page {
+    font-weight: 700;
+    color: #fff;
 }
 
 .pre-produced-show-content .show-intro-section p {

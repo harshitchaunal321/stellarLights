@@ -16,7 +16,7 @@ get_header(); ?>
 
 <div class="pre-produced-show-content">
     <div class="breadcrumbs">
-        <a href="/shows">SHOWS</a> > PRE-PRODUCED SHOWS
+        <a href="/shows">SHOWS</a> > <span class="current-page">PRE-PRODUCED SHOWS</span>
     </div>
 
     <section class="show-intro-section">

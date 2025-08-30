@@ -16,7 +16,7 @@ get_header(); ?>
 
 <div class="feature-shows-content">
     <div class="breadcrumbs">
-        <a href="/shows">SHOWS</a> > FEATURE SHOWS
+        <a href="/shows">SHOWS</a> > <span class="current-page">FEATURE SHOWS</span>
     </div>
 
     <section class="show-intro-section">

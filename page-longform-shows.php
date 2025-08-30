@@ -16,7 +16,7 @@ get_header(); ?>
 
 <div class="longform-shows-content">
     <div class="breadcrumbs">
-        <a href="/shows">SHOWS</a> > LONGFORM SHOWS
+        <a href="/shows">SHOWS</a> > <span class="current-page">LONGFORM SHOWS</span>
     </div>
 
     <section class="show-intro-section">

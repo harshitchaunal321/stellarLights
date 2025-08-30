@@ -233,7 +233,7 @@ body {
 
 /* Call to Action Section */
 .cta-section {
-    padding: 8vw 0;
+    padding: 4vw 0;
     text-align: center;
 }
 
@@ -335,7 +335,7 @@ body {
 .footer-subscribe,
 .footer-copyright {
     padding: 0 20px;
-    max-width: 1200px;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
 }

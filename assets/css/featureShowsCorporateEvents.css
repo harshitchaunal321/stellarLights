@@ -29,6 +29,11 @@
     z-index: 1;
     max-width: 90%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .hero-content h1 {
@@ -37,8 +42,9 @@
     font-weight: 600;
     margin-bottom: 20px;
     max-width: 1364px;
-    margin-top: 0;
+    margin: 0 auto 20px auto;
     line-height: 1.2;
+    text-align: center;
 }
 
 .hero-content p {
@@ -74,7 +80,7 @@
 
 /* Corporate Events Content Section */
 .corporate-event-content {
-    max-width: 1088px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 clamp(1rem, 4vw, 2rem);
     color: #fff;
@@ -87,12 +93,17 @@
     font-size: clamp(14px, 4vw, 20px);
     letter-spacing: clamp(1px, 0.5vw, 3.75px);
     margin-left: 0;
-    text-align: center;
+    text-align: left;
 }
 
 .corporate-event-content .breadcrumbs a {
     color: #fff;
     text-decoration: none;
+}
+
+.corporate-event-content .breadcrumbs .current-page {
+    font-weight: 700;
+    color: #fff;
 }
 
 .corporate-event-content .show-intro-section p {
@@ -177,6 +188,11 @@
 .show-details {
     width: 100%;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .show-details img {
@@ -221,13 +237,16 @@
 
 .show-navigation .nav-text {
     font-family: 'Titillium Web', sans-serif;
-    font-size: clamp(0.8rem, 2.5vw, 1rem);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 2.2px;
     color: white;
     background-color: transparent;
     border: none;
     cursor: pointer;
     white-space: nowrap;
     flex-shrink: 0;
+    text-decoration: none;
 }
 
 .show-navigation .nav-circle {
@@ -257,6 +276,27 @@
 
 .show-navigation .nav-circle:active {
     transform: scale(0.95);
+}
+
+/* Show Section Title and Content Styling - matching pre-produced shows */
+.show-section h2,
+.show-details h2 {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 3.5px;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.show-section p,
+.show-details p {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    letter-spacing: 2.2px;
+    text-align: center;
 }
 
 /* Other Features Section */
@@ -327,7 +367,8 @@
 /* Large devices (desktops, 992px and up) */
 @media (max-width: 1200px) {
     .hero-content h1 {
-        margin-top: 0;
+        margin: 0 auto 20px auto;
+        text-align: center;
     }
 }
 
@@ -364,6 +405,7 @@
     }
 
     .corporate-event-content .breadcrumbs {
+        margin-left: 0;
         text-align: center;
         padding: 1.5rem 0;
     }
@@ -404,7 +446,14 @@
     }
 
     .show-navigation .nav-text {
-        font-size: clamp(0.75rem, 2.2vw, 0.9rem);
+        font-size: 16px;
+        letter-spacing: 2.2px;
+    }
+
+    .show-section h2,
+    .show-details h2 {
+        font-size: 28px;
+        letter-spacing: 3.5px;
     }
 
     .show-navigation .nav-circle {
@@ -490,7 +539,14 @@
     }
 
     .show-navigation .nav-text {
-        font-size: clamp(0.7rem, 2vw, 0.8rem);
+        font-size: 16px;
+        letter-spacing: 2.2px;
+    }
+
+    .show-section h2,
+    .show-details h2 {
+        font-size: 24px;
+        letter-spacing: 3.5px;
     }
 
     .show-navigation .nav-circle {
@@ -549,7 +605,8 @@
 }
 
 /* Prevent horizontal scrolling on all screen sizes */
-html, body {
+html,
+body {
     overflow-x: hidden;
     max-width: 100%;
 }
