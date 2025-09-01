@@ -16,7 +16,7 @@ get_header(); ?>
 
 <div class="corporate-event-content">
     <div class="breadcrumbs">
-        <a href="/shows">SHOWS</a> > <a href="/feature-shows">FEATURE SHOWS</a> > PUBLIC EVENT
+        <a href="/shows">SHOWS</a> > <a href="/feature-shows">FEATURE SHOWS</a> > <span class="current-page">PUBLIC EVENTS</span>
     </div>
 </div>
 
