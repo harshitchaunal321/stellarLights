@@ -147,8 +147,7 @@
 /* Call to Action Section */
 .cta-section {
     /* background-color: black; */
-    padding: 2rem 0;
-    padding-bottom: 0;
+    padding: 0.5rem 0 0 0;
     text-align: center;
     margin-top: 0;
     margin-bottom: 4rem;
