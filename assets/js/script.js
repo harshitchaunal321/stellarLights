@@ -133,11 +133,21 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('.nav-circle.prev').addEventListener('click', () => {
             currentShowIndex = (currentShowIndex - 1 + shows.length) % shows.length;
             updateShow();
+            // Scroll to top of show section
+            document.querySelector('.show-section').scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
         });
 
         document.querySelector('.nav-circle.next').addEventListener('click', () => {
             currentShowIndex = (currentShowIndex + 1) % shows.length;
             updateShow();
+            // Scroll to top of show section
+            document.querySelector('.show-section').scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+            });
         });
     }
 
