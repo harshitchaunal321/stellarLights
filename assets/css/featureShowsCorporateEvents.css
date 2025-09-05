@@ -44,7 +44,7 @@
     max-width: 1364px;
     margin: 0 auto 20px auto;
     line-height: 1.2;
-    text-align: center;
+    text-align: center !important;
 }
 
 .hero-content p {
