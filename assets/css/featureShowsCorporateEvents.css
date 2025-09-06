@@ -44,7 +44,7 @@
     max-width: 1364px;
     margin: 0 auto 20px auto;
     line-height: 1.2;
-    text-align: center;
+    text-align: center !important;
 }
 
 .hero-content p {
@@ -286,7 +286,7 @@
     font-weight: 600;
     letter-spacing: 3.5px;
     margin-bottom: 2rem;
-    text-align: center;
+    text-align: left;
 }
 
 .show-section p,
@@ -416,7 +416,7 @@
 
     .show-header h2 {
         font-size: clamp(1.1rem, 4vw, 1.6rem);
-        text-align: center;
+        text-align: left;
     }
 
     .show-location {
