@@ -11,7 +11,6 @@ get_header(); ?>
     </div>
     <div class="photo-credit-container">
         <div class="photo-credit">Unknown</div>
-        <div class="photo-credit-line"></div>
     </div>
 </div>
 

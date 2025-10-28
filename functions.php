@@ -518,7 +518,7 @@ function handle_footer_subscribe() {
     }
 
     // Prepare email
-    $to = 'harshitchaunal123@gmail.com';
+    $to = 'rob@stellarlights.com.au';
     $subject = 'New Subscription from Stellar Lights';
     $message = "A new user has subscribed to the newsletter:\n\n";
     $message .= "Name: $name\n";
@@ -568,7 +568,7 @@ function handle_contact_form() {
     }
 
     // Prepare email
-    $to = 'harshitchaunal123@gmail.com';
+    $to = 'rob@stellarlights.com.au';
     $subject = 'New Contact Form Submission - Stellar Lights';
     $email_message = "A new contact form submission has been received:\n\n";
     $email_message .= "Name: $name\n";
@@ -644,7 +644,7 @@ add_action('wp_ajax_nopriv_handle_contact_form', 'handle_contact_form');
  */
 function test_email_functionality() {
     if (isset($_GET['test_email']) && $_GET['test_email'] == '1') {
-        $to = 'harshitchaunal123@gmail.com';
+        $to = 'rob@stellarlights.com.au';
         $subject = 'Test Email from Stellar Lights';
         $message = "This is a test email to verify email functionality.\n\n";
         $message .= "Time: " . date('Y-m-d H:i:s') . "\n";

@@ -305,17 +305,30 @@
         width: 100%;
         height: 100vh;
         background-color: rgba(0, 0, 0, 0.95);
-        transition: left 0.3s ease;
+        transition: left 0.3s ease, padding-top 0.3s ease;
         z-index: 1000;
-        padding-top: 5rem;
+        padding-top: 2rem;
         padding-left: 1rem;
         overflow-y: auto;
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
     }
 
     .main-nav.active {
         left: 0;
+    }
+
+    /* Hide logo when mobile menu is active */
+    .main-nav.active~.logo,
+    .main-nav.active+.logo {
+        display: none;
+    }
+
+    /* Alternative approach: hide logo when body has menu-open class */
+    body.menu-open .logo {
+        display: none;
     }
 
     .header-contact {
@@ -369,6 +382,7 @@
         gap: 1.2rem;
         width: 100%;
         margin: 0;
+        margin-top: 1rem;
     }
 
     .nav-menu li {
@@ -436,10 +450,62 @@
     }
 }
 
+/* Additional mobile menu logo hiding rules */
+@media (max-width: 992px) {
+
+    /* Ensure logo is visible by default on mobile */
+    .stellar-header .header-container .logo {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+
+    /* Hide logo when mobile menu is active using body class */
+    body.menu-open .stellar-header .logo {
+        display: none !important;
+    }
+
+    /* Hide logo when mobile menu is active using nav class */
+    .main-nav.active~.logo,
+    .main-nav.active+.logo {
+        display: none !important;
+    }
+
+    /* Ensure logo is hidden when mobile menu is open */
+    .stellar-header .main-nav.active~.logo,
+    .stellar-header .main-nav.active+.logo {
+        display: none !important;
+    }
+
+    /* Most specific rule to hide logo when mobile menu is active */
+    body.menu-open .stellar-header .header-container .logo {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+    }
+
+    /* Maximum specificity rule for logo hiding */
+    html body.menu-open .stellar-header .header-container .logo {
+        display: none !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none !important;
+    }
+
+    /* Ensure logo is restored when menu is closed */
+    body:not(.menu-open) .stellar-header .header-container .logo {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+}
+
 @media (max-width: 576px) {
     .main-nav {
         width: 100vw;
-        padding-top: 4rem;
+        padding-top: 2rem;
         padding-left: 0.8rem;
     }
 
@@ -480,7 +546,7 @@
 
     .main-nav {
         width: 100%;
-        padding-top: 5rem;
+        padding-top: 2rem;
         padding-left: 1rem;
     }
 
@@ -529,7 +595,7 @@
 /* Adjustments for landscape mobile devices */
 @media (max-width: 992px) and (orientation: landscape) {
     .main-nav {
-        padding-top: 4rem;
+        padding-top: 2rem;
         padding-left: 1rem;
     }
 
@@ -567,7 +633,7 @@
     }
 
     .main-nav {
-        padding-top: 3.5rem;
+        padding-top: 2rem;
         padding-left: clamp(0.8rem, 4vw, 1rem);
         width: 100vw;
     }
@@ -662,7 +728,7 @@
 /* Fix for devices with notches or unusual screen ratios */
 @media (max-width: 768px) and (max-aspect-ratio: 1/1) {
     .main-nav {
-        padding-top: clamp(4rem, 8vw, 6rem);
+        padding-top: 2rem;
     }
 
     .menu-toggle {
@@ -727,7 +793,7 @@
 /* Fix for very wide mobile devices */
 @media (max-width: 768px) and (min-aspect-ratio: 16/9) {
     .main-nav {
-        padding-top: clamp(3rem, 6vw, 4rem);
+        padding-top: 2rem;
     }
 
     .nav-menu {
