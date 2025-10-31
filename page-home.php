@@ -38,6 +38,11 @@ get_header(); ?>
                 <a href="/feature-shows" class="carousel-button">See Our Feature Shows</a>
             </div>
             <div class="carousel-item">
+                <h2>Longform Shows</h2>
+                <p>Longer-format performances blend drones, original sound, narration, lighting, and special effects into immersive, cinematic experiences.</p>
+                <a href="/shows/longFormShows" class="carousel-button">See Our Longform Shows</a>
+            </div>
+            <div class="carousel-item">
                 <h2>Pre-Produced Shows</h2>
                 <p>For those after premium impact with lower lead times, our pre-produced, award-winning drone shows are ready to license.</p>
                 <a href="/pre-producedshows" class="carousel-button">See Our Pre-Produced Shows</a>
@@ -46,11 +51,6 @@ get_header(); ?>
                 <h2>First Lights</h2>
                 <p>A place-responsive, choreographed drone light and sound experience, celebrating and honouring First Nations storytelling and cultural heritage.</p>
                 <a href="/first-lights" class="carousel-button">See Our First Lights Shows</a>
-            </div>
-            <div class="carousel-item">
-                <h2>Longform Shows</h2>
-                <p>Longer-format performances blend drones, original sound, narration, lighting, and special effects into immersive, cinematic experiences.</p>
-                <a href="/shows/longFormShows" class="carousel-button">See Our Longform Shows</a>
             </div>
         </div>
         <button class="carousel-arrow carousel-arrow-right" aria-label="Next slide">></button>
@@ -65,10 +65,10 @@ get_header(); ?>
                 Australian Education Union<br>For Every Child Campaign<br>Sydney, Australia
             </span>
         </div>
-        <div class="image-wrapper" data-video-id="_ZdkLLRWfSE" onclick="openVideoPlayer(this)">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-2.png" alt="Aronui Arts Festival">
+        <div class="image-wrapper" data-video-id="BZiGpN4f8fg" onclick="openVideoPlayer(this)">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-5.png" alt="Bula Fiji">
             <span class="image-overlay">
-                Aronui Arts Festival<br>Rotorua, New Zealand
+                Bula Fiji<br>Private Celebration<br>Viti Levu, Fiji
             </span>
         </div>
         <div class="image-wrapper" data-video-id="CrWockNS_YU" onclick="openVideoPlayer(this)">
@@ -83,10 +83,10 @@ get_header(); ?>
                 Solar Eclipse Dark Sky Festival<br>Exmouth, Australia
             </span>
         </div>
-        <div class="image-wrapper" data-video-id="BZiGpN4f8fg" onclick="openVideoPlayer(this)">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-5.png" alt="Bula Fiji">
+        <div class="image-wrapper" data-video-id="_ZdkLLRWfSE" onclick="openVideoPlayer(this)">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-2.png" alt="Aronui Indigenous Arts Festival">
             <span class="image-overlay">
-                Bula Fiji<br>Private Celebration<br>Viti Levu, Fiji
+                Aronui Indigenous Arts Festival<br>Rotorua, New Zealand
             </span>
         </div>
         <div class="image-wrapper" data-video-id="QSqzBKDUyZQ" onclick="openVideoPlayer(this)">

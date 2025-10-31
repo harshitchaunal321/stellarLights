@@ -35,8 +35,9 @@ get_header(); ?>
         </div>
     </section>
 
-    <section id="show-video-section" class="show-video-section" data-video-id="SD9YX8B2JDM" onclick="openVideoPlayer(this)">
+    <section id="show-video-section" class="show-video-section" data-video-id="SD9YX8B2JDM">
         <img id="show-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/seagull-and-sea-video.png" alt="The Seagull & The Sea Video Thumbnail">
+        <div id="video-container" class="video-container" style="display: none;"></div>
     </section>
 
     <div class="show-credits-bottom" id="show-credits">
@@ -155,6 +156,117 @@ function showPrevious() {
     updateShowContent(currentShowIndex);
     showDetailsSectionEl.scrollIntoView({ behavior: 'smooth' });
 }
+
+// Video player functions
+function openVideoPlayer(element) {
+    const videoId = element.dataset.videoId || element.closest('[data-video-id]')?.dataset.videoId;
+    const overlay = document.getElementById('videoPlayerOverlay');
+    const iframe = document.getElementById('videoPlayerIframe');
+    if (videoId && overlay && iframe) {
+        iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&modestbranding=1&playsinline=1`;
+        overlay.classList.add('active');
+    }
+}
+
+function closeVideoPlayer() {
+    const overlay = document.getElementById('videoPlayerOverlay');
+    const iframe = document.getElementById('videoPlayerIframe');
+    if (overlay && iframe) {
+        overlay.classList.remove('active');
+        iframe.src = '';
+    }
+}
+
+// Scroll-based autoplay functionality
+let videoAutoplayed = false;
+
+function initVideoAutoplay() {
+    const videoSection = document.getElementById('show-video-section');
+    const showImage = document.getElementById('show-image');
+    const videoContainer = document.getElementById('video-container');
+    
+    if (!videoSection || !showImage || !videoContainer) return;
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !videoAutoplayed) {
+                const videoId = videoSection.dataset.videoId;
+                if (videoId) {
+                    // Hide image and show video
+                    showImage.style.display = 'none';
+                    videoContainer.style.display = 'block';
+                    
+                    // Create iframe for embedded autoplay
+                    const iframe = document.createElement('iframe');
+                    iframe.width = '100%';
+                    iframe.height = '100%';
+                    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&controls=1&rel=0&modestbranding=1&playsinline=1`;
+                    iframe.frameBorder = '0';
+                    iframe.allow = 'autoplay; encrypted-media; picture-in-picture';
+                    iframe.allowFullscreen = true;
+                    iframe.style.width = '100%';
+                    iframe.style.height = '100%';
+                    
+                    videoContainer.innerHTML = '';
+                    videoContainer.appendChild(iframe);
+                    
+                    videoAutoplayed = true;
+                }
+            }
+        });
+    }, {
+        threshold: 0.3 // Trigger when 30% of the video section is visible
+    });
+    
+    observer.observe(videoSection);
+    
+    // Make video section clickable to open in overlay
+    videoSection.addEventListener('click', function(e) {
+        // Don't prevent iframe clicks, but allow clicking on the container or section itself
+        if (e.target === videoSection || e.target === videoContainer || e.target === showImage || e.target.closest('.video-container')) {
+            // Stop event propagation if clicking on the iframe itself
+            if (e.target.tagName === 'IFRAME') {
+                e.stopPropagation();
+            } else {
+                e.preventDefault();
+                openVideoPlayer(videoSection);
+            }
+        }
+    });
+}
+
+// Reset autoplay when show changes
+const originalUpdateShowContent = updateShowContent;
+updateShowContent = function(index) {
+    originalUpdateShowContent(index);
+    videoAutoplayed = false;
+    const showImage = document.getElementById('show-image');
+    const videoContainer = document.getElementById('video-container');
+    if (showImage) showImage.style.display = 'block';
+    if (videoContainer) {
+        videoContainer.style.display = 'none';
+        videoContainer.innerHTML = '';
+    }
+    // Reinitialize autoplay for new show
+    setTimeout(initVideoAutoplay, 100);
+};
+
+// Initialize on page load
+document.addEventListener('DOMContentLoaded', function() {
+    initVideoAutoplay();
+});
+
+// Close video player when clicking overlay background
+document.addEventListener('DOMContentLoaded', function() {
+    const overlay = document.getElementById('videoPlayerOverlay');
+    if (overlay) {
+        overlay.addEventListener('click', function(e) {
+            if (e.target === overlay) {
+                closeVideoPlayer();
+            }
+        });
+    }
+});
 </script>
 
 <?php get_footer(); ?> 
