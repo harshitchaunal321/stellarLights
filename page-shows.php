@@ -17,14 +17,6 @@ get_header(); ?>
 <!-- Shows Gallery Section (side-by-side images, scrollable on mobile) -->
 <section class="shows-gallery-scroll">
     <div class="shows-gallery-scroll-inner">
-        <a href="/shows/pre-produced" class="shows-gallery-image-link">
-            <div class="shows-gallery-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/Seagull&SeaHeader.png');">
-                <div class="shows-gallery-overlay">
-                    <div class="shows-gallery-title">Pre-Produced Shows</div>
-                    <div class="shows-gallery-subtitle">Award-winning shows, ready to license with premium impact and faster lead times.</div>
-                </div>
-            </div>
-        </a>
         <a href="/shows/feature-show" class="shows-gallery-image-link">
             <div class="shows-gallery-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/featured.jpg');">
                 <div class="shows-gallery-overlay">
@@ -33,19 +25,27 @@ get_header(); ?>
                 </div>
             </div>
         </a>
-        <a href="/shows/first-lights" class="shows-gallery-image-link">
-            <div class="shows-gallery-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/firstLights.jpg');">
-                <div class="shows-gallery-overlay">
-                    <div class="shows-gallery-title">First Lights</div>
-                    <div class="shows-gallery-subtitle">Place-responsive works honouring First Nations storytelling through light and sound.</div>
-                </div>
-            </div>
-        </a>
         <a href="/shows/longFormShows" class="shows-gallery-image-link">
             <div class="shows-gallery-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/featured.png');">
                 <div class="shows-gallery-overlay">
                     <div class="shows-gallery-title">Longform Shows</div>
                     <div class="shows-gallery-subtitle">Immersive, cinematic journeys blending drones, sound, story, and special effects.</div>
+                </div>
+            </div>
+        </a>
+        <a href="/shows/pre-produced" class="shows-gallery-image-link">
+            <div class="shows-gallery-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/Seagull&SeaHeader.png');">
+                <div class="shows-gallery-overlay">
+                    <div class="shows-gallery-title">Pre-Produced Shows</div>
+                    <div class="shows-gallery-subtitle">Award-winning shows, ready to license with premium impact and faster lead times.</div>
+                </div>
+            </div>
+        </a>
+        <a href="/shows/first-lights" class="shows-gallery-image-link">
+            <div class="shows-gallery-image" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/firstLights.jpg');">
+                <div class="shows-gallery-overlay">
+                    <div class="shows-gallery-title">First Lights</div>
+                    <div class="shows-gallery-subtitle">Place-responsive works honouring First Nations storytelling through light and sound.</div>
                 </div>
             </div>
         </a>
@@ -69,11 +69,11 @@ get_header(); ?>
 <div class="additional-images">
 <a href="/corporate-events" class="image-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/corporateEvent.png" alt="Corporate Shows">
-            <span class="image-overlay">Corporate Events</span>
+            <span class="image-overlay">Corporate<br>Events</span>
          </a>
          <a href="/brand-storytelling" class="image-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/brandStorytelling.png" alt="Public Events">
-            <span class="image-overlay">Brand Storytelling</span>
+            <span class="image-overlay">Brand<br>Storytelling</span>
             </a>
             <a href="/public-events" class="image-wrapper">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/publicEvent.png" alt="Festivals">
@@ -94,24 +94,24 @@ get_header(); ?>
     </div>
     <div class="what-we-offer-grid">
         <div class="offer-item">
-            <h3>Pre-Produced Shows</h3>
-            <p>For those after premium impact with lower lead times, our pre-produced, award-winning drone shows are ready to license. These beautifully crafted shows deliver high-end experiences with seamless setup and excellent value.</p>
-            <a href="/shows/pre-produced" class="offer-button">See the Collection</a>
-        </div>
-        <div class="offer-item">
             <h3>Feature Shows</h3>
             <p>We create every Feature Show in close collaboration with you—taking the time to understand your audience, your event, and the story you want to tell.</p>
             <a href="/shows/feature-show" class="offer-button">See the Shows</a>
         </div>
         <div class="offer-item">
-            <h3>First Lights</h3>
-            <p>First Lights is a place-responsive, choreographed drone light and sound experience, celebrating and honouring First Nations storytelling and cultural heritage. Presented by the Fremantle Biennale, First Lights is an epic spectacle of light, movement, and sound that deeply connects audiences to country and ancient knowledge.</p>
-            <a href="/shows/first-lights" class="offer-button">See the Shows</a>
-        </div>
-        <div class="offer-item">
             <h3>Longform Shows</h3>
             <p>These longer-format performances blend drones, original sound, narration, lighting, and special effects into immersive, cinematic experiences. Rooted in place and story, they're designed for major public celebrations—inviting audiences on a journey that connects land, culture, and collective memory.</p>
             <a href="/shows/longFormShows" class="offer-button">See the Shows</a>
+        </div>
+        <div class="offer-item">
+            <h3>Pre-Produced Shows</h3>
+            <p>For those after premium impact with lower lead times, our pre-produced, award-winning drone shows are ready to license. These beautifully crafted shows deliver high-end experiences with seamless setup and excellent value.</p>
+            <a href="/shows/pre-produced" class="offer-button">See the Collection</a>
+        </div>
+        <div class="offer-item">
+            <h3>First Lights</h3>
+            <p>First Lights is a place-responsive, choreographed drone light and sound experience, celebrating and honouring First Nations storytelling and cultural heritage. Presented by the Fremantle Biennale, First Lights is an epic spectacle of light, movement, and sound that deeply connects audiences to country and ancient knowledge.</p>
+            <a href="/shows/first-lights" class="offer-button">See the Shows</a>
         </div>
     </div>
 </section>
@@ -124,10 +124,10 @@ get_header(); ?>
                 <span class="shows-video-text">Australian Education Union<br>For Every Child Campaign</span>
             </div>
         </div>
-        <div class="shows-video-item" data-video-id="_ZdkLLRWfSE" onclick="openVideoPlayer(this)">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-2.png" alt="Rotorua, New Zealand">
+        <div class="shows-video-item" data-video-id="QSqzBKDUyZQ" onclick="openVideoPlayer(this)">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-6.png" alt="Viti Levu, Fiji">
             <div class="shows-video-overlay">
-                <span class="shows-video-text">Rotorua, New Zealand<br>Aronui Arts Festival</span>
+                <span class="shows-video-text">Viti Levu, Fiji<br>Private Celebration</span>
             </div>
         </div>
         <div class="shows-video-item" data-video-id="CrWockNS_YU" onclick="openVideoPlayer(this)">
@@ -148,10 +148,10 @@ get_header(); ?>
                 <span class="shows-video-text">Location<br>Darwin Festival</span>
             </div>
         </div>
-        <div class="shows-video-item" data-video-id="QSqzBKDUyZQ" onclick="openVideoPlayer(this)">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-6.png" alt="Viti Levu, Fiji">
+        <div class="shows-video-item" data-video-id="_ZdkLLRWfSE" onclick="openVideoPlayer(this)">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-2.png" alt="Rotorua, New Zealand">
             <div class="shows-video-overlay">
-                <span class="shows-video-text">Viti Levu, Fiji<br>Private Celebration</span>
+                <span class="shows-video-text">Rotorua, New Zealand<br>Aronui Indigenous Arts Festival</span>
             </div>
         </div>
     </div>

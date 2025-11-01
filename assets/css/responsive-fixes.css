@@ -410,10 +410,16 @@ section,
 }
 
 .hero-content {
-    padding-top: 120px !important;
+    padding-top: 200px !important;
 }
 
 /* Responsive hero section fixes */
+@media (max-width: 992px) {
+    .hero-content {
+        padding-top: 160px !important;
+    }
+}
+
 @media (max-width: 768px) {
     .hero-section {
         margin-top: 0 !important;
@@ -421,7 +427,7 @@ section,
     }
 
     .hero-content {
-        padding-top: 100px !important;
+        padding-top: 140px !important;
     }
 }
 
@@ -432,12 +438,12 @@ section,
     }
 
     .hero-content {
-        padding-top: 90px !important;
+        padding-top: 120px !important;
     }
 }
 
 @media (max-width: 480px) {
     .hero-content {
-        padding-top: 80px !important;
+        padding-top: 110px !important;
     }
 }
