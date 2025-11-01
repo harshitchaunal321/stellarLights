@@ -57,7 +57,7 @@
     </div>
 
     <div class="footer-address">
-        <p>130 ROCKINGHAM ROAD, HAMILTON HILL WA 6163 AUSTRALIA</p>
+        <p>153 ROCKINGHAM ROAD, HAMILTON HILL WA 6163 AUSTRALIA</p>
         <p>Mobile: +61 (0) 410 953 282 | Landline: +61 8 6188 1226 | Email: <a href="mailto:launch@StellarLights.com.au">launch@StellarLights.com.au</a></p>
     </div>
 

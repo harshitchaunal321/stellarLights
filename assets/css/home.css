@@ -250,6 +250,25 @@
     pointer-events: none;
 }
 
+/* Gallery section specific overlay styles */
+.gallery-section .image-overlay {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    white-space: normal;
+    font-weight: normal;
+}
+
+.gallery-section .image-overlay .overlay-title {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.gallery-section .image-overlay .overlay-subtitle {
+    font-weight: normal;
+    font-style: italic;
+}
+
 .image-wrapper:hover .image-overlay {
     opacity: 1;
 }

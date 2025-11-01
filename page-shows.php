@@ -127,7 +127,7 @@ get_header(); ?>
         <div class="shows-video-item" data-video-id="QSqzBKDUyZQ" onclick="openVideoPlayer(this)">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-6.png" alt="Viti Levu, Fiji">
             <div class="shows-video-overlay">
-                <span class="shows-video-text">Viti Levu, Fiji<br>Private Celebration</span>
+                <span class="shows-video-text">Wanneroo 25<br>Community Event</span>
             </div>
         </div>
         <div class="shows-video-item" data-video-id="CrWockNS_YU" onclick="openVideoPlayer(this)">
@@ -143,13 +143,13 @@ get_header(); ?>
             </div>
         </div>
         <div class="shows-video-item" data-video-id="BZiGpN4f8fg" onclick="openVideoPlayer(this)">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-5.png" alt="Darwin Festival">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-2.png" alt="Darwin Festival">
             <div class="shows-video-overlay">
-                <span class="shows-video-text">Location<br>Darwin Festival</span>
+                <span class="shows-video-text">Bula Fiji<br>iti Levu, Fiji</span>
             </div>
         </div>
         <div class="shows-video-item" data-video-id="_ZdkLLRWfSE" onclick="openVideoPlayer(this)">
-            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-2.png" alt="Rotorua, New Zealand">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/gallery-image-5.png" alt="Rotorua, New Zealand">
             <div class="shows-video-overlay">
                 <span class="shows-video-text">Rotorua, New Zealand<br>Aronui Indigenous Arts Festival</span>
             </div>
