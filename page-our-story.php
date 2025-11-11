@@ -80,13 +80,6 @@ get_header(); ?>
     <div class="container">
         <div class="shows-grid">
             <div class="show-item">
-                <h3>Pre-Produced Shows</h3>
-                <p>
-                    For those after premium impact with lower lead times, our pre-produced, award-winning drone shows are ready to license.
-                </p>
-                <a href="/pre-producedshows" class="read-more">Read More</a>
-            </div>
-            <div class="show-item">
                 <h3>Feature Shows</h3>
                 <p>
                     We create every feature show in close collaboration with you—taking the time to understand the story you want to tell.
@@ -106,6 +99,13 @@ get_header(); ?>
                     Longer-format performances blend drones, original sound, narration, lighting, and special effects into immersive, cinematic experiences.
                 </p>
                 <a href="/shows/longFormShows" class="read-more">Read More</a>
+            </div>
+            <div class="show-item">
+                <h3>Pre-Produced Shows</h3>
+                <p>
+                    For those after premium impact with lower lead times, our pre-produced, award-winning drone shows are ready to license.
+                </p>
+                <a href="/pre-producedshows" class="read-more">Read More</a>
             </div>
         </div>
     </div>
