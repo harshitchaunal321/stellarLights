@@ -35,7 +35,7 @@ get_header(); ?>
         </div>
     </section>
 
-    <section id="show-video-section" class="show-video-section" data-video-id="SD9YX8B2JDM">
+    <section id="show-video-section" class="show-video-section" data-video-id="kbo4Rmew2dU">
         <img id="show-image" src="<?php echo get_template_directory_uri(); ?>/assets/images/seagull-and-sea-video.png" alt="The Seagull & The Sea Video Thumbnail">
         <div id="video-container" class="video-container" style="display: none;"></div>
     </section>
@@ -100,7 +100,7 @@ const shows = [
         descriptionHTML: `
             <p>Playful, poetic, and richly textured, The Seagull & the Sea captures the energy of coastal life through a spectacular aerial performance. This family-friendly drone show evokes the chaos and beauty of seagulls swirling above the shore—boisterous, unpredictable, and full of character—before diving into a dreamlike sequence that celebrates the connection between ocean, river, and childlike curiosity.</p>
             <p>As feathered flocks crash and lift like waves, audiences are drawn into a vivid narrative of tidal rhythms, beach discoveries, and the deep, unspoken wisdom of the sea. With sweeping choreography, an immersive soundtrack, and moments of joyful nostalgia, The Seagull & the Sea is a tribute to the places where rivers meet oceans—and where generations meet wonder.</p>`,
-        videoId: 'SD9YX8B2JDM',
+        videoId: 'kbo4Rmew2dU',
         imageSrc: '<?php echo get_template_directory_uri(); ?>/assets/images/seagull-and-sea-video.png',
         imageAlt: 'The Seagull & The Sea Video Thumbnail',
         creditsHTML: `
@@ -116,7 +116,7 @@ const shows = [
             <p>Set to a driving, cinematic score, Twins is a bold and immersive drone performance that explores the relationship between two celestial forces—twin spirits dancing in the sky, mirroring and defying one another in perfect synchronicity.</p>
             <p>With sweeping visuals and precise formation work, the drones conjure shifting patterns of tension and unity, balance and divergence—pulling the audience into a rhythm that feels both ancient and futuristic. Circles orbit, divide, and reunite. Spirals uncoil and reform. And through it all, the twins remain: two energies in constant motion, reflecting the dynamics of light and shadow, creation and collapse.</p>
             <p>Twins is a visually rich and emotionally charged experience—ideal for festivals, public gatherings, and large-scale celebrations. Its structure and energy make it an ideal complement to a fireworks display, providing contrast, narrative depth, and a heightened sense of anticipation before or after the pyrotechnics begin.</p>`,
-        videoId: 'SD9YX8B2JDM', // NOTE: Using placeholder video ID
+        videoId: 'gauu1QfiRYo',
         imageSrc: '<?php echo get_template_directory_uri(); ?>/assets/images/twins-thumbnail.png', // NOTE: Using placeholder image
         imageAlt: 'Twins Video Thumbnail',
         creditsHTML: `<p>Animation by Jarrad Russell</p>
