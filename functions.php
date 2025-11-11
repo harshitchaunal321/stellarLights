@@ -251,6 +251,13 @@ function stellar_lights_enqueue_scripts() {
             filemtime(get_template_directory() . '/assets/js/script.js'),
             true
         );
+        wp_enqueue_script(
+            'stellar-lights-video-player',
+            get_template_directory_uri() . '/assets/js/video-player.js',
+            array('jquery'),
+            filemtime(get_template_directory() . '/assets/js/video-player.js'),
+            true
+        );
         // Localize script to pass theme directory URL
         wp_localize_script(
             'stellar-lights-show-navigation',
@@ -278,6 +285,13 @@ function stellar_lights_enqueue_scripts() {
             get_template_directory_uri() . '/assets/js/script.js',
             array('jquery'),
             filemtime(get_template_directory() . '/assets/js/script.js'),
+            true
+        );
+        wp_enqueue_script(
+            'stellar-lights-video-player',
+            get_template_directory_uri() . '/assets/js/video-player.js',
+            array('jquery'),
+            filemtime(get_template_directory() . '/assets/js/video-player.js'),
             true
         );
         // Localize script to pass theme directory URL
@@ -309,6 +323,13 @@ function stellar_lights_enqueue_scripts() {
             filemtime(get_template_directory() . '/assets/js/script.js'),
             true
         );
+        wp_enqueue_script(
+            'stellar-lights-video-player',
+            get_template_directory_uri() . '/assets/js/video-player.js',
+            array('jquery'),
+            filemtime(get_template_directory() . '/assets/js/video-player.js'),
+            true
+        );
         // Localize script to pass theme directory URL
         wp_localize_script(
             'stellar-lights-show-navigation',
@@ -333,6 +354,13 @@ function stellar_lights_enqueue_scripts() {
             get_template_directory_uri() . '/assets/js/script.js',
             array('jquery'),
             filemtime(get_template_directory() . '/assets/js/script.js'),
+            true
+        );
+        wp_enqueue_script(
+            'stellar-lights-video-player',
+            get_template_directory_uri() . '/assets/js/video-player.js',
+            array('jquery'),
+            filemtime(get_template_directory() . '/assets/js/video-player.js'),
             true
         );
         // Localize script to pass theme directory URL
@@ -425,6 +453,121 @@ function stellar_lights_register_menus() {
     );
 }
 add_action('init', 'stellar_lights_register_menus');
+
+/**
+ * Reorder Shows submenu items
+ */
+function stellar_lights_reorder_shows_submenu($items, $menu) {
+    if (empty($items)) {
+        return $items;
+    }
+    
+    // Find the Shows menu item (parent item)
+    $shows_item_id = null;
+    $shows_children = array();
+    $item_map = array();
+    
+    // First pass: build a map and find Shows parent
+    foreach ($items as $item) {
+        $item_map[$item->ID] = $item;
+        // Check if this is the Shows parent item (no parent and title contains "shows")
+        if ($item->menu_item_parent == 0 && stripos($item->title, 'shows') !== false) {
+            $shows_item_id = $item->ID;
+        }
+    }
+    
+    // Second pass: find all children of Shows
+    if ($shows_item_id) {
+        foreach ($items as $item) {
+            if ($item->menu_item_parent == $shows_item_id) {
+                $shows_children[] = $item;
+            }
+        }
+    }
+    
+    // If we found Shows and its children, reorder them
+    if ($shows_item_id && !empty($shows_children)) {
+        // Define the desired order
+        $order = array(
+            'feature show' => 1,
+            'first lights' => 2,
+            'pre produced' => 3,
+            'long form' => 4
+        );
+        
+        // Sort children based on title matching
+        usort($shows_children, function($a, $b) use ($order) {
+            $title_a = strtolower(trim($a->title));
+            $title_b = strtolower(trim($b->title));
+            
+            $order_a = 999;
+            $order_b = 999;
+            
+            foreach ($order as $key => $value) {
+                if (stripos($title_a, $key) !== false) {
+                    $order_a = $value;
+                }
+                if (stripos($title_b, $key) !== false) {
+                    $order_b = $value;
+                }
+            }
+            
+            return $order_a - $order_b;
+        });
+        
+        // Function to get all nested children of a menu item
+        $get_nested_children = function($parent_id, $all_items) use (&$get_nested_children) {
+            $nested = array();
+            foreach ($all_items as $item) {
+                if ($item->menu_item_parent == $parent_id) {
+                    $nested[] = $item;
+                    // Recursively get nested children
+                    $nested = array_merge($nested, $get_nested_children($item->ID, $all_items));
+                }
+            }
+            return $nested;
+        };
+        
+        // Rebuild items array maintaining order but with reordered Shows children
+        $shows_children_ids = array_map(function($child) { return $child->ID; }, $shows_children);
+        // Get all nested items (grandchildren, etc.) that belong to Shows submenu
+        $all_shows_submenu_ids = $shows_children_ids;
+        foreach ($shows_children_ids as $child_id) {
+            $nested = $get_nested_children($child_id, $items);
+            foreach ($nested as $nested_item) {
+                $all_shows_submenu_ids[] = $nested_item->ID;
+            }
+        }
+        
+        $reordered_items = array();
+        
+        foreach ($items as $item) {
+            // Skip Shows children and their nested items as we'll add them in order
+            if (in_array($item->ID, $all_shows_submenu_ids)) {
+                continue;
+            }
+            
+            $reordered_items[] = $item;
+            
+            // When we encounter Shows parent, add its reordered children right after
+            if ($item->ID == $shows_item_id) {
+                foreach ($shows_children as $child) {
+                    $reordered_items[] = $child;
+                    // Add nested children immediately after their parent
+                    $nested_children = $get_nested_children($child->ID, $items);
+                    foreach ($nested_children as $nested) {
+                        $reordered_items[] = $nested;
+                    }
+                }
+            }
+        }
+        
+        return $reordered_items;
+    }
+    
+    return $items;
+}
+add_filter('wp_get_nav_menu_items', 'stellar_lights_reorder_shows_submenu', 10, 2);
 
 /**
  * Custom Menu Walker to add active class and other enhancements

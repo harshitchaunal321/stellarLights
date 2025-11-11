@@ -3,48 +3,87 @@
 // Hero video loading handler
 function initHeroVideo() {
     const heroVideo = document.getElementById('heroVideo');
-    
     if (heroVideo) {
-        // Video is already visible, no loading states needed
         heroVideo.style.opacity = '1';
     }
 }
 
+function buildYoutubeEmbedUrl({ videoId, start = null, baseUrl = null }) {
+    if (!videoId && !baseUrl) {
+        return '';
+    }
 
+    const url = new URL(baseUrl || `https://www.youtube.com/embed/${videoId}`);
+    const params = new URLSearchParams({
+        autoplay: '1',
+        rel: '0',
+        controls: '0',
+        showinfo: '0',
+        modestbranding: '1',
+        fs: '0',
+        iv_load_policy: '3',
+        disablekb: '1',
+        cc_load_policy: '0',
+        color: 'white',
+        playsinline: '1',
+        enablejsapi: '0',
+        origin: window.location.origin,
+        wmode: 'transparent',
+        vq: 'hd1080'
+    });
 
-// Initialize everything when DOM is loaded
-document.addEventListener('DOMContentLoaded', function () {
-    // Initialize hero video
-    initHeroVideo();
-});
+    if (start !== null && start !== undefined && start !== '') {
+        params.set('start', start);
+    }
+
+    url.search = params.toString();
+    return url.toString();
+}
 
 function openVideoPlayer(element) {
-    console.log('openVideoPlayer called with element:', element);
-    const videoId = element.getAttribute('data-video-id');
     const overlay = document.getElementById('videoPlayerOverlay');
     const iframe = document.getElementById('videoPlayerIframe');
-    if (videoId && overlay && iframe) {
-        const enhancedParams = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&controls=0&showinfo=0&modestbranding=1&fs=0&iv_load_policy=3&disablekb=1&cc_load_policy=0&color=white&playsinline=1&enablejsapi=0&origin=${window.location.origin}&wmode=transparent&vq=hd1080&modestbranding=1&showinfo=0&controls=0&rel=0&fs=0&iv_load_policy=3&disablekb=1&cc_load_policy=0&color=white&playsinline=1&enablejsapi=0&origin=${window.location.origin}&wmode=transparent&vq=hd1080&modestbranding=1&showinfo=0&controls=0&rel=0&fs=0&iv_load_policy=3&disablekb=1&cc_load_policy=0&color=white&playsinline=1&enablejsapi=0&origin=${window.location.origin}&wmode=transparent&vq=hd1080`;
-        console.log('Setting iframe src to:', enhancedParams);
-        iframe.src = enhancedParams;
-        overlay.classList.add('active');
-    } else {
-        console.log('Missing elements:', { videoId, overlay, iframe });
+
+    if (!overlay || !iframe || !element) {
+        return;
     }
+
+    const datasetSource = element.dataset || {};
+    const videoUrl = datasetSource.videoUrl || element.getAttribute('data-video-url');
+    const videoId = datasetSource.videoId || element.getAttribute('data-video-id');
+    const videoStart = datasetSource.videoStart || element.getAttribute('data-video-start');
+
+    const embedUrl = videoUrl
+        ? buildYoutubeEmbedUrl({ videoId: null, baseUrl: videoUrl, start: videoStart })
+        : buildYoutubeEmbedUrl({ videoId, start: videoStart });
+
+    if (!embedUrl) {
+        return;
+    }
+
+    iframe.src = embedUrl;
+    overlay.classList.add('active');
 }
 
 function closeVideoPlayer() {
     const overlay = document.getElementById('videoPlayerOverlay');
     const iframe = document.getElementById('videoPlayerIframe');
-    if (overlay && iframe) {
-        overlay.classList.remove('active');
-        iframe.src = ''; // Stop the video
+    if (!overlay || !iframe) {
+        return;
     }
+    overlay.classList.remove('active');
+    iframe.src = '';
 }
 
-// Close the video player when clicking on the overlay background
-document.getElementById('videoPlayerOverlay').addEventListener('click', function (event) {
-    if (event.target === this) {
-        closeVideoPlayer();
+document.addEventListener('DOMContentLoaded', function () {
+    initHeroVideo();
+
+    const overlay = document.getElementById('videoPlayerOverlay');
+    if (overlay) {
+        overlay.addEventListener('click', function (event) {
+            if (event.target === overlay) {
+                closeVideoPlayer();
+            }
+        });
     }
 });

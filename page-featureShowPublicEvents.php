@@ -27,6 +27,14 @@ get_header(); ?>
     </div>
 </section>
 
+<!-- Video Player Overlay -->
+<div class="video-player-overlay" id="videoPlayerOverlay">
+    <button class="close-video-player" onclick="closeVideoPlayer()">×</button>
+    <div class="video-player-container">
+        <iframe id="videoPlayerIframe" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+</div>
+
 <section class="other-features">
     <h2>See Our Other Feature Shows</h2>
     <div class="other-features-grid">

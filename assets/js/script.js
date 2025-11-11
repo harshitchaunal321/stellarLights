@@ -10,13 +10,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 location: "SYDNEY",
                 explanation: "Flown as part of the For Every Child campaign, this powerful drone show turned the night sky into a rallying cry for fully funded public schools. Built around a child-voiced script and shaped by vibrant campaign visuals, the performance brought national attention to the issue—and became part of a movement that helped deliver lasting change just months later.",
                 image: `${themeData.templateUrl}/assets/images/corporateEventFeatureShows.png`,
-                additional: "Story by Ron Bradfield | Animation by Jarrad Russell </br> Music & Sound design by Envelope Audio </br> Performed by Ron Bradfield"
+                additional: "Story by Ron Bradfield | Animation by Jarrad Russell </br> Music & Sound design by Envelope Audio </br> Performed by Ron Bradfield",
+                videoId: "ZDqIOKjJn8U",
             },
             {
-                title: "Amyway",
+                title: "Amway",
                 location: "Sandalford Estate, Perth",
                 explanation: "Commissioned by Amway to celebrate Taiwan’s top sellers, this high-energy drone and pyrotechnic show transformed the Perth sky into a moment of reward and recognition. Designed to honour performance, inspire future achievement, and close out an unforgettable WA incentive trip, the show also previewed the next top sellers’ summit in Korea—fueling motivation through spectacle.",
                 image: `${themeData.templateUrl}/assets/images/Amyway.jpeg`,
+                videoId: "CijoEZDCTe0",
+                videoStart: 85
             },
             {
                 title: "Association of School Business Administrators - 2025 Conference - Resilience at the Top End",
@@ -30,18 +33,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: "Australian Education Union",
                 explanation: "Flown as part of the For Every Child campaign, this powerful drone show turned the night sky into a rallying cry for fully funded public schools. Built around a child-voiced script and shaped by vibrant campaign visuals, the performance brought national attention to the issue—and became part of a movement that helped deliver lasting change just months later.",
                 image: `${themeData.templateUrl}/assets/images/brandStorytellingFeatureShows.png`,
+                videoId: "ZDqIOKjJn8U"
             },
             {
                 title: "Lark Whisky",
                 location: "Tasmania",
                 explanation: "To mark 30 years of pioneering Tasmanian whisky, Lark celebrated with an unforgettable drone light show above its Pontville Distillery—an atmospheric fusion of light, landscape, and legacy. The performance honoured three decades of craftsmanship and bold vision, paying tribute to Lark’s trailblazing spirit while ushering in a new chapter in Australian whisky.",
                 image: `${themeData.templateUrl}/assets/images/larkWhisky.png`,
+                videoId: "mJCB-EsFoss"
             },
             {
                 title: "Sea Life Melbourne - Exhibit Launch",
                 location: "MELBOURNE",
                 explanation: "Commissioned by Sea Life Melbourne, this imaginative drone show transformed the Yarra River skyline into a dynamic brand experience—bringing the wonder of the ocean to the heart of the city. Timed to coincide with the summer school holidays, the activation attracted crowds along the Southbank promenade and generated wide media buzz, reinforcing Sea Life’s position as a must-visit family attraction. Designed to connect with audiences of all ages, the show proved how drone storytelling can powerfully extend brand reach, amplify campaigns, and turn sky into spectacle.",
                 image: `${themeData.templateUrl}/assets/images/gallery-image-3.png`,
+                videoId: "d0UW9guZKck"
             }
         ],
         'public-events': [
@@ -49,27 +55,32 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: "Perth Festival - Djoondal - Opening Event",
                 explanation: "Presented as the opening event of Perth Festival 2025, Djoondal was a groundbreaking drone and light performance rooted in Noongar storytelling. Developed in deep collaboration with Noongar Elders and artists, the show traced the celestial journeys of the spirit woman Djoondal and reconnected audiences with sky, water, and Country. Set against the Swan River, it was a moving and technically ambitious celebration of First Nations knowledge, place, and story.",
                 image: `${themeData.templateUrl}/assets/images/perthFestival.jpg`,
+                videoId: "omRHfIDi7NY"
             },
             {
                 title: "Wanneroo 2025 (WA)",
                 location: "SYDNEY HARBOUR",
                 explanation: "Commissioned by the City of Wanneroo, this vibrant community show blended light, story, and celebration to bring local identity to life. Featuring site-specific visuals, a dynamic soundtrack, and scenes inspired by local flora, fauna, and community spirit, the performance was a celebration of place—designed to unite audiences of all ages in wonder.",
                 image: `${themeData.templateUrl}/assets/images/Wanneroo.png`,
+                videoId: "QSqzBKDUyZQ"
             },
             {
                 title: "AC40 “A Match Made in Heaven” - 40th Anniversary of Australia’s Famous America’s Cup Win",
                 explanation: "Marking 40 years since Australia’s legendary America’s Cup victory, A Match Made in Heaven was a stirring night of music, drones, and fireworks on Fremantle Harbour. Celebrating national pride and local legacy, the drone show reimagined the winning yacht’s story in light, geometry, and motion—culminating in a sea of stars over the water, just metres from where history was made.",
                 image: `${themeData.templateUrl}/assets/images/AC40.png`,
+                videoId: "sp_wtKnaiMU"
             },
             {
                 title: "Blessing of the Fleet – Fremantle 2024",
                 explanation: "For the first time in its 75-year history, Fremantle’s Blessing of the Fleet was crowned with a bespoke drone show—honouring the city’s rich fishing heritage and deep maritime roots. Set against the night harbour, the performance paid tribute to the community’s enduring connection to the sea, weaving light and motion into a skyborne celebration of faith, family, and tradition.",
                 image: `${themeData.templateUrl}/assets/images/blessingOfTheFleet.png`,
+                videoId: "uqyANiTuKBo"
             },
             {
                 title: "Sydney Royal Easter Show",
                 explanation: "For the first time in its storied history, the Sydney Royal Easter Show featured a drone light show—integrated seamlessly into its iconic fireworks finale. Featuring dazzling formations and Australia's first drone pyrotechnics flown within a fireworks sequence, the performance set a new national benchmark for hybrid aerial entertainment in stadium-scale events.",
                 image: `${themeData.templateUrl}/assets/images/sydneyRoyalEasterShow.jpg`,
+                videoId: "Ll3CoJJ9Qyw"
             }
         ],
         'private-events': [
@@ -78,6 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 location: "Sofitel Resort, Fiji",
                 explanation: "To celebrate a recent engagement, this private event at Sofitel Resort Fiji featured a breathtaking pyrotechnic show with drone integration. Designed to complement the romantic beachfront setting, the display combined dynamic aerial effects with vibrant ground-based pyro to create a moment of pure spectacle. The drones added shape and story to the sky, but it was the carefully choreographed pyro that delivered the emotional punch. A stunning tribute to love, light, and commitment.",
                 image: `${themeData.templateUrl}/assets/images/privateEventShow1.jpg`,
+                videoId: "BZiGpN4f8fg"
             },
             {
                 title: "ASBA Conference – Darwin 2025",
@@ -88,16 +100,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: "AEU – For Every Child Campaign Staff Event",
                 explanation: "Commissioned to support a television segment designed to raise awareness and pressure policymakers, this drone show also served as a private celebration for the AEU team behind the For Every Child campaign. The creative brief called for a show that would resonate on screen while honouring the mission and dedication of campaign staff. Featuring child-voiced narration and vibrant, values-led visuals, the performance was both a strategic communication tool and a heartfelt tribute to public education advocacy.",
                 image: `${themeData.templateUrl}/assets/images/AEU.jpg`,
+                videoId: "ZDqIOKjJn8U"
             },
             {
                 title: "Amway Taiwan – Sandalford Estate",
                 explanation: "As the grand finale of an incentive trip across Western Australia, this high-energy drone and pyrotechnic show was staged at Sandalford Estate for Amway Taiwan's top sellers. Celebrating their journey across the state, the performance reflected key moments and destinations visited throughout their trip—blending local motifs with international ambition. It was a cinematic closing chapter to a week of connection, discovery, and recognition.",
-                image: `${themeData.templateUrl}/assets/images/AEU.jpg`,
+                image: `${themeData.templateUrl}/assets/images/journal8inside2.jpg`,
             },
             {
                 title: "Lark Whisky – 30th Anniversary, Pontville",
                 explanation: "To mark three decades of Tasmanian whisky-making, Lark hosted a private drone show at its Pontville distillery for an invite-only crowd featuring some of the biggest names in the spirits industry. Rooted in legacy and forward vision, the show illuminated the Tasmanian sky with symbols of craft, landscape, and the pioneering spirit of Bill Lark. The result was a bold and elegant tribute to the past, present, and future of one of Australia's most iconic whisky brands. A powerful reminder of how far the industry has come, and where it's heading next.",
                 image: `${themeData.templateUrl}/assets/images/drone-show-6.png`,
+                videoId: "mJCB-EsFoss"
             },
 
 
@@ -110,6 +124,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function updateShow() {
         const show = shows[currentShowIndex];
+        const hasVideo = Boolean(show && show.videoId);
+        const videoAttributes = hasVideo
+            ? ` data-video-id="${show.videoId}"${show.videoStart ? ` data-video-start="${show.videoStart}"` : ''}`
+            : '';
+        const videoAccessibility = hasVideo
+            ? ` role="button" tabindex="0" aria-label="Play video for ${show.title}"`
+            : '';
+        const videoPlayIcon = hasVideo ? '<span class="show-video-play-icon" aria-hidden="true"></span>' : '';
+
         showDetails.innerHTML = `
             <div class="show-header">
                 <h2>${show ? show.title : ''}</h2>
@@ -119,7 +142,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             </div>
             <p class="show-explanation">${show ? show.explanation : ''}</p>
-            <img src="${show ? show.image : ''}" alt="${show ? show.title : ''} Show">
+            <div class="show-image-wrapper${hasVideo ? ' has-video' : ''}"${videoAttributes}${videoAccessibility}>
+                <img src="${show ? show.image : ''}" alt="${show ? show.title : ''} Show">
+                ${videoPlayIcon}
+            </div>
             <p class="show-additional">${show && show.additional ? show.additional : ''}</p>
             <div class="show-navigation">
                   <span class="nav-text">Previous Show</span>
@@ -134,9 +160,9 @@ document.addEventListener('DOMContentLoaded', () => {
             currentShowIndex = (currentShowIndex - 1 + shows.length) % shows.length;
             updateShow();
             // Scroll to top of show section
-            document.querySelector('.show-section').scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'start' 
+            document.querySelector('.show-section').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
             });
         });
 
@@ -144,11 +170,23 @@ document.addEventListener('DOMContentLoaded', () => {
             currentShowIndex = (currentShowIndex + 1) % shows.length;
             updateShow();
             // Scroll to top of show section
-            document.querySelector('.show-section').scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'start' 
+            document.querySelector('.show-section').scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
             });
         });
+
+        const videoWrapper = document.querySelector('.show-image-wrapper.has-video');
+        if (videoWrapper && typeof openVideoPlayer === 'function') {
+            const handlePlay = () => openVideoPlayer(videoWrapper);
+            videoWrapper.addEventListener('click', handlePlay);
+            videoWrapper.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    handlePlay();
+                }
+            });
+        }
     }
 
     updateShow(); // Initial display
