@@ -4,7 +4,7 @@ Template Name: Inside Stellar Lights Storytelling
 */
 get_header(); ?>
 
-<div class="hero-section" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/stellar-lights-storytelling.jpeg');">
+<div class="hero-section" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/journal2banner.jpg');">
     <div class="hero-content">
         <!-- Hero content can be empty for detail pages -->
     </div>
@@ -16,43 +16,43 @@ get_header(); ?>
 <section class="journal-detail-section">
     <div class="container">
         <div class="journal-content">
-            <h1 class="journal-title">Transforming Events: The Rise Of Drone Entertainment In Australia</h1>
+            <h1 class="journal-title">Why Sound Matters: Composing for the Sky</h1>
             
             <div class="journal-text">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                <p>The magic of a drone show is not only visual, it is sonic. It is the way music swells and softens as shapes emerge above you. The quiet that falls before the climax. The goosebumps that rise when voice and light meet at the right moment.</p>
                 
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                <p>At Stellar Lights, sound is not an afterthought; it is the emotional engine of every show. Our collaborators include award-winning composers, sound designers, and musicians, each crafting bespoke scores that elevate the experience beyond light alone.</p>
             </div>
             
             <!-- First set of 3 images -->
             <div class="journal-images-grid">
                 <div class="journal-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/storytelling-1.png" alt="Drone Entertainment Australia 1">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/journal2inside1.jpg" alt="Drone Entertainment Australia 1">
                 </div>
                 <div class="journal-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/storytelling-2.png" alt="Drone Entertainment Australia 2">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/journal2inside2.jpg" alt="Drone Entertainment Australia 2">
                 </div>
                 <div class="journal-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/storytelling-3.png" alt="Drone Entertainment Australia 3">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/journal2inside3.png" alt="Drone Entertainment Australia 3">
                 </div>
             </div>
             
             <div class="journal-text">
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                <p>Whether orchestral, ambient, spoken word, or a hybrid, our soundtracks are tailored to place, story, and audience. We pay attention to pace and tonal arc, building tension and release. We ensure the choreography and music land together, frame by frame, beat by beat.</p>
                 
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+                <p>This is not incidental music. It is intentional and integrated. Sound makes a show linger in the body long after the lights fade. A sky full of lights can be beautiful, but when it is scored with purpose it becomes unforgettable.</p>
             </div>
             
             <!-- Second set of 3 images -->
             <div class="journal-images-grid">
                 <div class="journal-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/storytelling-4.png" alt="Drone Entertainment Australia 4">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/journal2inside4.jpg" alt="Drone Entertainment Australia 4">
                 </div>
                 <div class="journal-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/storytelling-5.png" alt="Drone Entertainment Australia 5">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/journal2inside5.jpg" alt="Drone Entertainment Australia 5">
                 </div>
                 <div class="journal-image">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/storytelling-6.png" alt="Drone Entertainment Australia 6">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/images/journal2inside6.jpg" alt="Drone Entertainment Australia 6">
                 </div>
             </div>
             

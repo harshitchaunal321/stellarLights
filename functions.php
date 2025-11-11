@@ -134,11 +134,31 @@ function stellar_lights_enqueue_scripts() {
         is_page_template('page-inside-stellar-lights-storytelling.php') ||
         is_page_template('page-stellar-lights-casestudy.php') ||
         is_page_template('page-stellar-lights-insides.php') ||
+        is_page_template('page-why-story-comes-first.php') ||
+        is_page_template('page-why-sound-matters.php') ||
+        is_page_template('page-how-many-drones-do-you-really-need.php') ||
+        is_page_template('page-where-drone-shows-fit.php') ||
+        is_page_template('page-how-much-does-a-drone-show-cost.php') ||
+        is_page_template('page-why-we-build-in-3d.php') ||
+        is_page_template('page-the-creative-conductor.php') ||
+        is_page_template('page-not-just-pixels-in-the-sky.php') ||
+        is_page_template('page-first-lights-journal.php') ||
+        is_page_template('page-investing-in-impact.php') ||
         (is_page() && (
             strpos($_SERVER['REQUEST_URI'], '/journal/behind-the-scenes-drone-light-shows') !== false ||
             strpos($_SERVER['REQUEST_URI'], '/journal/inside-stellar-lights-storytelling') !== false ||
             strpos($_SERVER['REQUEST_URI'], '/journal/stellar-lights-casestudy') !== false ||
-            strpos($_SERVER['REQUEST_URI'], '/journal/stellar-lights-insides') !== false
+            strpos($_SERVER['REQUEST_URI'], '/journal/stellar-lights-insides') !== false ||
+            strpos($_SERVER['REQUEST_URI'], '/journal/why-story-comes-first') !== false ||
+            strpos($_SERVER['REQUEST_URI'], '/journal/why-sound-matters') !== false ||
+            strpos($_SERVER['REQUEST_URI'], '/journal/how-many-drones-do-you-really-need') !== false ||
+            strpos($_SERVER['REQUEST_URI'], '/journal/where-drone-shows-fit') !== false ||
+            strpos($_SERVER['REQUEST_URI'], '/journal/how-much-does-a-drone-show-cost') !== false ||
+            strpos($_SERVER['REQUEST_URI'], '/journal/why-we-build-in-3d') !== false ||
+            strpos($_SERVER['REQUEST_URI'], '/journal/the-creative-conductor') !== false ||
+            strpos($_SERVER['REQUEST_URI'], '/journal/not-just-pixels-in-the-sky') !== false ||
+            strpos($_SERVER['REQUEST_URI'], '/journal/first-lights') !== false ||
+            strpos($_SERVER['REQUEST_URI'], '/journal/investing-in-impact') !== false
         )) ||
         strpos($_SERVER['REQUEST_URI'], '/journal/') !== false) {
         wp_enqueue_style(
